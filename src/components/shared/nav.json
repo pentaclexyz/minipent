@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_nav",
+  "info": {
+    "displayName": "Shared.nav",
+    "icon": "apple-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "navTitle": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

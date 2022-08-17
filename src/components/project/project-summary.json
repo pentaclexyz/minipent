@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_project_project_summaries",
+  "info": {
+    "displayName": "projectSummary",
+    "icon": "adjust"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

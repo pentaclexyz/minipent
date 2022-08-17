@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_features_card_larges",
+  "info": {
+    "displayName": "cardLarge",
+    "icon": "address-card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

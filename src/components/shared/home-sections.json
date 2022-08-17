@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_home_sections",
+  "info": {
+    "displayName": "homeSections",
+    "icon": "atom",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string"
+    },
+    "sectionCards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card-large"
+    }
+  }
+}
