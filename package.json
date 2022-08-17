@@ -2,7 +2,7 @@
   "name": "strapi",
   "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application",
+  "description": "minipent",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -15,10 +15,11 @@
     "@strapi/plugin-users-permissions": "4.1.9",
     "@strapi/provider-upload-cloudinary": "4.1.9",
     "@strapi/strapi": "4.1.9",
+    "ethers": "^5.6.9",
     "pg": "8.7.3"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "pentacle"
   },
   "strapi": {
     "uuid": "35d7a084-3088-4d0b-869e-f503693ee8e5"
