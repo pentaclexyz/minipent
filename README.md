@@ -17,6 +17,8 @@ go to yourapp/admin
 
 create records in all the strapi fields or the build will fail
 
+go to settings > roles > public and check `find`, `findOne` for each item
+
 
 ### frontend
 
