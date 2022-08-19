@@ -20,7 +20,7 @@
     "heading": {
       "displayName": "homeIntros",
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "shared.home-intros"
     }
   }
