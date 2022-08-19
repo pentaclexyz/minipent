@@ -1,4 +1,4 @@
-# minipent-ui
+# minipent
 
 extremely badly written docs for now
 
