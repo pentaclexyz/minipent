@@ -7,7 +7,7 @@
   },
   "options": {},
   "attributes": {
-    "sectionTitle": {
+    "header": {
       "type": "string"
     },
     "sectionCards": {

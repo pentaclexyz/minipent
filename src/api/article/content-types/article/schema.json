@@ -15,20 +15,30 @@
     "slug": {
       "type": "uid"
     },
-    "description": {
-      "type": "text"
-    },
     "people": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::person.person",
       "mappedBy": "articles"
     },
-    "content": {
-      "type": "text"
-    },
     "name": {
       "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "coverImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

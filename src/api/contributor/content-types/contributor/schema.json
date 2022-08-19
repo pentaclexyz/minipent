@@ -4,7 +4,8 @@
   "info": {
     "singularName": "contributor",
     "pluralName": "contributors",
-    "displayName": "Contributors"
+    "displayName": "contributors",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true

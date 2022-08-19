@@ -17,8 +17,11 @@
       "repeatable": true,
       "component": "shared.card-large"
     },
-    "title": {
-      "type": "string"
+    "heading": {
+      "displayName": "homeIntros",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.home-intros"
     }
   }
 }

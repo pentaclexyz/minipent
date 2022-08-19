@@ -42,6 +42,16 @@
       "relation": "manyToMany",
       "target": "api::event.event",
       "mappedBy": "people"
+    },
+    "avatar": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
