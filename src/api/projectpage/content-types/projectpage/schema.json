@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "projectpages",
+  "info": {
+    "singularName": "projectpage",
+    "pluralName": "projectpages",
+    "displayName": "Projectpage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "intro": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.home-intros"
+    }
+  }
+}

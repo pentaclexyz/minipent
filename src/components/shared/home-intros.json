@@ -1,7 +1,7 @@
 {
   "collectionName": "components_shared_home_intros",
   "info": {
-    "displayName": "homeIntros",
+    "displayName": "pageIntros",
     "icon": "ankh",
     "description": ""
   },
@@ -10,18 +10,19 @@
     "title": {
       "type": "string"
     },
-    "intro": {
-      "type": "text"
-    },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "intro": {
+      "type": "richtext"
     }
   }
 }
