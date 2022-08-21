@@ -9,7 +9,7 @@ export default function articleOverview({news}) {
             <h1>News</h1>
             <div className="grid gap-4 grid-cols-3 md:grid-cols-6 lg:grid-cols-9">
                 {news.map((item, i) => (
-                    <ArticleCardMini new={item.attributes} key={i} />
+                    <ArticleCardMini item={item.attributes} key={i} />
                 ))}
             </div>
         </Layout>
