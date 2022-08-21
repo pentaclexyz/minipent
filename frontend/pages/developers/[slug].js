@@ -19,7 +19,7 @@ const Contributor = ({item}) => {
                     <ReactMarkdown>{item?.attributes?.details}</ReactMarkdown>
                 </article>
                 <article className={"pb-6"}>
-                    <ReactMarkdown>children={item?.attributes?.planning}</ReactMarkdown>
+                    <ReactMarkdown>{item?.attributes?.planning}</ReactMarkdown>
                 </article>
             </section>
             <aside>

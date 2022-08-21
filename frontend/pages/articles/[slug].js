@@ -2,7 +2,6 @@ import {fetchAPI, getSlugsForPath} from "../../lib/api";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
 import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 import React from "react";
 
 const Article = ({article}) => {
@@ -59,5 +58,3 @@ export async function getStaticProps({params}) {
         revalidate: 1,
     };
 }
-
-
