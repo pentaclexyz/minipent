@@ -12,7 +12,7 @@ export function EventCardMini({event}) {
 
                 <div className="flex flex-col gap-3 mt-auto">
                     <Link href={{pathname: `/events/${event.slug}`}}>
-                        <h2 className={"cursor-pointer text-color-secondary-700 fave-link"}>{event.name}</h2>
+                        <h2 className={"cursor-pointer text-color-secondary-700 fave-link py-0"}>{event.name}</h2>
                     </Link>
 
                     <p className={"text-sm"}>{event.start} - {event.end}</p>

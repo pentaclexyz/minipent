@@ -13,7 +13,7 @@ export function ProjectCardMini({item}) {
             className="flex flex-col justify-between col-span-4 gap-2 px-6 pt-6 pb-6 rounded-2xl bg-white/5 cursor-pointer hover:bg-white/10">
 
             <Link href={{pathname: `/projects/${item.slug}`}}>
-                <h2 className={"cursor-pointer text-color-secondary-700 fave-link pt-0 pb-0"}>{item.name}</h2>
+                <h2 className={"cursor-pointer text-color-secondary-700 fave-link py-0"}>{item.name}</h2>
             </Link>
 
             <div>{item.coverImage}</div>

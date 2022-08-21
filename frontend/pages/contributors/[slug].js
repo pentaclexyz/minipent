@@ -1,61 +1,54 @@
-import {fetchAPI} from "../../lib/api";
+import {fetchAPI, getSlugsForPath} from "../../lib/api";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
 import ReactMarkdown from "react-markdown";
+import React from "react";
 
-
-const Contributor = ({item}) => {
+const ContributorItem = ({item}) => {
     const seo = {
-        metaTitle: item?.attributes?.name,
-        metaDescription: `Details for item ${item?.attributes?.name}`,
+        metaTitle: item.attributes.name,
+        metaDescription: `${item.attributes.name}`,
     };
 
     return (
         <Layout>
             <Seo seo={seo}/>
-            <section>
-                <h1>{item?.attributes?.name}</h1>
-                <article className={"pb-6"}>
-                    <ReactMarkdown>{item?.attributes?.details}</ReactMarkdown>
-                </article>
-                <article className={"pb-6"}>
-                    <ReactMarkdown>{item?.attributes?.planning}</ReactMarkdown>
-                </article>
+            <section className={"grid md:grid-cols-12 gap-6"}>
+                <div className={"col-span-8"}>
+                    <h1>{item.attributes.name}</h1>
+                    <div className={"whitespace-pre-wrap"}>
+                        <ReactMarkdown>{item.attributes.description}</ReactMarkdown>
+                        <ReactMarkdown>{item.attributes.content}</ReactMarkdown>
+                    </div>
+                </div>
             </section>
-            <aside>
-                <p></p>
-            </aside>
         </Layout>
     );
 };
 
-export default Contributor;
+export default ContributorItem;
 
 export async function getStaticPaths() {
     return {
-        // paths: await getSlugsForPath("items"),
-        paths: [],
-        fallback: true,
+        paths: await getSlugsForPath("contributors"),
+        fallback: false,
     };
 }
 
 export async function getStaticProps({params}) {
-    try {
-        const matchingitems = await fetchAPI("/items", {
-            filters: {slug: params.slug},
-        });
-        return {
-            props: {
-                item: matchingitems.data[0],
-            },
-            revalidate: 1,
-        };
-    } catch (e) {
-        return {
-            props: {
-                item: {},
-            },
-            revalidate: 1,
-        };
-    }
+    const contributors = await fetchAPI("/contributors", {
+        filters: {slug: params.slug},
+        populate: {
+            contributors: {populate: "*"},
+        },
+    });
+
+    return {
+        props: {
+            item: contributors.data[0],
+        },
+        revalidate: 1,
+    };
 }
+
+
