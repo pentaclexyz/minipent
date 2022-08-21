@@ -1,0 +1,43 @@
+{
+  "name": "pentacle",
+  "version": "0.1.0",
+  "description": "mini pentacle for teams",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm install yarn && next build",
+    "start": "next start --port $PORT",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.6.4",
+    "@heroicons/react": "^1.0.6",
+    "@rainbow-me/rainbowkit": "^0.4.0",
+    "@tailwindcss/forms": "^0.5.2",
+    "@tailwindcss/line-clamp": "^0.4.0",
+    "@types/react": "^18.0.14",
+    "debounce": "^1.2.1",
+    "ethers": "^5.6.9",
+    "isomorphic-unfetch": "^3.1.0",
+    "next": "12.1.6",
+    "next-seo": "^5.4.0",
+    "qs": "^6.10.4",
+    "react": "^18.2.0",
+    "react-dom": "18.1.0",
+    "react-markdown": "^8.0.3",
+    "react-query": "^3.39.1",
+    "react-select": "^5.3.2",
+    "remark-gfm": "^3.0.1",
+    "swc-loader": "^0.2.3",
+    "tailwindcss": "^3.0.24",
+    "use-debounce": "^6.0.1",
+    "wagmi": "^0.5.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "eslint": "8.17.0",
+    "eslint-config-next": "12.1.6",
+    "eslint-config-prettier": "^8.5.0",
+    "postcss": "^8.4.14"
+  }
+}

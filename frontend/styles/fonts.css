@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "cako";
+  src: url("../public/fonts/cako/Cako-Regular.eot") format("eot");
+  src: url("../public/fonts/cako/Cako-Regular.woff") format("woff2");
+  src: url("../public/fonts/cako/Cako-Regular.woff2") format("woff");
+}
+
+@font-face {
+  font-family: "matter";
+  src: url("../public/fonts/matter/Matter-Regular.woff") format("woff2");
+  src: url("../public/fonts/matter/Matter-Regular.woff2") format("woff");
+}
+
+@font-face {
+  font-family: "ramillas-medium";
+  src: url("../public/fonts/ramillas/ramillas-medium.woff") format("woff2");
+  src: url("../public/fonts/ramillas/ramillas-medium.woff2") format("woff");
+}
+
+@font-face {
+  font-family: "priori-regular";
+  src: url("../public/fonts/priori/PrioriSansOT-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "priori-bold";
+  src: url("../public/fonts/priori/PrioriSansOT-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "priori-black";
+  src: url("../public/fonts/priori/PrioriSansOT-Black.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "fira-light";
+  src: url("../public/fonts/Fira_Code/FiraCode-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "fira-regular";
+  src: url("../public/fonts/Fira_Code/FiraCode-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "fira-medium";
+  src: url("../public/fonts/Fira_Code/FiraCode-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "fira-semibold";
+  src: url("../public/fonts/Fira_Code/FiraCode-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "fira-bold";
+  src: url("../public/fonts/Fira_Code/FiraCode-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "material-icons";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../public/fonts/material-design-icons/material.ttf");
+}

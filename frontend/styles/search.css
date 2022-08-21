@@ -1,0 +1,117 @@
+.search-input {
+  @apply -mt-2;
+  @apply pl-12 pr-6 py-5;
+  @apply rounded-md;
+  @apply border-0;
+  @apply transition-all;
+  @apply text-sm;
+  @apply w-full;
+  @apply bg-white/5;
+}
+
+.search-input-container {
+  @apply z-50 pt-1;
+  @apply right-0;
+  @apply top-0;
+  @apply border-2;
+  @apply border-transparent;
+  @apply rounded-xl;
+  @apply ring-opacity-5;
+  @apply transition-all;
+  @apply transform;
+  @apply overflow-hidden;
+}
+.search-group-header {
+  @apply py-1;
+  @apply text-lg;
+  @apply z-40;
+}
+
+.search-filter-item {
+  @apply flex;
+  @apply items-center;
+  @apply px-3 py-1 lg:px-6 lg:py-2;
+  @apply hover:bg-gray-200;
+  @apply cursor-pointer;
+  @apply bg-gray-50;
+  @apply transition-colors;
+  @apply hover:text-indigo-700;
+  @apply text-gray-600;
+}
+
+.search-filter-item:hover .search-section-counter {
+  @apply bg-indigo-700;
+}
+.search-section-counter {
+  @apply hidden;
+  /*@apply inline-flex;*/
+  @apply justify-center;
+  @apply items-center;
+  @apply ml-auto;
+  @apply w-6;
+  @apply h-6;
+  @apply text-white;
+  @apply bg-gray-600;
+  @apply rounded-full;
+  font-size: 11px;
+}
+
+.search-filter-item-container {
+  @apply flex;
+  @apply overflow-x-auto;
+  @apply top-0;
+  @apply z-30;
+  @apply flex-row;
+  @apply min-w-full;
+  @apply bg-white;
+  @apply mb-1.5;
+  @apply divide-x;
+  @apply divide-gray-300;
+  @apply border-b;
+}
+
+.search-input-option {
+  width: 26rem;
+  min-height: 10rem;
+  max-height: 24rem;
+  @apply overflow-y-auto;
+  @apply text-sm;
+  @apply scroll-py-2;
+  @apply mt-5;
+}
+
+.search-result {
+  @apply bg-white/5;
+  @apply p-2 lg:p-3;
+  @apply rounded-lg;
+  @apply cursor-pointer;
+  @apply transition-all;
+}
+
+.search-result-grid {
+  @apply grid grid-cols-12 gap-y-3 gap-x-4;
+  @apply py-4 mt-4 w-full;
+}
+
+.search-result-list {
+  @apply absolute;
+  @apply right-0;
+  @apply left-0;
+  @apply border-2;
+  @apply border-transparent;
+  @apply rounded-b-lg;
+  @apply shadow-lg;
+  @apply overflow-y-auto;
+  max-height: 32rem;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 10px;
+  background:
+    linear-gradient(45deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 43%,#fff 45%,#fff 55%,rgba(0,0,0,0) 57%,rgba(0,0,0,0) 100%),
+    linear-gradient(135deg, transparent 0%,transparent 43%,#fff 45%,#fff 55%,transparent 57%,transparent 100%);
+}
