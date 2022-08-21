@@ -18,6 +18,7 @@ export function ArticleCardMini({item}) {
                             <h2 className={"cursor-pointer text-color-secondary-700 fave-link py-0"}>{item.name}</h2>
                         </Link>
                     </div>
+
                     <div className={"text-sm"}>{item.description}</div>
                     <div>
                         <a href={item.url} rel="nofollow noreferrer noopener" target={"_blank"}
