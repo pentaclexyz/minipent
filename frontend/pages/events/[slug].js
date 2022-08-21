@@ -19,7 +19,7 @@ const Event = ({event}) => {
                     <ReactMarkdown>{event?.attributes?.details}</ReactMarkdown>
                 </article>
                 <article className={"pb-6"}>
-                    <ReactMarkdown>children={event?.attributes?.planning}</ReactMarkdown>
+                    <ReactMarkdown>{event?.attributes?.planning}</ReactMarkdown>
                 </article>
             </section>
             <aside>

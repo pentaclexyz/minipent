@@ -3,7 +3,7 @@ import Layout from "../../components/layout";
 import {fetchAPI} from "../../lib/api";
 import {ArticleCardMini} from "../../components/articleCardMini";
 
-export default function articleOverview({articles}) {
+export default function Articles({articles}) {
     return (
         <Layout>
             <h1>Articles</h1>

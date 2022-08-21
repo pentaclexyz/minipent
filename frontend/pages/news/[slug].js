@@ -2,13 +2,12 @@ import {fetchAPI, getSlugsForPath} from "../../lib/api";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
 import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 import React from "react";
 
-const Article = ({article}) => {
+const NewsItem = ({item}) => {
     const seo = {
-        metaTitle: article.attributes.name,
-        metaDescription: `${article.attributes.name}`,
+        metaTitle: item.attributes.name,
+        metaDescription: `${item.attributes.name}`,
     };
 
     return (
@@ -16,9 +15,9 @@ const Article = ({article}) => {
             <Seo seo={seo}/>
             <section className={"grid md:grid-cols-12 gap-6"}>
                 <div className={"col-span-8"}>
-                    <h1>{article.attributes.name}</h1>
+                    <h1>{item.attributes.name}</h1>
                     <div className={"whitespace-pre-wrap"}>
-                        <ReactMarkdown>{article.attributes.content}</ReactMarkdown>
+                        <ReactMarkdown>{item.attributes.content}</ReactMarkdown>
                     </div>
                 </div>
             </section>
@@ -26,27 +25,26 @@ const Article = ({article}) => {
     );
 };
 
-export default Article;
+export default NewsItem;
 
 export async function getStaticPaths() {
     return {
-        paths: await getSlugsForPath("articles"),
+        paths: await getSlugsForPath("news"),
         fallback: false,
     };
 }
 
 export async function getStaticProps({params}) {
-    const articles = await fetchAPI("/articles", {
+    const news = await fetchAPI("/news", {
         filters: {slug: params.slug},
         populate: {
-            articles: {populate: "*"},
-            people: {populate: "*"},
+            news: {populate: "*"},
         },
     });
 
     return {
         props: {
-            article: articles.data[0],
+            item: news.data[0],
         },
         revalidate: 1,
     };

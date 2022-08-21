@@ -3,7 +3,7 @@ import Layout from "../../components/layout";
 import { fetchAPI } from "../../lib/api";
 import {EventCardMini} from "../../components/eventCardMini";
 
-export default function EventOverview({ events }) {
+export default function Events({ events }) {
   return (
     <Layout>
       <h1>Events</h1>

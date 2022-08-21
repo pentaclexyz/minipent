@@ -6,7 +6,7 @@ function removeTrailingSlash(str = '') {
     return str.replace(/\/+$/, '');
 }
 
-export function ArticleCardMini({item}) {
+export function NewsCardMini({item}) {
 
     return (
         <article className={"col-span-3"}>
@@ -14,7 +14,7 @@ export function ArticleCardMini({item}) {
 
                 <div className="flex flex-col gap-3 mt-auto">
                     <div className={"flex justify-between"}>
-                        <Link href={{pathname: `/news/${item.name}`}}>
+                        <Link href={{pathname: `/news/${item.slug}`}}>
                             <h2 className={"cursor-pointer text-color-secondary-700 fave-link"}>{item.name}</h2>
                         </Link>
                     </div>
