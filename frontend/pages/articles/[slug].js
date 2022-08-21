@@ -1,10 +1,8 @@
-import React from "react";
 import {fetchAPI, getSlugsForPath} from "../../lib/api";
-import {PersonCardMini} from "../../components/personCardMini";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
-import ArticleCard from "../../components/articleCard";
-import LayoutPageContent from "../../components/layoutPageContent";
+import ReactMarkdown from "react-markdown";
+import React from "react";
 
 const Article = ({article}) => {
     const seo = {
@@ -15,18 +13,22 @@ const Article = ({article}) => {
     return (
         <Layout>
             <Seo seo={seo}/>
-
-            <LayoutPageContent>
-                <article className={"md:col-span-8"}>
-                <ArticleCard item={article.attributes} id={article.id}/>
-                </article>
-                <article className="pt-6 md:pt-0 md:col-span-4 sm:mt-4">
+            <section className={"grid md:grid-cols-12 gap-6"}>
+                <div className={"col-span-8"}>
+                    <h1>{article.attributes.name}</h1>
+                    <div className={"whitespace-pre-wrap"}>
+                        <ReactMarkdown>{article.attributes.content}</ReactMarkdown>
+                    </div>
+                </div>
+                <article className={"rounded-2xl bg-white/10 p-8 col-span-4"}>
                     {article.attributes.people.data.map((person, i) => (
-                        <PersonCardMini person={person.attributes} key={i}/>
+                        <div key={i}>by @<a href={`https://twitter.com/${person.attributes.twitter}`} target={"_blank"}
+                                            rel="noopener noreferrer">{person.attributes.twitter}</a>
+                            <p>{person.attributes.bio}</p>
+                        </div>
                     ))}
                 </article>
-
-            </LayoutPageContent>
+            </section>
         </Layout>
     );
 };

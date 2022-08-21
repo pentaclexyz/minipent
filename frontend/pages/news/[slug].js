@@ -1,19 +1,26 @@
 import {fetchAPI, getSlugsForPath} from "../../lib/api";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
+import ReactMarkdown from "react-markdown";
 import React from "react";
-import BackLink from "../../components/backLink";
-import NewsCard from "../../components/newsCard";
 
-const NewsItem = ({news}) => {
+const NewsItem = ({item}) => {
     const seo = {
-        metaTitle: news.attributes.name,
+        metaTitle: item.attributes.name,
+        metaDescription: `${item.attributes.name}`,
     };
 
     return (
         <Layout>
             <Seo seo={seo}/>
-            <NewsCard news={news.attributes} id={news.id}/>
+            <section className={"grid md:grid-cols-12 gap-6"}>
+                <div className={"col-span-8"}>
+                    <h1>{item.attributes.name}</h1>
+                    <div className={"whitespace-pre-wrap"}>
+                        <ReactMarkdown>{item.attributes.content}</ReactMarkdown>
+                    </div>
+                </div>
+            </section>
         </Layout>
     );
 };
@@ -37,7 +44,7 @@ export async function getStaticProps({params}) {
 
     return {
         props: {
-            news: news.data[0],
+            item: news.data[0],
         },
         revalidate: 1,
     };

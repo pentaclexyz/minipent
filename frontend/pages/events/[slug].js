@@ -15,10 +15,10 @@ const Event = ({event}) => {
             <Seo seo={seo}/>
             <section>
                 <h1>{event?.attributes?.name}</h1>
-                <article className={"pb-6 editorial"}>
+                <article className={"pb-6"}>
                     <ReactMarkdown>{event?.attributes?.details}</ReactMarkdown>
                 </article>
-                <article className={"pb-6 editorial"}>
+                <article className={"pb-6"}>
                     <ReactMarkdown>{event?.attributes?.planning}</ReactMarkdown>
                 </article>
             </section>
