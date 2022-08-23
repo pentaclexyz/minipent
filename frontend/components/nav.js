@@ -25,10 +25,10 @@ const Nav = () => {
 
               <div className="flex-shrink-0">
                 <Link href={"/"}>
-                  <a><img className="block w-auto h-10 md:hidden" src="/pentacle-icon.svg" alt="{sitename}"/></a>
+                  <a><img className="block w-auto h-10 md:hidden" src="/minipent-icon.svg" alt="{sitename}"/></a>
                 </Link>
                 <Link href={"/"}>
-                  <a><img className="hidden w-auto h-10 md:block" src="/pentacle-logo.svg" alt="{sitename}"/></a>
+                  <a><img className="hidden w-auto h-10 md:block" src="/minipent-logo.svg" alt="{sitename}"/></a>
                 </Link>
               </div>
 
@@ -50,10 +50,7 @@ const Nav = () => {
               </div>
 
               <div>
-                <ConnectButton
-                  label={"connect wallet"}
-                  showBalance={false}
-                />
+                <ConnectButton label={"connect wallet"} showBalance={false}/>
               </div>
 
 

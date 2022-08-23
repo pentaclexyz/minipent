@@ -1,5 +1,6 @@
-import StyledLink from "./styledLink";
 import {getStrapiMedia} from "../lib/media";
+import StyledLink from "./styledLink";
+import LinkLaunch from "./linkLaunch";
 
 export default function ProjectCard({project}) {
     return (
@@ -12,7 +13,7 @@ export default function ProjectCard({project}) {
                 </article>
 
                 <article className="col-span-3 text-sm">
-                    <StyledLink url={project.url} text={project.url}/>
+                    <LinkLaunch url={project.url} text={project.url}/>
                     <p>{project.description}</p>
                     <div className={"pt-8 pb-4"}>
                         <dt className="text-color-secondary-700">Social</dt>

@@ -8,7 +8,6 @@ import SearchResult from "../searchResult";
 import NoResults from "./no-results";
 import SearchLoading from "./search-loading";
 import scrollParentToChild from "../../lib/scroll-parent-to-child";
-import {useCoingecko} from "../../contexts/CoingeckoContext";
 import {AllowedLink} from "../allowedLink";
 import {SearchIcon} from "@heroicons/react/outline";
 
@@ -28,20 +27,6 @@ export default function Search({initialValues}) {
     setFilteredResults([]);
     setSelectedType("");
   };
-  const {loadPrices, prices} = useCoingecko();
-
-  const match = (name) => {
-    if (name === "btc") {
-      return "bitcoin";
-    }
-    if (name === "eth") {
-      return "ethereum";
-    }
-    if (name === "sol") {
-      return "solana";
-    }
-    return name;
-  };
 
   useEffect(() => {
     (async () => {
@@ -53,7 +38,6 @@ export default function Search({initialValues}) {
         const idsString = relevantItems.map((res) =>
           match(res?.attributes?.coingecko_id)
         );
-        loadPrices(idsString);
       }
     })();
   }, [filteredResults]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -203,10 +187,7 @@ export default function Search({initialValues}) {
           style={{outline: "none"}}
         />
         {focussed && (
-          <Combobox.Options
-            static
-            className={`px-3 py-2 mt-0 search-input-option search-result-grid`}
-          >
+          <Combobox.Options static className={`px-3 py-2 mt-0 search-input-option search-result-grid`}>
             {!!loading && !filteredResults.length && (
               <div key={"loading"} className="flex col-span-12 justify-center items-center">
                 <SearchLoading/>
@@ -225,7 +206,7 @@ export default function Search({initialValues}) {
                     <Combobox.Option
                       className={`flex col-span-12 rounded-md select-none sm:col-span-6 md:col-span-4 lg:col-span-3`}
                       value={{...result.attributes, id: result.id, type: group.name,}}>
-                      <SearchResult result={result} group={group.name} slug={result.attributes.slug} price={prices[match(result.attributes.coingecko_id)]?.usd}/>
+                      <SearchResult result={result} group={group.name} slug={result.attributes.slug}/>
                     </Combobox.Option>
                   </div>
                 ))}
