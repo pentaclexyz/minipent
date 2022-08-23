@@ -11,7 +11,7 @@ export default function PlanningCard({planning}) {
                     <ReactMarkdown>{planning.content}</ReactMarkdown>
                 </article>
                 <article className="col-span-2">
-                    <h2 className={"pt-0"}>Who</h2>
+                    {/*<h2 className={"pt-0"}>Team</h2>*/}
                     {planning.people.data.map((person, i) => (
                         <PersonCardMini person={person.attributes} key={i} />
                     ))}
