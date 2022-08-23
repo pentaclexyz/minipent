@@ -2,7 +2,8 @@
   "collectionName": "components_shared_plannings",
   "info": {
     "displayName": "planning",
-    "icon": "archive"
+    "icon": "archive",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -10,9 +11,6 @@
       "type": "string"
     },
     "description": {
-      "type": "richtext"
-    },
-    "task": {
       "type": "richtext"
     },
     "status": {
