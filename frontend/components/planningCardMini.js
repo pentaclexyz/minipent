@@ -14,7 +14,7 @@ export function PlanningCardMini({item}) {
 
                 <div className="flex flex-col gap-3 mt-auto">
                     <div className={"flex justify-between"}>
-                        <Link href={{pathname: `/articles/${item.slug}`}}>
+                        <Link href={{pathname: `/planning/${item.slug}`}}>
                             <h2 className={"cursor-pointer text-color-secondary-700 fave-link py-0"}>{item.name}</h2>
                         </Link>
                     </div>

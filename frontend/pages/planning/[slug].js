@@ -17,6 +17,7 @@ const PlanningItem = ({planning}) => {
                 <div className={"col-span-8"}>
                     <h1>{planning.attributes.name}</h1>
                     <div className={"whitespace-pre-wrap"}>
+                        <ReactMarkdown>{planning.attributes.description}</ReactMarkdown>
                         <ReactMarkdown>{planning.attributes.content}</ReactMarkdown>
                     </div>
                 </div>
@@ -25,27 +26,26 @@ const PlanningItem = ({planning}) => {
     );
 };
 
-export default Article;
+export default PlanningItem;
 
 export async function getStaticPaths() {
     return {
-        paths: await getSlugsForPath("articles"),
+        paths: await getSlugsForPath("plannings"),
         fallback: false,
     };
 }
 
 export async function getStaticProps({params}) {
-    const articles = await fetchAPI("/articles", {
+    const plannings = await fetchAPI("/plannings", {
         filters: {slug: params.slug},
         populate: {
-            articles: {populate: "*"},
-            people: {populate: "*"},
+            plannings: {populate: "*"},
         },
     });
 
     return {
         props: {
-            article: articles.data[0],
+            planning: plannings.data[0],
         },
         revalidate: 1,
     };
