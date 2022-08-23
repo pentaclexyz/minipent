@@ -4,7 +4,8 @@
   "info": {
     "singularName": "planning",
     "pluralName": "plannings",
-    "displayName": "planning"
+    "displayName": "planning",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -25,6 +26,10 @@
       "relation": "manyToMany",
       "target": "api::person.person",
       "inversedBy": "plannings"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
     }
   }
 }

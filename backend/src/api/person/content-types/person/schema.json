@@ -57,7 +57,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::planning.planning",
-      "inversedBy": "people"
+      "mappedBy": "people"
     }
   }
 }
