@@ -18,9 +18,6 @@
     "description": {
       "type": "richtext"
     },
-    "content": {
-      "type": "richtext"
-    },
     "people": {
       "type": "relation",
       "relation": "manyToMany",
