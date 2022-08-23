@@ -9,15 +9,20 @@ set up an account at railway.app
 
 ### backend
 
-create a strapi starter
+create a strapi starter (will install a strapi back-end and postgresql db)
 
 push your minipent fork
 
-go to yourapp/admin
+in the railway strapi app settings, set the base directory to `backend` 
+
+
+go to https://yourappname/admin
 
 create records in all the strapi fields or the build will fail
 
 go to settings > roles > public and check `find`, `findOne` for each item
+
+you'll need to redeploy the frontend to create the routes for any new pages you add
 
 
 
@@ -25,10 +30,5 @@ go to settings > roles > public and check `find`, `findOne` for each item
 
 set up a separate app on railway for the ui
 
-push your minipent-ui fork 
-
-
-
-## The board
-https://github.com/orgs/pentaclexyz/projects/2
+set the base directory in settings to `frontend`
 
