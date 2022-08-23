@@ -1,7 +1,7 @@
+import React from "react";
 import {fetchAPI, getSlugsForPath} from "../../lib/api";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
-import React from "react";
 import PlanningCard from "../../components/planningCard";
 
 const PlanningItem = ({planning}) => {
@@ -32,6 +32,8 @@ export async function getStaticProps({params}) {
         filters: {slug: params.slug},
         populate: {
             plannings: {populate: "*"},
+            people: {populate: "*"},
+            tasks: {populate: "*"},
         },
     });
 

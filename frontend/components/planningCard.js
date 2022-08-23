@@ -1,5 +1,5 @@
-import {getStrapiMedia} from "../lib/media";
 import ReactMarkdown from "react-markdown";
+import {PersonCardMini} from "./personCardMini";
 
 export default function PlanningCard({planning}) {
     return (
@@ -12,8 +12,11 @@ export default function PlanningCard({planning}) {
                     <ReactMarkdown>{planning.content}</ReactMarkdown>
                 </article>
                 <article className="col-span-3">
-                    <div>hello</div>
-                </article>
+                    <h2>who</h2>
+                    {planning.people.data.map((person, i) => (
+                        <PersonCardMini person={person.attributes} key={i} />
+                    ))}
+                    </article>
             </article>
         </section>
     );
