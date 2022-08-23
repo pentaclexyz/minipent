@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_plannings",
+  "info": {
+    "displayName": "planning",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "task": {
+      "type": "richtext"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "to do",
+        "doing",
+        "done"
+      ]
+    }
+  }
+}

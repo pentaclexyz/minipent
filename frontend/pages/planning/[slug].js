@@ -1,8 +1,8 @@
 import {fetchAPI, getSlugsForPath} from "../../lib/api";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
-import ReactMarkdown from "react-markdown";
 import React from "react";
+import PlanningCard from "../../components/planningCard";
 
 const PlanningItem = ({planning}) => {
     const seo = {
@@ -13,15 +13,7 @@ const PlanningItem = ({planning}) => {
     return (
         <Layout>
             <Seo seo={seo}/>
-            <section className={"grid md:grid-cols-12 gap-6"}>
-                <div className={"col-span-8"}>
-                    <h1>{planning.attributes.name}</h1>
-                    <div className={"whitespace-pre-wrap"}>
-                        <ReactMarkdown>{planning.attributes.description}</ReactMarkdown>
-                        <ReactMarkdown>{planning.attributes.content}</ReactMarkdown>
-                    </div>
-                </div>
-            </section>
+            <PlanningCard planning={planning.attributes} id={planning.id}/>
         </Layout>
     );
 };

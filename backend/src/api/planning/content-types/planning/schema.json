@@ -31,13 +31,10 @@
       "type": "uid",
       "targetField": "name"
     },
-    "status": {
-      "type": "enumeration",
-      "enum": [
-        "todo",
-        "doing",
-        "done"
-      ]
+    "tasks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.planning"
     }
   }
 }
