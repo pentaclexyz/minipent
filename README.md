@@ -24,7 +24,13 @@ create at least one record in all the strapi pages (eg homepage, global nav, eve
 
 go to settings > roles > public and check `find`, `findOne` for each item so your data displays on the frontend
 
-you'll need to redeploy the frontend to create the routes for any new pages you add
+you'll need to redeploy to create the routes for any new pages you add
+
+in your command line:
+
+`$ railway link` (select the back-end)
+
+`$ railway up` runs your deploy
 
 
 
@@ -33,4 +39,10 @@ you'll need to redeploy the frontend to create the routes for any new pages you 
 set up a separate app on railway for the ui
 
 set the base directory in settings to `frontend`
+
+in your command line:
+
+`$ railway link` (select the front-end)
+
+`$ railway up` runs your deploy
 
