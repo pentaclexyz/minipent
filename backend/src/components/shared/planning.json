@@ -10,9 +10,6 @@
     "name": {
       "type": "string"
     },
-    "description": {
-      "type": "richtext"
-    },
     "status": {
       "type": "enumeration",
       "enum": [
@@ -20,6 +17,12 @@
         "doing",
         "done"
       ]
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "description": {
+      "type": "string"
     }
   }
 }

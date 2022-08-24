@@ -15,9 +15,6 @@
     "name": {
       "type": "string"
     },
-    "description": {
-      "type": "richtext"
-    },
     "people": {
       "type": "relation",
       "relation": "manyToMany",
@@ -32,6 +29,9 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.planning"
+    },
+    "description": {
+      "type": "string"
     }
   }
 }
