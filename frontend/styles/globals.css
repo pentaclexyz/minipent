@@ -125,3 +125,7 @@ field input {
 p + p {
   padding-top: 1rem;
 }
+
+th {
+  font-family: matter-semibold, Arial, sans-serif;
+}

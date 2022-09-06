@@ -7,7 +7,6 @@ import PlanningCard from "../../components/planningCard";
 const PlanningItem = ({planning}) => {
     const seo = {
         metaTitle: planning.attributes.name,
-        metaDescription: `${planning.attributes.name}`,
     };
 
     return (
