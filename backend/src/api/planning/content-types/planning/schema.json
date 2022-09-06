@@ -30,9 +30,6 @@
       "repeatable": true,
       "component": "shared.planning"
     },
-    "description": {
-      "type": "string"
-    },
     "content": {
       "type": "richtext"
     }
