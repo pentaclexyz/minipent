@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "contributorpages",
+  "info": {
+    "singularName": "contributorpage",
+    "pluralName": "contributorpages",
+    "displayName": "contributorpage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "intros": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.home-intros"
+    },
+    "contributors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::contributor.contributor"
+    }
+  }
+}

@@ -2,7 +2,7 @@ import ReactMarkdown from "react-markdown";
 
 export function TasksCard({tasks}) {
     return (
-        <table className={"table-fixed text-sm p-2 w-full text-left align-text-top"}>
+        <table className={"table-fixed text-sm my-4 p-2 w-full text-left align-text-top"}>
             <colgroup>
                 <col className={"w-1/4"}/>
                 <col className={"w-1/4"}/>

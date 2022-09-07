@@ -10,9 +10,9 @@ export default function PlanningCard({planning}) {
             <article className="md:col-span-10">
                 <BackLink link={"/planning"} title={"Planning"}/>
                 <h1>{planning.name}</h1>
-                <article className={"pt-2"}><ReactMarkdown>{planning.description}</ReactMarkdown></article>
+                <article className={"py-4"}><ReactMarkdown>{planning.description}</ReactMarkdown></article>
+                <TasksCard tasks={planning.tasks} />
                 <article className={"pt-2"}><ReactMarkdown>{planning.content}</ReactMarkdown></article>
-               <TasksCard tasks={planning.tasks} />
             </article>
 
             <article className="pt-6 md:col-span-2">
