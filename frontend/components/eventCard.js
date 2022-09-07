@@ -18,9 +18,9 @@ export default function EventCard({event}) {
             </article>
 
             <article className="pt-6 md:col-span-2">
-                {event.people.data.map((person, i) => (
-                    <PersonCardMini person={person.attributes} key={i}/>
-                ))}
+                {/*{event.people.data.map((person, i) => (*/}
+                {/*    <PersonCardMini person={person.attributes} key={i}/>*/}
+                {/*))}*/}
             </article>
 
         </section>
