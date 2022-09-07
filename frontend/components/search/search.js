@@ -11,7 +11,7 @@ import scrollParentToChild from "../../lib/scroll-parent-to-child";
 import {AllowedLink} from "../allowedLink";
 import {SearchIcon} from "@heroicons/react/outline";
 
-const API_ENDPOINTS = ["projects", "news", "contributors", "developers", "articles", "events"];
+const API_ENDPOINTS = ["projects", "planning", "contributors", "events", "news", "articles"];
 
 export default function Search({initialValues}) {
   const [focussed, setFocussed] = useState(false);
