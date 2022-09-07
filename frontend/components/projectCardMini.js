@@ -25,8 +25,7 @@ export function ProjectCardMini({item}) {
                 </a>
                 {item.twitterId && (
                     <a href={`https://www.twitter.com/${item.twitterId}`} rel="nofollow noreferrer noopener"
-                       target={"_blank"}
-                       className={"line-clamp-2"}>
+                       target={"_blank"} className={"line-clamp-2"}>
                         <p className={"text-sm cursor-pointer hover:text-color-secondary-700 line-clamp-1 external-link"}>
                             {removeTrailingSlash(item.twitterId?.split("//")[1])}
                         </p>

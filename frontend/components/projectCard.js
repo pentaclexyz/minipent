@@ -1,10 +1,12 @@
 import {getStrapiMedia} from "../lib/media";
 import StyledLink from "./styledLink";
 import LinkLaunch from "./linkLaunch";
+import BackLink from "./backLink";
 
 export default function ProjectCard({project}) {
     return (
         <section className={"rounded-2xl bg-white/10 p-8"}>
+            <BackLink link={"/projects"} title={"Projects"}/>
             <h1>{project.name}</h1>
 
             <article className={"grid grid-cols-12 gap-x-8"}>
