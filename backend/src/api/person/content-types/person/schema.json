@@ -58,6 +58,12 @@
       "relation": "manyToMany",
       "target": "api::planning.planning",
       "mappedBy": "people"
+    },
+    "news": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::new.new",
+      "inversedBy": "people"
     }
   }
 }

@@ -1,30 +1,18 @@
-import {fetchAPI} from "../../lib/api";
+import {fetchAPI, getSlugsForPath} from "../../lib/api";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
-import ReactMarkdown from "react-markdown";
+import EventCard from "../../components/eventCard";
 
 
 const Event = ({event}) => {
     const seo = {
-        metaTitle: event?.attributes?.name,
-        metaDescription: `Details for event ${event?.attributes?.name}`,
+        metaTitle: event.attributes.name,
     };
 
     return (
         <Layout>
             <Seo seo={seo}/>
-            <section>
-                <h1>{event?.attributes?.name}</h1>
-                <article className={"pb-6"}>
-                    <ReactMarkdown>{event?.attributes?.details}</ReactMarkdown>
-                </article>
-                <article className={"pb-6"}>
-                    <ReactMarkdown>{event?.attributes?.planning}</ReactMarkdown>
-                </article>
-            </section>
-            <aside>
-                <p></p>
-            </aside>
+            <EventCard event={event.attributes} id={event.id}/>
         </Layout>
     );
 };
@@ -33,29 +21,24 @@ export default Event;
 
 export async function getStaticPaths() {
     return {
-        // paths: await getSlugsForPath("events"),
-        paths: [],
+        paths: await getSlugsForPath("events"),
         fallback: true,
     };
 }
 
 export async function getStaticProps({params}) {
-    try {
-        const matchingEvents = await fetchAPI("/events", {
-            filters: {slug: params.slug},
-        });
-        return {
-            props: {
-                event: matchingEvents.data[0],
-            },
-            revalidate: 1,
-        };
-    } catch (e) {
-        return {
-            props: {
-                event: {},
-            },
-            revalidate: 1,
-        };
-    }
+    const events = await fetchAPI("/events", {
+        filters: {slug: params.slug},
+        populate: {
+            events: {populate: "*"},
+            people: {populate: "*"},
+        },
+    });
+
+    return {
+        props: {
+            event: events.data[0],
+        },
+        revalidate: 1,
+    };
 }

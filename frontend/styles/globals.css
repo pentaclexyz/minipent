@@ -129,3 +129,11 @@ p + p {
 th {
   font-family: matter-semibold, Arial, sans-serif;
 }
+
+.editorial a {
+  text-decoration: underline;
+}
+
+.editorial a:hover {
+  color: #02E0B9;
+}

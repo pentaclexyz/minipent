@@ -35,6 +35,12 @@
     "slug": {
       "type": "uid",
       "targetField": "name"
+    },
+    "people": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::person.person",
+      "inversedBy": "news"
     }
   }
 }
