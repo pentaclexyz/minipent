@@ -21,7 +21,7 @@
         "audios"
       ]
     },
-    "intro": {
+    "content": {
       "type": "richtext"
     }
   }

@@ -16,11 +16,27 @@ export default function ProjectOverview({projects}) {
 }
 
 export async function getStaticProps() {
-  const projects = (await fetchAPI("/projects")).data;
+
+    const projects = await fetchAPI("/projectpage", {
+        populate: {
+            projects: {populate: "*"},
+            intros: {populate: "*"},
+        },
+    });
+
   return {
     props: {
-      projects,
+      projects: projects.data,
+      intros: projects.data,
     },
     revalidate: 1,
   };
 }
+//
+// return {
+//     props: {
+//         homeFeatures: response.data.attributes.homeFeatures,
+//         headings: response.data.attributes.headings,
+//         search: await getSearchProps(),
+//     },
+// };

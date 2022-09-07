@@ -4,17 +4,23 @@
   "info": {
     "singularName": "projectpage",
     "pluralName": "projectpages",
-    "displayName": "Projectpage"
+    "displayName": "Projectpage",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "intro": {
+    "intros": {
       "type": "component",
       "repeatable": true,
       "component": "shared.home-intros"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project"
     }
   }
 }

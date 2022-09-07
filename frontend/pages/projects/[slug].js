@@ -6,7 +6,6 @@ import ProjectCard from "../../components/projectCard";
 const Project = ({project}) => {
     const seo = {
         metaTitle: project.attributes.name,
-        metaDescription: `All ${project.attributes.name} articles`,
     };
 
     return (
@@ -31,8 +30,8 @@ export async function getStaticProps({params}) {
         filters: {slug: params.slug},
         populate: {
             coverImage: {populate: "*"},
-            articles: {populate: "*"},
-            people: {populate: "*"},
+            headings: {populate: "*"},
+            homeFeatures: {populate: "*"},
         },
     });
 
