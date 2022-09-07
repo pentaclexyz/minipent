@@ -7,11 +7,12 @@ import {fetchAPI, getSearchFilterProps} from "../lib/api";
 import {useFavorites} from "../contexts/FavoriteContext";
 import {useEffect, useMemo, useState} from "react";
 import {getStrapiMedia} from "../lib/media";
+import {IntroCard} from "../components/introCard";
 
 
 const API_ENDPOINTS = ["tags", "projects", "articles", "news"];
 
-const Index = ({homeFeatures, headings, search}) => {
+const Index = ({homeFeatures, intros, search}) => {
     const seo = {
         metaTitle: "home",
     };
@@ -52,16 +53,8 @@ const Index = ({homeFeatures, headings, search}) => {
 
             <Search initialValues={search}/>
 
-            {headings.map((heading, i) => (
-                <article className={"grid mt-2 md:mt-6 lg:mt-10 md:gap-x-10 md:grid-cols-2 lg:gap-x-20"} key={"i"}>
-                    <div className={"col-span-1 mb-10"}>
-                        <h1 className={"text-4xl"}>{heading.title}</h1>
-                        <ReactMarkdown>{heading.intro}</ReactMarkdown>
-                    </div>
-                    <div className={"col-span-1"}>
-                        <img className={"rounded-full"} src={getStrapiMedia(heading.image)}/>
-                    </div>
-                </article>
+            {intros.map((intro, i) => (
+                <IntroCard intro={intro} key={i}/>
             ))}
 
             <article className="mt-6 grid grid-cols-1 gap-4 md:gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -91,7 +84,7 @@ export async function getServerSideProps({res}) {
     );
     const response = await fetchAPI(`/homepage`, {
         populate: {
-            headings: {populate: "*"},
+            intros: {populate: "*"},
             homeFeatures: {populate: "*"},
         },
     });
@@ -115,7 +108,7 @@ export async function getServerSideProps({res}) {
     return {
         props: {
             homeFeatures: response.data.attributes.homeFeatures,
-            headings: response.data.attributes.headings,
+            intros: response.data.attributes.intros,
             search: await getSearchProps(),
         },
     };
