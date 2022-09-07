@@ -1,8 +1,6 @@
 import Layout from "../../components/layout";
 import {fetchAPI} from "../../lib/api";
 import {ProjectCardMini} from "../../components/projectCardMini";
-import ReactMarkdown from "react-markdown";
-import {getStrapiMedia} from "../../lib/media";
 import {IntroCard} from "../../components/introCard";
 
 export default function ProjectOverview({intros, projects}) {

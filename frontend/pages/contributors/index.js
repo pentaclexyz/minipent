@@ -12,7 +12,7 @@ export default function Contributors({intros, contributors}) {
                 <IntroCard intro={intro} key={i}/>
             ))}
             <div className="grid gap-4 grid-cols-3 md:grid-cols-6 lg:grid-cols-12">
-                {contributors.map((contributor, i) => (
+                {contributors.data.map((contributor, i) => (
                     <ContributorCardMini item={contributor.attributes} key={i}/>
                 ))}
             </div>
