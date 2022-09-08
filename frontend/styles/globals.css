@@ -17,8 +17,6 @@
   }
 }
 
-@tailwind components;
-@tailwind utilities;
 
 @import url(./search.css);
 @import url(./fonts.css);
@@ -65,18 +63,6 @@ input:focus-visible {
 
 .text-tiny {
   font-size: 9px;
-}
-
-.btn-group-start {
-  @apply inline-flex relative items-center px-4 py-2 text-sm font-medium bg-white rounded-l-md border border-gray-300 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-700 focus:border-indigo-700;
-}
-
-.btn-group-middle {
-  @apply inline-flex relative items-center px-4 py-2 text-sm font-medium bg-white border border-gray-300 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-700 focus:border-indigo-700;
-}
-
-.btn-group-end {
-  @apply inline-flex relative items-center px-4 py-2 text-sm font-medium bg-white rounded-r-md border border-gray-300 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-700 focus:border-indigo-700;
 }
 
 input[type="search"] {
@@ -157,3 +143,25 @@ th {
 .editorial a:hover {
   color: #02E0B9;
 }
+
+.bg-request-1000 {
+  background-color: #ffcde5;
+}
+.bg-approved-1000 {
+  background-color: #02E0B9;
+}
+.bg-rejected-1000 {
+  background-color: #121b05;
+}
+.bg-todo-1000 {
+  background-color: #ffcde5;
+}
+.bg-doing-1000 {
+  background-color: #7b91e6;
+}
+.bg-done-1000 {
+  background-color: #02E0B9;
+}
+
+@tailwind components;
+@tailwind utilities;
