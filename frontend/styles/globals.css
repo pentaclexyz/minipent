@@ -126,6 +126,10 @@ p + p {
   padding-top: 1rem;
 }
 
+table td {
+  vertical-align: text-top;
+}
+
 th {
   font-family: matter-semibold, Arial, sans-serif;
 }
