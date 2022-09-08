@@ -21,7 +21,7 @@ export function TasksCard({tasks}) {
                 <tr key={i}>
                     <td className={"border-collapse border border-white w-1/4"}>
                         <ReactMarkdown>{task.name}</ReactMarkdown>
-                        <div class={"mt-2"}><Label label={task.status} key={i} bgColor={task.status}
+                        <div className={"mt-2"}><Label label={task.status} key={i} bgColor={task.status}
                                                    txtColor={"text-primary"}/></div>
                     </td>
                     <td className={"border-collapse border border-white w-1/2"}></td>

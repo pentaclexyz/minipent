@@ -157,3 +157,9 @@ th {
 .editorial a:hover {
   color: #02E0B9;
 }
+
+.request {color:#ffcde5}
+.approved {color:#02E0B9}
+.todo {color:#4e3689}
+.doing {color:#ffcde5}
+.done {color:#02E0B9}
