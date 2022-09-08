@@ -1,4 +1,9 @@
+@import url(./search.css);
+@import url(./fonts.css);
+
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   h1 {
@@ -16,10 +21,6 @@
     @apply py-4;
   }
 }
-
-
-@import url(./search.css);
-@import url(./fonts.css);
 
 html,
 body {
@@ -104,7 +105,7 @@ input[type="search"] {
   color: #ffcde5;
 }
 
-field input {
+.field input {
   background-color: transparent;
 }
 
@@ -143,7 +144,6 @@ th {
 .editorial a:hover {
   color: #02E0B9;
 }
-
 .bg-request-1000 {
   background-color: #ffcde5;
 }
@@ -162,6 +162,3 @@ th {
 .bg-done-1000 {
   background-color: #02E0B9;
 }
-
-@tailwind components;
-@tailwind utilities;
