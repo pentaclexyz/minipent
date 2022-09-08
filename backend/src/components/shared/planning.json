@@ -13,8 +13,9 @@
     "status": {
       "type": "enumeration",
       "enum": [
-        "budget request",
-        "budget approved",
+        "request",
+        "approved",
+        "rejected",
         "to do",
         "doing",
         "done"

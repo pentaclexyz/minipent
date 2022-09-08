@@ -1,4 +1,5 @@
 import ReactMarkdown from "react-markdown";
+import Label from "./label";
 
 export function TasksCard({tasks}) {
     return (
@@ -18,12 +19,17 @@ export function TasksCard({tasks}) {
             <tbody>
             {tasks.map((task, i) => (
                 <tr key={i}>
-                    <td className={"border-collapse border border-white w-1/4"}><ReactMarkdown>{task.name}</ReactMarkdown></td>
-                    <td className={"border-collapse border border-white w-1/2"}><ReactMarkdown>{task.status}</ReactMarkdown></td>
-                    <td className={"border-collapse border border-white w-1/4"}><ReactMarkdown>{task.content}</ReactMarkdown></td>
+                    <td className={"border-collapse border border-white w-1/4"}>
+                        <ReactMarkdown>{task.name}</ReactMarkdown>
+                        <div class={"mt-2"}><Label label={task.status} key={i} bgColor={task.status}
+                                                   txtColor={"text-primary"}/></div>
+                    </td>
+                    <td className={"border-collapse border border-white w-1/2"}></td>
+                    <td className={"border-collapse border border-white w-1/4"}>
+                        <ReactMarkdown>{task.content}</ReactMarkdown></td>
                 </tr>
             ))}
             </tbody>
         </table>
-);
+    );
 }
