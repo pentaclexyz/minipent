@@ -5,7 +5,7 @@ import BackLink from "./backLink";
 
 export default function PlanningCard({planning}) {
     return (
-        <section className={"rounded-2xl bg-white/10 p-8 md:grid md:grid-cols-12 md:gap-x-8"}>
+        <section className={"rounded-2xl bg-white/10 p-2 md:p-8 md:grid md:grid-cols-12 md:gap-x-8"}>
 
             <article className="md:col-span-10">
                 <BackLink link={"/planning"} title={"Planning"}/>
