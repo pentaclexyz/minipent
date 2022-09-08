@@ -130,6 +130,21 @@ th {
   font-family: matter-semibold, Arial, sans-serif;
 }
 
+.editorial {
+  /*white-space: pre-wrap;*/
+}
+
+.editorial ul {
+  margin: 0;
+  padding: 0;
+}
+
+.editorial li {
+  list-style: disc;
+  padding: .5rem 0;
+  margin-left: 1rem;
+}
+
 .editorial a {
   text-decoration: underline;
 }
