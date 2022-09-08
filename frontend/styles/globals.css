@@ -126,8 +126,9 @@ p + p {
   padding-top: 1rem;
 }
 
-table td {
+table td, table th {
   vertical-align: text-top;
+  padding: 1rem;
 }
 
 th {

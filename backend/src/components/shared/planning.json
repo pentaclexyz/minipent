@@ -13,6 +13,8 @@
     "status": {
       "type": "enumeration",
       "enum": [
+        "budget request",
+        "budget approved",
         "to do",
         "doing",
         "done"
@@ -23,6 +25,11 @@
     },
     "description": {
       "type": "string"
+    },
+    "people": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::person.person"
     }
   }
 }
