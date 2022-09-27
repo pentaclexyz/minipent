@@ -38,6 +38,10 @@
       "relation": "manyToMany",
       "target": "api::planning.planning",
       "inversedBy": "calendars"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
     }
   }
 }
