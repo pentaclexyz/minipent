@@ -109,9 +109,9 @@ input[type="search"] {
   background-color: transparent;
 }
 
-p + p {
-  padding-top: 1rem;
-}
+/*p + p {*/
+/*  padding-top: .5rem;*/
+/*}*/
 
 table td, table th {
   vertical-align: text-top;
@@ -123,7 +123,7 @@ th {
 }
 
 .editorial {
-  /*white-space: pre-wrap;*/
+  white-space: pre-wrap;
 }
 
 .editorial ul {

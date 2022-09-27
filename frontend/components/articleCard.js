@@ -8,7 +8,7 @@ const ArticleCard = ({item, ...props}) => {
         <div {...props}>
             <BackLink link={"/articles"} title={"Articles"}/>
             <h1>{item.name}</h1>
-            <div className={"whitespace-pre-wrap"}>
+            <div className={"editorial"}>
                 <ReactMarkdown>{item.content}</ReactMarkdown>
             </div>
         </div>
