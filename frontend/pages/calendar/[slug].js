@@ -3,13 +3,13 @@ import {fetchAPI, getSlugsForPath} from "../../lib/api";
 import {PersonCardMini} from "../../components/personCardMini";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
-import ArticleCard from "../../components/articleCard";
+import CalendarCard from "../../components/calendarCard";
 import LayoutPageContent from "../../components/layoutPageContent";
 
-const Article = ({article}) => {
+const Calendar = ({calendar}) => {
     const seo = {
-        metaTitle: article.attributes.name,
-        metaDescription: `${article.attributes.name}`,
+        metaTitle: calendar.attributes.name,
+        metaDescription: `${calendar.attributes.name}`,
     };
 
     return (
@@ -17,41 +17,41 @@ const Article = ({article}) => {
             <Seo seo={seo}/>
 
             <LayoutPageContent>
-                <article className={"md:col-span-8"}>
-                <ArticleCard item={article.attributes} id={article.id}/>
-                </article>
-                <article className="pt-6 md:pt-0 md:col-span-4 sm:mt-4">
-                    {article.attributes.people.data.map((person, i) => (
+                <calendar className={"md:col-span-8"}>
+                <CalendarCard item={calendar.attributes} id={calendar.id}/>
+                </calendar>
+                <calendar className="pt-6 md:pt-0 md:col-span-4 sm:mt-4">
+                    {calendar.attributes.people.data.map((person, i) => (
                         <PersonCardMini person={person.attributes} key={i}/>
                     ))}
-                </article>
+                </calendar>
 
             </LayoutPageContent>
         </Layout>
     );
 };
 
-export default Article;
+export default Calendar;
 
 export async function getStaticPaths() {
     return {
-        paths: await getSlugsForPath("articles"),
+        paths: await getSlugsForPath("calendar-items"),
         fallback: false,
     };
 }
 
 export async function getStaticProps({params}) {
-    const articles = await fetchAPI("/articles", {
+    const calendarItems = await fetchAPI("/calendar-items", {
         filters: {slug: params.slug},
         populate: {
-            articles: {populate: "*"},
+            calendarItems: {populate: "*"},
             people: {populate: "*"},
         },
     });
 
     return {
         props: {
-            article: articles.data[0],
+            calendar: calendarItems.data[0],
         },
         revalidate: 1,
     };

@@ -55,6 +55,12 @@
       ],
       "type": "media",
       "multiple": false
+    },
+    "calendars": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::calendar-item.calendar-item",
+      "mappedBy": "events"
     }
   }
 }

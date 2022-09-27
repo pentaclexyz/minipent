@@ -64,6 +64,12 @@
       "relation": "manyToMany",
       "target": "api::new.new",
       "inversedBy": "people"
+    },
+    "calendars": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::calendar-item.calendar-item",
+      "mappedBy": "people"
     }
   }
 }
