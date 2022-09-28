@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const isValidPath = (path) => {
-  return ["projects", "articles", "events", "developers", "events", "tags"].includes(path);
+  return ["projects", "planning", "contributors", "events", "news", "articles"].includes(path);
 };
 
 const AllowedLink = ({ children, group, slug }) => {
