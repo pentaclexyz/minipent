@@ -8,7 +8,8 @@ import {useEffect, useMemo, useState} from "react";
 import {IntroCard} from "../components/introCard";
 
 
-const API_ENDPOINTS = ["projects", "planning", "contributors", "events", "news", "articles"];
+// const API_ENDPOINTS = ["projects", "planning", "contributors", "events", "news", "articles"];
+const API_ENDPOINTS = ["contributors", "news", "articles"];
 
 const Index = ({homeFeatures, intros, search}) => {
     const seo = {

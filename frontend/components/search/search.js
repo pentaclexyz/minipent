@@ -176,14 +176,7 @@ export default function Search({initialValues}) {
       </div>
       <Combobox onChange={() => {
       }}>
-        <Combobox.Input
-          className={`search-input`}
-          type={"search"}
-          onFocus={handleFocus}
-          onChange={handleSubmit}
-          ref={ref}
-          style={{outline: "none"}}
-        />
+        <Combobox.Input className={`search-input`} type={"search"} onFocus={handleFocus} onChange={handleSubmit} ref={ref} style={{outline: "none"}}/>
         {focussed && (
           <Combobox.Options static className={`px-3 py-2 mt-0 search-input-option search-result-grid`}>
             {!!loading && !filteredResults.length && (
