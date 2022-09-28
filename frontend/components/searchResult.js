@@ -1,6 +1,5 @@
 import {useMemo} from "react";
 import {AllowedLink} from "./allowedLink";
-import ChainSearchResult from './search/chainSearchResult';
 
 function SearchResult({result, group, slug, price}) {
     const description = useMemo(
