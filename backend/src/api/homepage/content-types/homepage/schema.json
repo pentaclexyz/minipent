@@ -22,6 +22,11 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.home-intros"
+    },
+    "people": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::person.person"
     }
   }
 }

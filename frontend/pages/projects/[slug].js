@@ -31,7 +31,6 @@ export async function getStaticProps({params}) {
         populate: {
             coverImage: {populate: "*"},
             headings: {populate: "*"},
-            homeFeatures: {populate: "*"},
         },
     });
 

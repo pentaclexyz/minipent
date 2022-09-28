@@ -49,9 +49,9 @@ const Nav = () => {
                 </div>
               </div>
 
-              <div>
-                <ConnectButton label={"connect wallet"} showBalance={false}/>
-              </div>
+              {/*<div>*/}
+                {/*<ConnectButton label={"connect wallet"} showBalance={false}/>*/}
+              {/*</div>*/}
 
 
               <div className="flex lg:hidden">

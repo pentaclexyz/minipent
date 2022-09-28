@@ -10,7 +10,7 @@ import {getStrapiMedia} from "../lib/media";
 import {IntroCard} from "../components/introCard";
 
 
-const API_ENDPOINTS = ["tags", "projects", "articles", "news"];
+const API_ENDPOINTS = ["projects", "planning", "contributors", "events", "news", "articles"];
 
 const Index = ({homeFeatures, intros, search}) => {
     const seo = {
@@ -50,12 +50,8 @@ const Index = ({homeFeatures, intros, search}) => {
     return (
         <Layout>
             <Seo seo={seo}/>
-
             <Search initialValues={search}/>
-
-            {intros.map((intro, i) => (
-                <IntroCard intro={intro} key={i}/>
-            ))}
+            {intros.map((intro, i) => (<IntroCard intro={intro} key={i}/>))}
 
             <article className="mt-6 grid grid-cols-1 gap-4 md:gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {homeFeatures.map((homeFeature) => (
