@@ -11,7 +11,7 @@ import scrollParentToChild from "../../lib/scroll-parent-to-child";
 import {AllowedLink} from "../allowedLink";
 import {SearchIcon} from "@heroicons/react/outline";
 
-const API_ENDPOINTS = ["projects", "planning", "contributors", "events", "news", "articles"];
+const API_ENDPOINTS = ["contributors", "news", "articles"];
 
 export default function Search({initialValues}) {
   const [focussed, setFocussed] = useState(false);
@@ -59,7 +59,6 @@ export default function Search({initialValues}) {
       const apiPromises = API_ENDPOINTS.map((name) =>
         fetchAPI(`/${name}`, getSearchFilterProps(name, ""))
           .catch(() => ({data: [], name}))
-          // add category name for display purposes
           .then((res) => ({...res, name}))
       );
 
@@ -83,7 +82,6 @@ export default function Search({initialValues}) {
       const filteredApiPromises = API_ENDPOINTS.map((name, i) =>
         fetchAPI(`/${name}`, getSearchFilterProps(name, search))
           .catch(() => ({data: [], name}))
-          // add category name for display purposes
           .then((res) => ({...res, name}))
       );
 
@@ -178,14 +176,7 @@ export default function Search({initialValues}) {
       </div>
       <Combobox onChange={() => {
       }}>
-        <Combobox.Input
-          className={`search-input`}
-          type={"search"}
-          onFocus={handleFocus}
-          onChange={handleSubmit}
-          ref={ref}
-          style={{outline: "none"}}
-        />
+        <Combobox.Input className={`search-input`} type={"search"} onFocus={handleFocus} onChange={handleSubmit} ref={ref} style={{outline: "none"}}/>
         {focussed && (
           <Combobox.Options static className={`px-3 py-2 mt-0 search-input-option search-result-grid`}>
             {!!loading && !filteredResults.length && (
@@ -198,7 +189,6 @@ export default function Search({initialValues}) {
             {filteredResults.map((group, i) => (
               <div className="contents" key={i}>
                 <div className="col-span-12">
-                  {/*{i !== 0 && <hr className="my-3"/>}*/}
                   <h4 id={`header-${group.name}`} className="px-1 search-group-header">{group.name}</h4>
                 </div>
                 {group.data.map((result) => (

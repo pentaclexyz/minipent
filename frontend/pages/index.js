@@ -1,16 +1,15 @@
 import Link from "next/link";
-import ReactMarkdown from "react-markdown";
 import Layout from "../components/layout";
 import Search from "../components/search/search";
 import Seo from "../components/seo";
 import {fetchAPI, getSearchFilterProps} from "../lib/api";
 import {useFavorites} from "../contexts/FavoriteContext";
 import {useEffect, useMemo, useState} from "react";
-import {getStrapiMedia} from "../lib/media";
 import {IntroCard} from "../components/introCard";
 
 
-const API_ENDPOINTS = ["projects", "planning", "contributors", "events", "news", "articles"];
+// const API_ENDPOINTS = ["projects", "planning", "contributors", "events", "news", "articles"];
+const API_ENDPOINTS = ["contributors", "news", "articles"];
 
 const Index = ({homeFeatures, intros, search}) => {
     const seo = {
