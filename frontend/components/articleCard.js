@@ -1,6 +1,5 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 import BackLink from "./backLink";
 
 const ArticleCard = ({item, ...props}) => {
@@ -8,7 +7,7 @@ const ArticleCard = ({item, ...props}) => {
         <div {...props}>
             <BackLink link={"/articles"} title={"Articles"}/>
             <h1>{item.name}</h1>
-            <div className={"editorial"}><ReactMarkdown>{item.description}</ReactMarkdown></div>
+            <div className={"editorial mb-4 "}><ReactMarkdown>{item.description}</ReactMarkdown></div>
             <div className={"editorial"}><ReactMarkdown>{item.content}</ReactMarkdown></div>
         </div>
     );
