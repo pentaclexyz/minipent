@@ -8,9 +8,8 @@ const ArticleCard = ({item, ...props}) => {
         <div {...props}>
             <BackLink link={"/articles"} title={"Articles"}/>
             <h1>{item.name}</h1>
-            <div className={"editorial"}>
-                <ReactMarkdown>{item.content}</ReactMarkdown>
-            </div>
+            <div className={"editorial"}><ReactMarkdown>{item.description}</ReactMarkdown></div>
+            <div className={"editorial"}><ReactMarkdown>{item.content}</ReactMarkdown></div>
         </div>
     );
 };
