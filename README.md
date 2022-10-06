@@ -10,6 +10,15 @@ set up an account at railway.app
 ### backend
 
 create a strapi starter (will install a strapi back-end and postgresql db)
+new project > type strapi to select and deploy template
+
+you will need to create some variables
+for JWT secret, app keys and api token salt use generate.js to generate random strings
+you will need to set up a cloudinary account for image hosting for now until we sort out local image storage (soon)
+
+
+
+
 
 push your minipent fork
 
