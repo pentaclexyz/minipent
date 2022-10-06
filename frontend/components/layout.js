@@ -1,6 +1,5 @@
 import Nav from "./nav";
 import Footer from "./footer";
-import Message from "./message";
 
 const Layout = ({children}) => {
   return (

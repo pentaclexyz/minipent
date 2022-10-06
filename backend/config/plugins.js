@@ -6,6 +6,11 @@ module.exports = ({ env }) => ({
     },
     upload: {
       config: {
+        // providerOptions: {
+        //   localServer: {
+        //     maxage: 300000
+        //   },
+        // },
         provider: 'cloudinary',
         providerOptions: {
           cloud_name: env('CLOUDINARY_NAME'),
