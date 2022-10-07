@@ -8,8 +8,8 @@ export default function Events({ events }) {
     <Layout>
       <h1>Events</h1>
         <div className="grid gap-4 grid-cols-3 md:grid-cols-6 lg:grid-cols-12">
-            {events.map((event, i) => (
-                <EventCardMini event={event.attributes} key={i} />
+            {events.map((item, i) => (
+                <EventCardMini item={item.attributes} key={i} />
             ))}
         </div>
     </Layout>
