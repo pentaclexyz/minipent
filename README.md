@@ -32,9 +32,8 @@ change the permissions to find and findOne for each api endpoint in:
 settings > users and permissions plugin > roles > public
 
 create at least one record in all the strapi collection and single types 
-(eg homepage, global, events, projects etc) or the frontend build will fail
-
-you'll need to redeploy back and frontend to create the routes for any new pages you add
+(eg homepage, projectpage, contributorpage, global; as well as events, projects etc) or the frontend build will fail (see next step)
+and make sure they all have slugs
 
 in project root:
 
@@ -42,16 +41,24 @@ in project root:
 `$ railway up` deploys backend
 
 
-
-
 ### frontend
 
 set up a separate app on railway for the ui
 
 set the base directory in settings to `frontend`
+yourapp > settings > service > general > root directory
 
 in project root:
 
 `$ railway link` [select frontend]
 `$ railway up` deploys frontend
+
+when you create a new page, you must deploy the back and frontend to create the static page
+
+
+### database
+
+take cut of a db (in this case minipent)
+
+
 
