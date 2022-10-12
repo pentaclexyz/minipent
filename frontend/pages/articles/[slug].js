@@ -20,14 +20,14 @@ const Article = ({article}) => {
                         <ReactMarkdown>{article.attributes.content}</ReactMarkdown>
                     </div>
                 </div>
-                <article className={"rounded-2xl bg-white/10 p-8 col-span-4"}>
-                    {article.attributes.people.data.map((person, i) => (
-                        <div key={i}>by @<a href={`https://twitter.com/${person.attributes.twitter}`} target={"_blank"}
-                                            rel="noopener noreferrer">{person.attributes.twitter}</a>
-                            <p>{person.attributes.bio}</p>
-                        </div>
-                    ))}
-                </article>
+                {/*<article className={"rounded-2xl bg-white/10 p-8 col-span-4"}>*/}
+                {/*    {article.attributes.people.data.map((person, i) => (*/}
+                {/*        <div key={i}>by @<a href={`https://twitter.com/${person.attributes.twitter}`} target={"_blank"}*/}
+                {/*                            rel="noopener noreferrer">{person.attributes.twitter}</a>*/}
+                {/*            <p>{person.attributes.bio}</p>*/}
+                {/*        </div>*/}
+                {/*    ))}*/}
+                {/*</article>*/}
             </section>
         </Layout>
     );
@@ -47,7 +47,7 @@ export async function getStaticProps({params}) {
         filters: {slug: params.slug},
         populate: {
             articles: {populate: "*"},
-            people: {populate: "*"},
+            // people: {populate: "*"},
         },
     });
 
