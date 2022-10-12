@@ -1,3 +1,5 @@
+*** this is out of date and being replaced w/c 12 oct
+
 # minipent
 
 
