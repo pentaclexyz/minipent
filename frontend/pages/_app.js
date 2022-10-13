@@ -8,7 +8,7 @@ import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 
 import "../styles/globals.css";
-import Styles from "`${process.env.REACT_APP_THEME}`";
+// import Styles from "`${process.env.REACT_APP_THEME}`";
 import GlobalContext from "../contexts/GlobalContext";
 import { fetchAPI } from "../lib/api";
 import { CoingeckoProvider } from "../contexts/CoingeckoContext";
@@ -50,7 +50,7 @@ const MyApp = ({ Component, pageProps }) => {
     <Providers>
       <Head>
         <link rel="shortcut icon" href={getStrapiMedia(global?.attributes?.favicon)}/>
-        <link rel="stylesheet" href={Styles}/>
+        {/*<link rel="stylesheet" href={Styles}/>*/}
       </Head>
       <CoingeckoProvider>
         <GlobalContext.Provider value={global?.attributes}>
