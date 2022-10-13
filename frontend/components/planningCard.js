@@ -15,11 +15,11 @@ export default function PlanningCard({planning}) {
                 <TasksCard tasks={planning.tasks} />
             </article>
 
-            {/*<article className="pt-6 md:col-span-2">*/}
-            {/*    {planning.people.data.map((person, i) => (*/}
-            {/*        <PersonCardMini person={person.attributes} key={i}/>*/}
-            {/*    ))}*/}
-            {/*</article>*/}
+            <article className="pt-6 md:col-span-2">
+                {planning.people.data.map((person, i) => (
+                    <PersonCardMini person={person.attributes} key={i}/>
+                ))}
+            </article>
 
         </section>
     );

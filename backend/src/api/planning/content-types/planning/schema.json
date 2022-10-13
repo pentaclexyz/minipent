@@ -35,12 +35,6 @@
     },
     "description": {
       "type": "string"
-    },
-    "calendars": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::calendar-item.calendar-item",
-      "mappedBy": "plannings"
     }
   }
 }
