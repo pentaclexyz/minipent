@@ -31,7 +31,7 @@ export async function getStaticProps({params}) {
         filters: {slug: params.slug},
         populate: {
             plannings: {populate: "*"},
-            // people: {populate: "*"},
+            people: {populate: "*"},
             tasks: {populate: "*"},
         },
     });

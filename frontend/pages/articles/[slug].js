@@ -20,11 +20,11 @@ const Article = ({article}) => {
                 <article className={"md:col-span-8"}>
                 <ArticleCard item={article.attributes} id={article.id}/>
                 </article>
-                {/*<article className="pt-6 md:pt-0 md:col-span-4 sm:mt-4">*/}
-                {/*    {article.attributes.people.data.map((person, i) => (*/}
-                {/*        <PersonCardMini person={person.attributes} key={i}/>*/}
-                {/*    ))}*/}
-                {/*</article>*/}
+                <article className="pt-6 md:pt-0 md:col-span-4 sm:mt-4">
+                    {article.attributes.people.data.map((person, i) => (
+                        <PersonCardMini person={person.attributes} key={i}/>
+                    ))}
+                </article>
 
             </LayoutPageContent>
         </Layout>
@@ -45,7 +45,7 @@ export async function getStaticProps({params}) {
         filters: {slug: params.slug},
         populate: {
             articles: {populate: "*"},
-            // people: {populate: "*"},
+            people: {populate: "*"},
         },
     });
 
