@@ -16,6 +16,7 @@
     "@strapi/provider-upload-cloudinary": "4.1.9",
     "@strapi/provider-upload-local": "^4.4.3",
     "@strapi/strapi": "4.1.9",
+    "date-fns": "^2.29.3",
     "ethers": "^5.6.9",
     "pg": "8.7.3"
   },
