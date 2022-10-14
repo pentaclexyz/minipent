@@ -8,6 +8,7 @@ import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 
 import "../styles/globals.css";
+// import Styles from "`${process.env.REACT_APP_THEME}`";
 import GlobalContext from "../contexts/GlobalContext";
 import { fetchAPI } from "../lib/api";
 import { CoingeckoProvider } from "../contexts/CoingeckoContext";
@@ -34,18 +35,9 @@ const wagmiClient = createClient({
 
 const Providers = ({ children }) => {
   return (
-    <WagmiConfig
-      client={wagmiClient}
-    >
+    <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider
-        theme={darkTheme({
-          accentColor: '#7b3fe4',
-          accentColorForeground: 'white',
-          borderRadius: 'large',
-          fontStack: 'system',
-        })}
-        chains={chains}
-      >
+        theme={darkTheme({accentColor: '#7b3fe4', accentColorForeground: 'white', borderRadius: 'large', fontStack: 'system',})} chains={chains}>
         {children}
       </RainbowKitProvider>
     </WagmiConfig>
@@ -57,10 +49,8 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <Providers>
       <Head>
-        {/*<link*/}
-        {/*  rel="shortcut icon"*/}
-        {/*  href={getStrapiMedia(global?.attributes?.favicon)}*/}
-        {/*/>*/}
+        <link rel="shortcut icon" href={getStrapiMedia(global?.attributes?.favicon)}/>
+        {/*<link rel="stylesheet" href={Styles}/>*/}
       </Head>
       <CoingeckoProvider>
         <GlobalContext.Provider value={global?.attributes}>
@@ -80,12 +70,8 @@ MyApp.getInitialProps = async (ctx) => {
   const globalRes = await fetchAPI("/global", {
     populate: {
       // favicon: "*",
-      defaultSeo: {
-        populate: "*",
-      },
-      defaultNav: {
-        populate: "*",
-      },
+      defaultSeo: {populate: "*",},
+      defaultNav: {populate: "*",},
     },
   });
   // Pass the data to our page via props
