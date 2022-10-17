@@ -8,8 +8,8 @@ import {getStrapiMedia} from "../lib/media";
 
 const Nav = () => {
   const {defaultNav} = useContext(GlobalContext) || {defaultNav: []};
-  const {logo} = useContext(GlobalContext) || {logo: []};
-  const {brand} = useContext(GlobalContext) || {brand: []};
+  const {logo} = useContext(GlobalContext) || {};
+  const {icon} = useContext(GlobalContext) || {};
   const router = useRouter();
 
   const slugFromPath = useMemo(() => {
@@ -24,8 +24,8 @@ const Nav = () => {
           <div className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="flex justify-between items-center h-16">
               <div className="flex-shrink-0">
-                <Link href={"/"}><a><img className="block w-auto h-10 md:hidden" src={getStrapiMedia(brand.icon)}/></a></Link>
-                <Link href={"/"}><a><img className="hidden w-auto h-10 md:block" src={getStrapiMedia(brand.logo)}/></a></Link>
+                <Link href={"/"}><a><img className="block w-auto h-10 md:hidden" src={getStrapiMedia(icon)}/></a></Link>
+                <Link href={"/"}><a><img className="hidden w-auto h-10 md:block" src={getStrapiMedia(logo)}/></a></Link>
               </div>
 
               <div className={"hidden lg:block flex items-center justify-between"}>

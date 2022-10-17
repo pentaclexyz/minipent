@@ -1,23 +1,16 @@
-import "@rainbow-me/rainbowkit/styles.css";
+import React, {useContext} from "react";
+import GlobalContext from "../contexts/GlobalContext";
 import App from "next/app";
 import Head from "next/head";
 import {QueryClientProvider, QueryClient} from "react-query";
-import { createContext } from "react";
-
-import "../styles/globals.css";
-// import Styles from "`${process.env.REACT_APP_THEME}`";
-import GlobalContext from "../contexts/GlobalContext";
 import {fetchAPI} from "../lib/api";
 import {getStrapiMedia} from "../lib/media";
-
+import "../styles/globals.css";
 
 const queryClient = new QueryClient();
 
 const Providers = ({children}) => {
-    return (<>
-            {children}
-        </>
-    );
+    return (<>{children}</>);
 };
 const MyApp = ({Component, pageProps}) => {
     const {global} = pageProps;
@@ -25,7 +18,7 @@ const MyApp = ({Component, pageProps}) => {
     return (
         <Providers>
             <Head>
-                <link rel="shortcut icon" href={getStrapiMedia(global.attributes.favicon)}/>
+                <link rel="shortcut icon" type="image/x-icon" href={getStrapiMedia(global.attributes.favicon)}/>
             </Head>
             <GlobalContext.Provider value={global.attributes}>
                 <QueryClientProvider client={queryClient}>
@@ -42,9 +35,10 @@ MyApp.getInitialProps = async (ctx) => {
         populate: {
             defaultSeo: {populate: "*",},
             defaultNav: {populate: "*",},
-            brand: {populate: "*",},
-            logo: {populate: "*",},
-        },
+            icon: "*",
+            favicon: "*",
+            logo: "*",
+            styles: "*"},
     });
     // Pass the data to our page via props
     return {...appProps, pageProps: {global: globalRes.data}};
