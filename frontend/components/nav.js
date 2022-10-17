@@ -4,10 +4,12 @@ import {MenuIcon, XIcon} from "@heroicons/react/outline";
 import Link from "next/link";
 import GlobalContext from "../contexts/GlobalContext";
 import {useRouter} from "next/router";
-import {ConnectButton} from "@rainbow-me/rainbowkit";
+import {getStrapiMedia} from "../lib/media";
 
 const Nav = () => {
   const {defaultNav} = useContext(GlobalContext) || {defaultNav: []};
+  const {logo} = useContext(GlobalContext) || {logo: []};
+  const {brand} = useContext(GlobalContext) || {brand: []};
   const router = useRouter();
 
   const slugFromPath = useMemo(() => {
@@ -20,16 +22,10 @@ const Nav = () => {
       {({open}) => (
         <>
           <div className="mx-auto max-w-7xl px-4 lg:px-8">
-
             <div className="flex justify-between items-center h-16">
-
               <div className="flex-shrink-0">
-                <Link href={"/"}>
-                  <a><img className="block w-auto h-10 md:hidden" src="/minipent-icon.svg" alt="{sitename}"/></a>
-                </Link>
-                <Link href={"/"}>
-                  <a><img className="hidden w-auto h-10 md:block" src="/minipent-logo.svg" alt="{sitename}"/></a>
-                </Link>
+                <Link href={"/"}><a><img className="block w-auto h-10 md:hidden" src={getStrapiMedia(brand.icon)}/></a></Link>
+                <Link href={"/"}><a><img className="hidden w-auto h-10 md:block" src={getStrapiMedia(brand.logo)}/></a></Link>
               </div>
 
               <div className={"hidden lg:block flex items-center justify-between"}>
@@ -49,18 +45,10 @@ const Nav = () => {
                 </div>
               </div>
 
-              {/*<div>*/}
-                {/*<ConnectButton label={"connect wallet"} showBalance={false}/>*/}
-              {/*</div>*/}
-
-
               <div className="flex lg:hidden">
                 <Disclosure.Button
                   className="inline-flex justify-center items-center p-2 text-gray-400 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                  <span className="sr-only">Open main menu</span>
-                  {open ? (
-                    <XIcon className="block w-6 h-6" aria-hidden="true"/>
-                  ) : (
+                  <span className="sr-only">Open main menu</span>{open ? (<XIcon className="block w-6 h-6" aria-hidden="true"/>) : (
                     <MenuIcon className="block w-6 h-6" aria-hidden="true"/>
                   )}
                 </Disclosure.Button>
@@ -79,6 +67,7 @@ const Nav = () => {
               );
             })}
           </Disclosure.Panel>
+
         </>
       )}
     </Disclosure>

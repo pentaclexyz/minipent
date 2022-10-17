@@ -16,35 +16,35 @@ const Index = ({homeFeatures, intros, search}) => {
         metaTitle: "home",
     };
 
-    const {faves, addFave, removeFave} = useFavorites();
+    // const {faves, addFave, removeFave} = useFavorites();
     const [limit, setLimit] = useState(8);
     const [resolvedFaves, setResolvedFaves] = useState([]);
-    const shownFaves = useMemo(
-        () => resolvedFaves.slice(0, limit),
-        [resolvedFaves, limit]
-    );
+    // const shownFaves = useMemo(
+    //     () => resolvedFaves.slice(0, limit),
+    //     [resolvedFaves, limit]
+    // );
 
-    useEffect(() => {
-        (async () => {
-            const projectIds = Object.entries(faves)
-                .filter(([key, value]) => key.includes("project:"))
-                .map(([key]) => key.split(":")[1]);
-
-            if (projectIds.length) {
-                const results = (
-                    await Promise.allSettled(
-                        projectIds.map((id) =>
-                            fetchAPI(`/projects/${id}`, {populate: "*"})
-                        )
-                    )
-                )
-                    .filter((r) => r.status === "fulfilled")
-                    .map((r) => ({...r.value.data.attributes, id: r.value.data.id, key: r.value.data.id}));
-
-                setResolvedFaves(results);
-            }
-        })();
-    }, [faves]);
+    // useEffect(() => {
+    //     (async () => {
+    //         const projectIds = Object.entries(faves)
+    //             .filter(([key, value]) => key.includes("project:"))
+    //             .map(([key]) => key.split(":")[1]);
+    //
+    //         if (projectIds.length) {
+    //             const results = (
+    //                 await Promise.allSettled(
+    //                     projectIds.map((id) =>
+    //                         fetchAPI(`/projects/${id}`, {populate: "*"})
+    //                     )
+    //                 )
+    //             )
+    //                 .filter((r) => r.status === "fulfilled")
+    //                 .map((r) => ({...r.value.data.attributes, id: r.value.data.id, key: r.value.data.id}));
+    //
+    //             setResolvedFaves(results);
+    //         }
+    //     })();
+    // }, [faves]);
 
     return (
         <Layout>
@@ -58,9 +58,7 @@ const Index = ({homeFeatures, intros, search}) => {
                         <article id={`homeFeature-card-${homeFeature.id}`}
                                  className="rounded-2xl bg-white/5 cursor-pointer hover:border-p-green-400 p-10 hover:bg-white/10 internal-link">
                             <h2 className="pt-0">{homeFeature.header}</h2>
-                            <p className="text-sm">
-                                {homeFeature.text}
-                            </p>
+                            <p className="text-sm">{homeFeature.text}</p>
                         </article>
                     </Link>
                 ))}

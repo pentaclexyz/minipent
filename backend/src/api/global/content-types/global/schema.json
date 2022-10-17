@@ -28,6 +28,12 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.nav"
+    },
+    "brand": {
+      "displayName": "brand",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.brand"
     }
   }
 }
