@@ -8,7 +8,7 @@ export function EventCardMini({item}) {
 
     return (
         <event className={"col-span-4"}>
-            <div className="flex flex-col px-6 pt-6 pb-3 rounded-2xl bg-white/5 cursor-pointer hover:bg-white/10">
+            <div className="flex flex-col p-card-inner">
 
                 <div className="flex flex-col gap-3 mt-auto">
                     <Link href={{pathname: `/events/${item.slug}`}}>

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-        <footer className={"flex justify-between mx-auto max-w-7xl p-8 text-sm"}>
+        <footer className={"flex justify-between mx-auto max-w-7xl px-8 py-20 text-sm"}>
             <div className={"flex gap-4 "}>
                 <Link href={"/"}>© Pentacle 2022</Link>
                 <Link href={"/terms"}>Terms</Link>

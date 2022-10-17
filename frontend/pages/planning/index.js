@@ -7,7 +7,7 @@ export default function Planning({planning}) {
     return (
         <Layout>
             <h1>Planning</h1>
-            <div className="grid gap-4 grid-cols-3 md:grid-cols-6 lg:grid-cols-12">
+            <div className="grid md:gap-y-12 md:gap-x-8 grid-cols-3 md:grid-cols-6 lg:grid-cols-12">
                 {planning.map((item, i) => (
                     <PlanningCardMini item={item.attributes} key={i} />
                 ))}

@@ -36,7 +36,7 @@ const Nav = () => {
                         <li key={item.id}>
                           <Link href={`/${item.link}`} className={`${router.asPath}`}>
                             <a id={router.pathname}
-                               className={`link px-2 py-1.5 text-sm hover:txt-primary ${slugFromPath === item.navTitle && 'bg-white/20 rounded-md'}`}>{item.navTitle}</a>
+                               className={`p-card-inner text-sm hover:underline ${slugFromPath === item.navTitle && ''}`}>{item.navTitle}</a>
                           </Link>
                         </li>
                       );
