@@ -9,11 +9,10 @@ function removeTrailingSlash(str = '') {
 export function ProjectCardMini({item}) {
 
     return (
-        <article
-            className="flex flex-col justify-between col-span-4 gap-2 px-6 pt-6 pb-6 rounded-2xl bg-white/5 cursor-pointer hover:bg-white/10">
+        <article className="flex flex-col justify-start col-span-4 gap-2 p-card-inner rounded-2xl">
 
             <Link href={{pathname: `/projects/${item.slug}`}}>
-                <h2 className={"cursor-pointer txt-secondary fave-link py-0"}>{item.name}</h2>
+                <h2 className={"cursor-pointer hover:underline"}>{item.name}</h2>
             </Link>
             <div className={"text-sm line-clamp-3"}>{item.description}</div>
             <div>

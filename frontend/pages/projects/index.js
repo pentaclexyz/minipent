@@ -10,7 +10,7 @@ export default function ProjectOverview({intros, projects}) {
         {intros.map((intro, i) => (
             <IntroCard intro={intro} key={i}/>
         ))}
-      <div className="grid gap-4 grid-cols-4 md:grid-cols-8 lg:grid-cols-12">
+      <div className="grid gap-16 grid-cols-4 md:grid-cols-8 lg:grid-cols-12">
         {projects.data.map((project, i) => (
             <ProjectCardMini item={project.attributes} key={i} />
         ))}

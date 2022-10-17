@@ -2,7 +2,6 @@
 @import url(./fonts.css);
 @import url(./editorial.css);
 @import url(./table.css);
-/*@import url(../public/styles/opyn.css);*/
 
 
 :root, html[data-theme="root"] {
@@ -29,6 +28,8 @@
   --txt-secondary: #ffcc77;
   --txt-inverted: #05121B;
   --black: #05121B;
+  --card-inner: 0;
+  --gap-sm: 8;
   /*--logo: url('');*/
   /*--icon: url('')*/
 }
@@ -62,11 +63,6 @@ html[data-theme="pink"] {
   --txt-hover: #05121B;
   --txt-inverted: #ffffff;
 }
-
-
-
-
-
 
 @tailwind base;
 @tailwind components;

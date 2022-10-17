@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      padding: {
+        "card-inner": "var(--card-inner)",
+      },
       fontSize: {
         xs: '0.688rem',
         sm: '0.813rem',
