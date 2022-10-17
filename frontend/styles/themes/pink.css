@@ -1,0 +1,26 @@
+{
+  --primary: #ffcde5;
+  --primary-dark: #e82c86;
+  --border-primary: #ffcde5;
+  --border-secondary: #e82c86;
+  --border-tertiary: #ffffff;
+  --p-bg: #ffcde5;
+  /*--p-bg: linear-gradient(162deg, #ffcde5, #ffc3c3, #ffcde5);*/
+  --bg-01: #ffcde5;
+  --bg-02: #ffc3c3;
+  --bg-03: #ffcde5;
+  --bg-card: #ffffff;
+  --bg-card-hover: rgba(255, 255, 255, .7);
+  --bg-card-secondary: #ffcde5;
+  --bg-card-secondary-hover: #f1f1f1;
+  --bg-form: #cccccc;
+  --bg-input: #ffffff;
+  --bg-search: #ffffff;
+  --secondary: #02E0B9;
+  --tertiary: #4e3689;
+  --black: #05121B;
+  --txt-primary: #05121B;
+  --txt-hover: #05121B;
+  --txt-inverted: #ffffff;
+  --logo: url('../../public/pentacle-logo-dark.svg');
+}

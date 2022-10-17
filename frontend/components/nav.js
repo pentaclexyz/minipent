@@ -18,7 +18,7 @@ const Nav = () => {
   }, [router.asPath]);
 
   return (
-    <Disclosure as="nav" className="color-black sm:pt-1 pt-4">
+    <Disclosure as="nav" className="black sm:pt-1 pt-4">
       {({open}) => (
         <>
           <div className="mx-auto max-w-7xl px-4 lg:px-8">
@@ -36,7 +36,7 @@ const Nav = () => {
                         <li key={item.id}>
                           <Link href={`/${item.link}`} className={`${router.asPath}`}>
                             <a id={router.pathname}
-                               className={`link px-2 py-1.5 text-sm hover:text-color-primary-700 ${slugFromPath === item.navTitle && 'bg-white/20 rounded-md'}`}>{item.navTitle}</a>
+                               className={`link px-2 py-1.5 text-sm hover:txt-primary ${slugFromPath === item.navTitle && 'bg-white/20 rounded-md'}`}>{item.navTitle}</a>
                           </Link>
                         </li>
                       );

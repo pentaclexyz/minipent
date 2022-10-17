@@ -19,6 +19,7 @@ const MyApp = ({Component, pageProps}) => {
         <Providers>
             <Head>
                 <link rel="shortcut icon" type="image/x-icon" href={getStrapiMedia(global.attributes.favicon)}/>
+                <link rel="stylesheet" href={global.attributes.styles}/>
             </Head>
             <GlobalContext.Provider value={global.attributes}>
                 <QueryClientProvider client={queryClient}>

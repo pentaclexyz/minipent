@@ -20,7 +20,7 @@ const Tag = ({tag}) => {
 
       <article className={"md:flex md:justify-between mb-4"}>
         <h1><Link href={"/tags"} passHref><span
-          className={"hover:text-color-primary-700 cursor-pointer"}>tags</span></Link> / {tag.attributes.name}</h1>
+          className={"hover:txt-primary cursor-pointer"}>tags</span></Link> / {tag.attributes.name}</h1>
         <p className={"mt-4 text-sm"}>{tag.attributes.description}</p>
       </article>
 

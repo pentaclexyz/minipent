@@ -170,7 +170,7 @@ export default function Search({initialValues}) {
 
 
   return (
-    <div className={`search-input-container relative ${focussed ? "border-2 border-color-tertiary-700" : ""}`}>
+    <div className={`search-input-container relative ${focussed ? "border-2 border-tertiary" : ""}`}>
       <div className="absolute left-4 top-4">
         <SearchIcon width={20}/>
       </div>
@@ -204,7 +204,7 @@ export default function Search({initialValues}) {
                   group.meta.pagination.pageSize && (
                     <div className="flex col-span-12 w-full">
                       <AllowedLink group={group.name} slug={""}>
-                        <span className="inline-block mx-3 ml-auto text-xs cursor-pointer hover:text-color-primary-700">... and{" "}
+                        <span className="inline-block mx-3 ml-auto text-xs cursor-pointer hover:txt-primary">... and{" "}
                           {group.meta.pagination.total -
                             group.meta.pagination.pageSize}{" "}
                           more

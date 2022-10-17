@@ -12,7 +12,7 @@ export function EventCardMini({item}) {
 
                 <div className="flex flex-col gap-3 mt-auto">
                     <Link href={{pathname: `/events/${item.slug}`}}>
-                        <h2 className={"cursor-pointer text-color-secondary-700 fave-link py-0"}>{item.name}</h2>
+                        <h2 className={"cursor-pointer txt-secondary fave-link py-0"}>{item.name}</h2>
                     </Link>
 
                     <p className={"text-sm"}>{item.start} - {item.end}</p>
@@ -20,7 +20,7 @@ export function EventCardMini({item}) {
                     <div>
                         <a href={item.url} rel="nofollow noreferrer noopener" target={"_blank"}
                            className={"line-clamp-2"}>
-                            <p className={"text-sm cursor-pointer hover:text-color-secondary-700 line-clamp-1 external-link"}>
+                            <p className={"text-sm cursor-pointer hover:txt-secondary line-clamp-1 external-link"}>
                                 {removeTrailingSlash(item.url?.split("//")[1])}
                             </p>
                         </a>
@@ -28,7 +28,7 @@ export function EventCardMini({item}) {
                             <a href={`https://www.twitter.com/${item.twitter}`} rel="nofollow noreferrer noopener"
                                target={"_blank"}
                                className={"line-clamp-2"}>
-                                <p className={"text-sm cursor-pointer hover:text-color-secondary-700 line-clamp-1 external-link"}>
+                                <p className={"text-sm cursor-pointer hover:txt-secondary line-clamp-1 external-link"}>
                                     @{item.twitter}
                                 </p>
                             </a>)}
