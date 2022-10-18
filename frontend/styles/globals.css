@@ -4,7 +4,7 @@
 @import url(./table.css);
 
 
-:root, html[data-theme="root"] {
+:root, html[data-theme="light"] {
   --primary: #00e0b9;
   --primary-dark: #00e0b9;
   --border-primary: #ffcde5;

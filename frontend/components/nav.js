@@ -23,6 +23,7 @@ const Nav = () => {
         <>
           <div className="mx-auto max-w-7xl px-4 lg:px-8">
             <div className="flex justify-between items-center h-16">
+
               <div className="flex-shrink-0">
                 <Link href={"/"}><a><img className="block w-auto h-10 md:hidden" src={getStrapiMedia(icon)}/></a></Link>
                 <Link href={"/"}><a><img className="hidden w-auto h-10 md:block" src={getStrapiMedia(logo)}/></a></Link>
@@ -50,6 +51,14 @@ const Nav = () => {
                     <MenuIcon className="block w-6 h-6" aria-hidden="true"/>
                   )}
                 </Disclosure.Button>
+              </div>
+
+              <div>
+                <select data-choose-theme className={"text-sm p-1 border border-border-tertiary"}>
+                    <option value="root">White</option>
+                    <option value="pink">Pink</option>
+                    {/*<option value="dark">Dark</option>*/}
+                </select>
               </div>
             </div>
 
