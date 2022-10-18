@@ -5,12 +5,10 @@ function SearchResult({result, group, slug, price}) {
     const description = useMemo(
         () =>
             result?.attributes?.description && (
-                <>
-                    <div className="my-2 text-s line-clamp-2">
-                        {result?.attributes?.description?.slice(0, 100)}
-                        {result?.attributes?.description?.length > 100 && "..."}
-                    </div>
-                </>
+                <div className="my-2 text-s line-clamp-2">
+                    {result?.attributes?.description?.slice(0, 100)}
+                    {result?.attributes?.description?.length > 100 && "..."}
+                </div>
             ),
         [result?.attributes?.description]
     );
@@ -28,7 +26,7 @@ function SearchResult({result, group, slug, price}) {
         <AllowedLink group={group} slug={slug}>
             <div className="search-result internal-link">
                 <h4>{shortenedTitle}</h4>
-                <p>{description}</p>
+                <div>{description}</div>
             </div>
         </AllowedLink>
     );

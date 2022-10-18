@@ -1,10 +1,8 @@
+import {fetchAPI, getSearchFilterProps} from "../lib/api";
 import Link from "next/link";
 import Layout from "../components/layout";
 import Search from "../components/search/search";
 import Seo from "../components/seo";
-import {fetchAPI, getSearchFilterProps} from "../lib/api";
-import {useFavorites} from "../contexts/FavoriteContext";
-import {useEffect, useMemo, useState} from "react";
 import {IntroCard} from "../components/introCard";
 
 
@@ -12,39 +10,7 @@ import {IntroCard} from "../components/introCard";
 const API_ENDPOINTS = ["contributors", "news", "articles"];
 
 const Index = ({homeFeatures, intros, search}) => {
-    const seo = {
-        metaTitle: "home",
-    };
-
-    // const {faves, addFave, removeFave} = useFavorites();
-    const [limit, setLimit] = useState(8);
-    const [resolvedFaves, setResolvedFaves] = useState([]);
-    // const shownFaves = useMemo(
-    //     () => resolvedFaves.slice(0, limit),
-    //     [resolvedFaves, limit]
-    // );
-
-    // useEffect(() => {
-    //     (async () => {
-    //         const projectIds = Object.entries(faves)
-    //             .filter(([key, value]) => key.includes("project:"))
-    //             .map(([key]) => key.split(":")[1]);
-    //
-    //         if (projectIds.length) {
-    //             const results = (
-    //                 await Promise.allSettled(
-    //                     projectIds.map((id) =>
-    //                         fetchAPI(`/projects/${id}`, {populate: "*"})
-    //                     )
-    //                 )
-    //             )
-    //                 .filter((r) => r.status === "fulfilled")
-    //                 .map((r) => ({...r.value.data.attributes, id: r.value.data.id, key: r.value.data.id}));
-    //
-    //             setResolvedFaves(results);
-    //         }
-    //     })();
-    // }, [faves]);
+    const seo = {metaTitle: "Home"};
 
     return (
         <Layout>
@@ -69,7 +35,6 @@ const Index = ({homeFeatures, intros, search}) => {
 
 export default Index;
 
-
 export async function getServerSideProps({res}) {
     res.setHeader(
         "Cache-Control",
@@ -86,7 +51,6 @@ export async function getServerSideProps({res}) {
         const apiPromises = API_ENDPOINTS.map((name) =>
             fetchAPI(`/${name}`, getSearchFilterProps(name, ""))
                 .catch(() => ({data: [], name}))
-                // add category name for display purposes
                 .then((res) => ({...res, name}))
         );
 

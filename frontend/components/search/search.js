@@ -101,7 +101,6 @@ export default function Search({initialValues}) {
       const apiPromises = API_ENDPOINTS.map((name) =>
         fetchAPI(`/${name}`, getSearchFilterProps(name, ""))
           .catch(() => ({data: [], name}))
-          // add category name for display purposes
           .then((res) => ({...res, name}))
       );
 
@@ -191,8 +190,8 @@ export default function Search({initialValues}) {
                 <div className="col-span-12">
                   <h2 id={`header-${group.name}`}>{group.name}</h2>
                 </div>
-                {group.data.map((result) => (
-                  <div className="sm:col-span-6 md:col-span-4 lg:col-span-3" key={result.attributes.id}>
+                {group.data.map((result, i) => (
+                  <div className="sm:col-span-6 md:col-span-4 lg:col-span-3" key={i}>
                     <Combobox.Option
                       className={`select-none`}
                       value={{...result.attributes, id: result.id, type: group.name,}}>

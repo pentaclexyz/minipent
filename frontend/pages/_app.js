@@ -6,6 +6,7 @@ import {QueryClientProvider, QueryClient} from "react-query";
 import {fetchAPI} from "../lib/api";
 import {getStrapiMedia} from "../lib/media";
 import "../styles/globals.css";
+import Footer from "../components/footer";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const MyApp = ({Component, pageProps}) => {
                     <Component {...pageProps} />
                 </QueryClientProvider>
             </GlobalContext.Provider>
+            <Footer/>
         </Providers>
     );
 };
@@ -39,6 +41,7 @@ MyApp.getInitialProps = async (ctx) => {
             icon: "*",
             favicon: "*",
             logo: "*",
+            siteName: "*",
             styles: "*"},
     });
     // Pass the data to our page via props

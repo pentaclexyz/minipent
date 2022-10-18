@@ -7,7 +7,7 @@ function removeTrailingSlash(str = '') {
 export function EventCardMini({item}) {
 
     return (
-        <event className={"col-span-4"}>
+        <article className={"col-span-4"}>
             <div className="flex flex-col p-card-inner">
 
                 <div className="flex flex-col gap-3 mt-auto">
@@ -35,6 +35,6 @@ export function EventCardMini({item}) {
                     </div>
                 </div>
             </div>
-        </event>
+        </article>
     );
 }

@@ -8,7 +8,7 @@ const Layout = ({children}) => {
       <main className="mx-auto max-w-7xl p-4 md:px-6 lg:px-8">
         {children}
       </main>
-      <Footer/>
+      {/*<Footer/>*/}
     </>
   );
 };
