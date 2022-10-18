@@ -135,7 +135,7 @@ input[type="search"] {
     color: #02E0B9;
 }
 
-.fave-link:hover:after {
+.internal-link:hover:after {
     margin-left: 10px;
     content: "\2192";
     color: #ffcde5;

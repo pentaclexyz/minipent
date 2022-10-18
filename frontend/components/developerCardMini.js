@@ -15,7 +15,7 @@ export function DeveloperCardMini({item}) {
                 <div className="flex flex-col gap-3 mt-auto">
                     <div className={"flex justify-between"}>
                         <Link href={{pathname: `/developers/${item.slug}`}}>
-                            <h2 className={"cursor-pointer txt-secondary fave-link py-0"}>{item.name}</h2>
+                            <h2 className={"cursor-pointer txt-secondary internal-link py-0"}>{item.name}</h2>
                         </Link>
                     </div>
 
