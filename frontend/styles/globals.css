@@ -132,8 +132,8 @@ input[type="search"] {
 }
 
 .internal-link:hover:after {
- padding-left: 10px;
-  content: "\2192";
+ /*padding-left: 10px;*/
+ /* content: "\2192";*/
 }
 
 .field input {
