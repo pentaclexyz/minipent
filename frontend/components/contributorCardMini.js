@@ -15,7 +15,7 @@ export function ContributorCardMini({item}) {
                 <div className="flex flex-col gap-3 mt-auto">
                     <div className={"flex justify-between"}>
                         <Link href={{pathname: `/contributors/${item.slug}`}}>
-                            <h2 className={"cursor-pointer txt-secondary internal-link py-0"}>{item.name}</h2>
+                            <h2 className={"cursor-pointer txt-secondary internal-link py-2"}>{item.name}</h2>
                         </Link>
                     </div>
                     <div className={"text-sm"}>{item.description}</div>

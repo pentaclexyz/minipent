@@ -110,14 +110,14 @@ input[type="search"] {
 
 .internal-link h4, .internal-link h2, h2.internal-link, h4.internal-link {
   border-bottom: 1px solid transparent;
-  display: inline-block;
+  display: inline;
 }
 
 .internal-link:hover h2, h2.internal-link:hover {
   border-bottom: 1px solid var(--border-primary);
 }
 
-.internal-link:hover h2:after {
+.internal-link:hover h2:after, h2.internal-link:hover:after {
   padding-left: 10px;
   content: "\2192";
 }
