@@ -18,7 +18,7 @@ export default function ProjectCard({project}) {
                     <LinkLaunch url={project.url} text={project.url}/>
                     <p>{project.description}</p>
                     <div className={"pt-8 pb-4"}>
-                        <dt className="text-color-secondary-700">Social</dt>
+                        <dt className="txt-secondary">Social</dt>
                         <StyledLink url={project.twitterId} text={project.twitterId}/>
                         <StyledLink url={project.discord_url} text={project.discord_url}/>
                         <StyledLink url={project.telegram_url} text={project.telegram_url}/>
@@ -26,7 +26,7 @@ export default function ProjectCard({project}) {
                     </div>
 
                     <div className={"pb-4"}>
-                        <dt className="text-color-secondary-700">Technical</dt>
+                        <dt className="txt-secondary">Technical</dt>
                         <StyledLink url={project.whitepaper_url} text={project.whitepaper_url}/>
                         <StyledLink url={project.githubRepo} text={project.githubRepo}/>
                         <StyledLink url={project.contract_url} text={project.contract_url}/>

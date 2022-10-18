@@ -1,0 +1,31 @@
+
+.editorial {
+    white-space: normal;
+}
+
+.editorial h3 {
+    padding-top: 2rem;
+}
+
+.editorial ul {
+    margin: 0 0 .5rem 0;
+    padding: 0;
+}
+
+.editorial li {
+    list-style: disc;
+    padding: .25rem 0;
+    margin-left: 1rem;
+}
+
+.editorial a {
+    text-decoration: underline;
+}
+
+.editorial a:hover {
+    color: #02E0B9;
+}
+
+.editorial img {
+    padding: 1rem 0;
+}

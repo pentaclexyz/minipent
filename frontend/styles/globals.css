@@ -1,5 +1,93 @@
 @import url(./search.css);
 @import url(./fonts.css);
+@import url(./editorial.css);
+@import url(./table.css);
+
+
+:root, html[data-theme="light"] {
+  --primary: #00e0b9;
+  --primary-dark: #00e0b9;
+  --border-primary: #ffcde5;
+  --border-secondary: #f3f3f3;
+  --border-tertiary: #cdc7c3;
+  --p-bg: #fff;
+  --bg-01: rgba(255,255,255,.8);
+  --bg-02: rgba(53, 115, 110, 1);
+  --bg-03: rgba(29, 60, 67, 1);
+  --bg-card: rgba(255, 255, 255, .1);
+  --bg-card-hover: rgba(255, 255, 255, .05);
+  --bg-card-secondary: rgba(255, 255, 255, .1);
+  --bg-card-secondary-hover: #05121B;
+  --bg-form: #cccccc;
+  --bg-input: rgba(255, 255, 255, .1);
+  --bg-search: rgba(53, 115, 110, .95);
+  --secondary: #ffcde5;
+  --tertiary: #4e3689;
+  --txt-hover: #ffffff;
+  --txt-primary: #000;
+  --txt-secondary: #ffcc77;
+  --txt-inverted: #05121B;
+  --black: #05121B;
+  --card-inner: 0;
+  --gap-sm: 8;
+  --todo: #ffcde5;
+  --doing: #4e3689;
+  --done: #00e0b9;
+  --request: #ffcde5;
+  --approved: #00e0b9;
+  --rejected: #4e3689;
+}
+
+html[data-theme="indigo"] {
+  --p-bg: #070a1b;
+  --primary: #00e0b9;
+  --primary-dark: #00e0b9;
+  --border-primary: #ffcde5;
+  --border-secondary: #f3f3f3;
+  --border-tertiary: #cdc7c3;
+  --bg-01: rgba(255,255,255,.8);
+  --bg-02: rgba(53, 115, 110, 1);
+  --bg-03: rgba(29, 60, 67, 1);
+  --bg-card: rgba(255, 255, 255, .1);
+  --bg-card-hover: rgba(255, 255, 255, .05);
+  --bg-card-secondary: rgba(255, 255, 255, .1);
+  --bg-card-secondary-hover: #05121B;
+  --bg-form: #cccccc;
+  --bg-input: rgba(255, 255, 255, .1);
+  --bg-search: rgba(53, 115, 110, .95);
+  --secondary: #ffcde5;
+  --tertiary: #4e3689;
+  --txt-hover: #ffffff;
+  --txt-primary: rgba(255,255,255,.8);
+  --txt-secondary: #ffcc77;
+  --txt-inverted: #05121B;
+  --black: #05121B;
+}
+
+html[data-theme="pink"] {
+  --primary: #fcdbe4;
+  --primary-dark: #f91c9a;
+  --border-primary: #fcdbe4;
+  --border-secondary: #f91c9a;
+  --border-tertiary: #ffffff;
+  --p-bg: #fcdbe4;
+  --bg-01: #fcdbe4;
+  --bg-02: #ffc3c3;
+  --bg-03: #fcdbe4;
+  --bg-card: #ffffff;
+  --bg-card-hover: rgba(255, 255, 255, .7);
+  --bg-card-secondary: #fcdbe4;
+  --bg-card-secondary-hover: #f1f1f1;
+  --bg-form: #cccccc;
+  --bg-input: #ffffff;
+  --bg-search: #ffffff;
+  --secondary: #00e0b9;
+  --tertiary: #4e3689;
+  --txt-primary: #05121B;
+  --txt-secondary: #05121B;
+  --txt-hover: #05121B;
+  --txt-inverted: #ffffff;
+}
 
 @tailwind base;
 @tailwind components;
@@ -8,7 +96,7 @@
 @layer base {
   h1 {
     @apply text-2xl;
-    @apply pb-6;
+    @apply py-12;
   }
 
   h2 {
@@ -26,83 +114,42 @@ html,
 body {
   font-size: 16px;
   font-family: matter, arial, sans-serif;
-  background: rgb(7, 10, 27);
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  color: #D8E1E1;
-}
-
-.badge {
-  @apply border;
-  line-height: 1.5;
-}
-
-.badge-primary {
-  @apply text-color-secondary-700;
-  @apply border-color-secondary-700;
-}
-
-.badge-secondary {
-  @apply text-color-secondary-700;
-  @apply border-color-secondary-700;
-}
-
-.badge {
-  @apply px-2;
-  @apply rounded-md;
-}
-
-.badge-outline {
-  @apply border;
 }
 
 input:focus-visible {
   @apply outline-none;
 }
 
-.text-tiny {
-  font-size: 9px;
-}
-
 input[type="search"] {
   -webkit-appearance: none;
 }
 
-.feature {
-  font-family: cako, Matter, Arial, sans-serif;
+.internal-link h4, .internal-link h2, h2.internal-link, h4.internal-link, .external-link {
+  border-bottom: 1px solid transparent;
+  display: inline;
 }
 
-.external-link:hover:after {
-  content: " \2197";
-  color: white;
+.internal-link:hover h2, h2.internal-link:hover, .external-link:hover {
+  border-bottom: 1px solid var(--border-primary);
 }
 
-.internal-link:hover h2 {
-  color: #02E0B9;
-}
-
-.internal-link:hover h2:after {
-  margin-left: 10px;
+.internal-link:hover h2:after, h2.internal-link:hover:after {
+  padding-left: 10px;
   content: "\2192";
-  color: #02E0B9;
 }
 
-.internal-link:hover h4 {
-  color: #02E0B9;
+.internal-link:hover h4, h4.internal-link:hover {
+  border-bottom: 1px solid var(--border-primary);
 }
 
 .internal-link:hover h4:after {
-  margin-left: 6px;
+  padding-left: 6px;
   content: "\2192";
-  color: #02E0B9;
 }
 
-.fave-link:hover:after {
-  margin-left: 10px;
-  content: "\2192";
-  color: #ffcde5;
+.internal-link:hover:after {
+ /*padding-left: 10px;*/
+ /* content: "\2192";*/
 }
 
 .field input {
@@ -113,56 +160,4 @@ p + p {
   padding-top: .5rem;
 }
 
-table td, table th {
-  vertical-align: text-top;
-  padding: 1rem;
-}
 
-th {
-  font-family: matter-semibold, Arial, sans-serif;
-}
-
-.editorial {
-  white-space: normal;
-}
-
-.editorial h3 {
-  padding-top: 2rem;
-}
-
-.editorial ul {
-  margin: 0 0 .5rem 0;
-  padding: 0;
-}
-
-.editorial li {
-  list-style: disc;
-  padding: .25rem 0;
-  margin-left: 1rem;
-}
-
-.editorial a {
-  text-decoration: underline;
-}
-
-.editorial a:hover {
-  color: #02E0B9;
-}
-.bg-request-1000 {
-  background-color: #ffcde5;
-}
-.bg-approved-1000 {
-  background-color: #02E0B9;
-}
-.bg-rejected-1000 {
-  background-color: #121b05;
-}
-.bg-todo-1000 {
-  background-color: #ffcde5;
-}
-.bg-doing-1000 {
-  background-color: #7b91e6;
-}
-.bg-done-1000 {
-  background-color: #02E0B9;
-}

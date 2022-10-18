@@ -1,0 +1,8 @@
+table td, table th {
+    vertical-align: text-top;
+    padding: 1rem;
+}
+
+th {
+    font-family: matter-semibold, Arial, sans-serif;
+}

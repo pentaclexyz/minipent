@@ -71,19 +71,19 @@ function SlimSearch() {
 
   return (
     <>
-      <div className="search-input-container w-full">
+      <div className="search-container w-full">
         <div className="absolute left-4 top-4">
           <SearchIcon width={20} />
         </div>
-        <input className={`pl-12 search-input`} type={"search"} style={{outline: "none"}} onFocus={handleFocus} onChange={handleSubmit} ref={ref}/>
+        <input className={`pl-12 search-input`} type={"search"} onFocus={handleFocus} onChange={handleSubmit} ref={ref}/>
       </div>
       {!!results.length && (
         <div className="relative z-50">
           <ul className="search-result-list -mt-2">
             {results.map((result) => (
-              <li key={`${result.group}-${result.attributes.slug}`} className="cursor-pointer bg-color-black">
+              <li key={`${result.group}-${result.attributes.slug}`} className="cursor-pointer bg-black">
                 <AllowedLink group={result.group} slug={result.attributes.slug}>
-                  <div className="px-3 py-2 text-sm flex justify-between items-center bg-color-tertiary-700 hover:bg-color-black">
+                  <div className="px-3 py-2 text-sm flex justify-between items-center bg-tertiary hover:bg-black">
                     <span>
                       {result.attributes.name || result.attributes.title}
                     </span>

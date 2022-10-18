@@ -3,10 +3,13 @@ import Layout from "../../components/layout";
 import {fetchAPI} from "../../lib/api";
 import {ContributorCardMini} from "../../components/contributorCardMini";
 import {IntroCard} from "../../components/introCard";
+import Seo from "../../components/seo";
 
 export default function Contributors({intros, contributors}) {
+    const seo = {metaTitle: "Contributors"};
     return (
         <Layout>
+            <Seo seo={seo}/>
             <h1>Contributors</h1>
             {intros.map((intro, i) => (
                 <IntroCard intro={intro} key={i}/>

@@ -11,18 +11,18 @@ export function TasksCard({tasks}) {
             </colgroup>
             <thead>
             <tr className={""}>
-                <th className={"border-collapse border border-white"}>Name</th>
-                <th className={"border-collapse border border-white"}>Details</th>
+                <th className={"border-collapse border border-border-secondary"}>Name</th>
+                <th className={"border-collapse border border-border-secondary"}>Details</th>
             </tr>
             </thead>
             <tbody>
             {tasks.map((task, i) => (
                 <tr key={i}>
-                    <td className={"border-collapse border border-white"}>
+                    <td className={"border-collapse border border-border-secondary"}>
                         <ReactMarkdown>{task.name}</ReactMarkdown>
-                        <div className={"mt-2"}><Label label={task.status} key={i} bgColor={task.status} txtColor={'text-primary'}/></div>
+                        <div className={"mt-2"}><Label label={task.status} key={i} bgColor={task.status} txtColor={'txt-primary'}/></div>
                     </td>
-                    <td className={"border-collapse border border-white"}>
+                    <td className={"border-collapse border border-border-secondary"}>
                         <ReactMarkdown>{task.content}</ReactMarkdown></td>
                 </tr>
             ))}

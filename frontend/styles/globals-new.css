@@ -1,0 +1,155 @@
+@import url(./search.css);
+@import url(./fonts.css);
+
+@media (prefers-color-scheme: light) {
+}
+
+@media (prefers-color-scheme: dark) {
+}
+
+:root, html[data-theme="root"] {
+    --primary: #00e0b9;
+    --primary-dark: #00e0b9;
+    --border-primary: rgba(255, 255, 255, .2);
+    --border-secondary: #00e0b9;
+    --border-tertiary: rgba(255, 255, 255, .1);
+    --p-bg: linear-gradient(162deg, rgba(5, 18, 27, 1) 0%, rgba(29, 60, 67, 1) 48%, rgba(53, 115, 110, 1) 75%, rgba(53, 115, 110, 1) 100%);
+    --bg-01: rgba(5, 18, 27, 1);
+    --bg-02: rgba(53, 115, 110, 1);
+    --bg-03: rgba(29, 60, 67, 1);
+    --bg-card: rgba(255, 255, 255, .1);
+    --bg-card-hover: rgba(255, 255, 255, .05);
+    --bg-card-secondary: rgba(255, 255, 255, .1);
+    --bg-card-secondary-hover: #05121B;
+    --bg-form: #cccccc;
+    --bg-input: rgba(255, 255, 255, .1);
+    --bg-search: rgba(53, 115, 110, .95);
+    --secondary: #ffcde5;
+    --tertiary: #4e3689;
+    --txt-hover: #ffffff;
+    --txt-primary: #ffffff;
+    --txt-inverted: #05121B;
+    --black: #05121B;
+    --logo: url('../public/pentacle-logo-dark.svg');
+    --icon: url('../public/pentacle-icon-dark.svg')
+}
+
+html[data-theme="dark"] {
+    --p-bg: rgba(24,45,61, 1);
+}
+
+html[data-theme="pink"] {
+    --primary: #fcdbe4;
+    --primary-dark: #f91c9a;
+    --border-primary: #fcdbe4;
+    --border-secondary: #f91c9a;
+    --border-tertiary: #ffffff;
+    --p-bg: #fcdbe4;
+    /*--p-bg: linear-gradient(162deg, #ffcde5, #ffc3c3, #ffcde5);*/
+    --bg-01: #fcdbe4;
+    --bg-02: #ffc3c3;
+    --bg-03: #fcdbe4;
+    --bg-card: #ffffff;
+    --bg-card-hover: rgba(255, 255, 255, .7);
+    --bg-card-secondary: #fcdbe4;
+    --bg-card-secondary-hover: #f1f1f1;
+    --bg-form: #cccccc;
+    --bg-input: #ffffff;
+    --bg-search: #ffffff;
+    --secondary: #00e0b9;
+    --tertiary: #4e3689;
+    --txt-primary: #05121B;
+    --txt-hover: #05121B;
+    --txt-inverted: #ffffff;
+}
+
+@tailwind base;
+
+@layer base {
+    h1 {
+        @apply text-2xl;
+    }
+
+    h2 {
+        @apply text-xl;
+        @apply pt-4;
+        @apply pb-2;
+    }
+
+    h3 {
+        @apply text-lg;
+    }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+
+html,
+body {
+    font-size: 16px;
+    font-family: matter, arial, sans-serif;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+/*@media only screen and (max-width: 900px) {*/
+/*  html, body {*/
+/*    font-size: 15px;*/
+/*  }*/
+/*}*/
+
+/*@media only screen and (max-width: 600px) {*/
+/*  html, body {*/
+/*    font-size: 13px;*/
+/*  }*/
+/*}*/
+
+input:focus-visible {
+    @apply outline-none;
+}
+
+input[type="search"] {
+    -webkit-appearance: none;
+}
+
+.internal-link:hover h2, a.internal-link:hover {
+    color: var(--txt-primary);
+}
+
+.internal-link:hover h2:after, a.internal-link:hover:after {
+    margin-left: 10px;
+    content: "\2192";
+    color: #02E0B9;
+}
+
+.internal-link:hover h4 {
+    color: #02E0B9;
+}
+
+.internal-link:hover h4:after {
+    margin-left: 6px;
+    content: "\2192";
+    color: #02E0B9;
+}
+
+.internal-link:hover:after {
+    margin-left: 10px;
+    content: "\2192";
+    color: #ffcde5;
+}
+
+input.search-input {
+    background-color: var(--bg-input);
+}
+
+p + p {
+    padding-top: 1rem;
+}
+
+button {
+    box-shadow: none !important;
+    font-weight: 400 !important;
+}

@@ -13,7 +13,7 @@ function TabNav({tabs, section}) {
         <select
           id="tabs"
           name="tabs"
-          className="text-color-black p-2 block w-full rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
+          className="text-black p-2 block w-full rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
           defaultValue={"all"}
           onChange={(e) => {
             push({
@@ -34,8 +34,8 @@ function TabNav({tabs, section}) {
                   aria-current={query.category === tab.name ? "page" : undefined}>
               <a className={`${(query.category === tab.name || (!query.category && tab.name === "all")
                 ? "bg-white/20 text-grey-1000"
-                : "hover:text-color-primary-700 first-letter:") +
-              " hover:text-color-primary-700 px-2 py-1.5 text-sm rounded-md cursor-pointer"
+                : "hover:txt-primary first-letter:") +
+              " hover:txt-primary px-2 py-1.5 text-sm rounded-md cursor-pointer"
               }`}>{tab.name}
               </a>
             </Link>

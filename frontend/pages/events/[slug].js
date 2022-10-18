@@ -1,4 +1,4 @@
-import {fetchAPI} from "../../lib/api";
+import {fetchAPI, getSlugsForPath} from "../../lib/api";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
 import ReactMarkdown from "react-markdown";
@@ -33,29 +33,24 @@ export default Event;
 
 export async function getStaticPaths() {
     return {
-        // paths: await getSlugsForPath("events"),
-        paths: [],
-        fallback: true,
+        paths: await getSlugsForPath("events"),
+        fallback: false,
     };
 }
 
 export async function getStaticProps({params}) {
-    try {
-        const matchingEvents = await fetchAPI("/events", {
-            filters: {slug: params.slug},
-        });
-        return {
-            props: {
-                event: matchingEvents.data[0],
-            },
-            revalidate: 1,
-        };
-    } catch (e) {
-        return {
-            props: {
-                event: {},
-            },
-            revalidate: 1,
-        };
-    }
+    const events = await fetchAPI("/events", {
+        filters: {slug: params.slug},
+        populate: {
+            events: {populate: "*"},
+            people: {populate: "*"},
+        },
+    });
+
+    return {
+        props: {
+            event: events.data[0],
+        },
+        revalidate: 1,
+    };
 }
