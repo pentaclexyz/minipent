@@ -71,11 +71,11 @@ function SlimSearch() {
 
   return (
     <>
-      <div className="search-input-container w-full">
+      <div className="search-container w-full">
         <div className="absolute left-4 top-4">
           <SearchIcon width={20} />
         </div>
-        <input className={`pl-12 search-input`} type={"search"} style={{outline: "none"}} onFocus={handleFocus} onChange={handleSubmit} ref={ref}/>
+        <input className={`pl-12 search-input`} type={"search"} onFocus={handleFocus} onChange={handleSubmit} ref={ref}/>
       </div>
       {!!results.length && (
         <div className="relative z-50">

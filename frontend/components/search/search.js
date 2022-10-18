@@ -43,7 +43,7 @@ export default function Search({initialValues}) {
   }, [filteredResults]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useOnClickOutside(ref, (e) => {
-    const container = document.querySelector(".search-input-container");
+    const container = document.querySelector(".search-container");
     if (container.contains(e.target)) {
       return;
     }
@@ -170,13 +170,13 @@ export default function Search({initialValues}) {
 
 
   return (
-    <div className={`search-input-container relative ${focussed ? "border-2 border-tertiary" : ""}`}>
-      <div className="absolute left-4 top-4">
+    <div className={`search-container bg-bg-01 relative mb-4 ${focussed ? "border border-border-tertiary" : ""}`}>
+      <div className="absolute left-4 top-5">
         <SearchIcon width={20}/>
       </div>
       <Combobox onChange={() => {
       }}>
-        <Combobox.Input className={`search-input`} type={"search"} onFocus={handleFocus} onChange={handleSubmit} ref={ref} style={{outline: "none"}}/>
+        <Combobox.Input className={`search-input border-b border-border-tertiary`} type={"search"} onFocus={handleFocus} onChange={handleSubmit} ref={ref}/>
         {focussed && (
           <Combobox.Options static className={`px-3 py-2 mt-0 search-input-option search-result-grid`}>
             {!!loading && !filteredResults.length && (
@@ -189,12 +189,12 @@ export default function Search({initialValues}) {
             {filteredResults.map((group, i) => (
               <div className="contents" key={i}>
                 <div className="col-span-12">
-                  <h4 id={`header-${group.name}`} className="px-1 search-group-header">{group.name}</h4>
+                  <h2 id={`header-${group.name}`}>{group.name}</h2>
                 </div>
                 {group.data.map((result) => (
-                  <div className="contents" key={result.attributes.id}>
+                  <div className="sm:col-span-6 md:col-span-4 lg:col-span-3" key={result.attributes.id}>
                     <Combobox.Option
-                      className={`flex col-span-12 rounded-md select-none sm:col-span-6 md:col-span-4 lg:col-span-3`}
+                      className={`select-none`}
                       value={{...result.attributes, id: result.id, type: group.name,}}>
                       <SearchResult result={result} group={group.name} slug={result.attributes.slug}/>
                     </Combobox.Option>
@@ -204,10 +204,8 @@ export default function Search({initialValues}) {
                   group.meta.pagination.pageSize && (
                     <div className="flex col-span-12 w-full">
                       <AllowedLink group={group.name} slug={""}>
-                        <span className="inline-block mx-3 ml-auto text-xs cursor-pointer hover:txt-primary">... and{" "}
-                          {group.meta.pagination.total -
-                            group.meta.pagination.pageSize}{" "}
-                          more
+                        <span className="inline-block mx-3 ml-auto text-xs cursor-pointer hover:underline">
+                          {group.meta.pagination.total - group.meta.pagination.pageSize}{" "} more
                         </span>
                       </AllowedLink>
                     </div>

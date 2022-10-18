@@ -26,9 +26,9 @@ function SearchResult({result, group, slug, price}) {
 
     return (
         <AllowedLink group={group} slug={slug}>
-            <div className="w-full search-result internal-link hover:bg-white/10">
+            <div className="search-result internal-link">
                 <h4>{shortenedTitle}</h4>
-                {description}
+                <p>{description}</p>
             </div>
         </AllowedLink>
     );

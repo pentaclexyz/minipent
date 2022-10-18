@@ -28,9 +28,8 @@ const Nav = () => {
                 <Link href={"/"}><a><img className="hidden w-auto h-10 md:block" src={getStrapiMedia(logo)}/></a></Link>
               </div>
 
-              <div className={"hidden lg:block flex items-center justify-between"}>
-                <div>
-                  <ul className="flex space-x-3">
+              <div className={"hidden lg:block "}>
+                  <ul className="flex items-center space-x-8">
                     {defaultNav.map((item) => {
                       return (
                         <li key={item.id}>
@@ -42,7 +41,6 @@ const Nav = () => {
                       );
                     })}
                   </ul>
-                </div>
               </div>
 
               <div className="flex lg:hidden">
@@ -54,6 +52,7 @@ const Nav = () => {
                 </Disclosure.Button>
               </div>
             </div>
+
           </div>
 
           <Disclosure.Panel className="lg:hidden">

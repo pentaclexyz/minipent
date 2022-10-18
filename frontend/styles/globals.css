@@ -7,11 +7,11 @@
 :root, html[data-theme="root"] {
   --primary: #00e0b9;
   --primary-dark: #00e0b9;
-  --border-primary: rgba(255, 255, 255, .2);
-  --border-secondary: #00e0b9;
-  --border-tertiary: rgba(255, 255, 255, .1);
+  --border-primary: #cdc7c3;
+  --border-secondary: #cdc7c3;
+  --border-tertiary: #cdc7c3;
   --p-bg: linear-gradient(162deg, rgba(5, 18, 27, 1) 0%, rgba(29, 60, 67, 1) 48%, rgba(53, 115, 110, 1) 75%, rgba(53, 115, 110, 1) 100%);
-  --bg-01: rgba(5, 18, 27, 1);
+  --bg-01: rgba(255,255,255,.8);
   --bg-02: rgba(53, 115, 110, 1);
   --bg-03: rgba(29, 60, 67, 1);
   --bg-card: rgba(255, 255, 255, .1);

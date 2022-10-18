@@ -52,11 +52,11 @@ const Index = ({homeFeatures, intros, search}) => {
             <Search initialValues={search}/>
             {intros.map((intro, i) => (<IntroCard intro={intro} key={i}/>))}
 
-            <article className="mt-6 grid grid-cols-1 gap-4 md:gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <article className="mt-6 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 md:gap-y-12 md:gap-x-8">
                 {homeFeatures.map((homeFeature) => (
                     <Link key={homeFeature.id} href={homeFeature.link}>
                         <article id={`homeFeature-card-${homeFeature.id}`}
-                                 className="rounded-2xl bg-white/5 cursor-pointer hover:border-p-green-400 p-10 hover:bg-white/10 internal-link">
+                                 className="rounded-2xl cursor-pointer p-card-inner internal-link">
                             <h2 className="pt-0">{homeFeature.header}</h2>
                             <p className="text-sm">{homeFeature.text}</p>
                         </article>
