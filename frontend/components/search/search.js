@@ -203,7 +203,7 @@ export default function Search({initialValues}) {
                   group.meta.pagination.pageSize && (
                     <div className="flex col-span-12 w-full">
                       <AllowedLink group={group.name} slug={""}>
-                        <span className="inline-block mx-3 ml-auto text-xs cursor-pointer hover:underline">
+                        <span className="inline-block mx-3 ml-auto text-xs cursor-pointer">
                           {group.meta.pagination.total - group.meta.pagination.pageSize}{" "} more
                         </span>
                       </AllowedLink>
