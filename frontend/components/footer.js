@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer className={"flex justify-between mx-auto max-w-7xl px-8 py-20 text-sm"}>
             <div className={"flex gap-4 "}>
-                <Link href={"/"}>© Sitename</Link>
+                <Link href={"/"}>© Minipent</Link>
                 <Link href={"/terms"}>Terms</Link>
                 <Link href={"/about"}>About</Link>
                 <a href={"https://github.com/pentaclexyz/minipent"} target={"_blank"} rel="noopener noreferrer">Github</a>

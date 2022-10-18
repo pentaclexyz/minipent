@@ -25,3 +25,7 @@
 .editorial a:hover {
     color: #02E0B9;
 }
+
+.editorial img {
+    padding: 1rem 0;
+}

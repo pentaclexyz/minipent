@@ -20,9 +20,6 @@ module.exports = {
         '5xl': '2.5rem',
       },
       colors: {
-        doing: {
-          1000: '#ffcde5',
-        },
         "primary": "var(--primary)",
         "primary-dark": "var(--primary-dark)",
         "border-primary": "var(--border-primary)",
@@ -45,6 +42,12 @@ module.exports = {
         "txt-primary": "var(--txt-primary)",
         "txt-secondary": "var(--txt-secondary)",
         "txt-inverted": "var(--txt-inverted)",
+        "done": "var(--done)",
+        "doing": "var(--doing)",
+        "todo": "var(--todo)",
+        "request": "var(--request)",
+        "approved": "var(--approved)",
+        "rejected": "var(--rejected)",
       },
     },
   },
