@@ -54,10 +54,10 @@ const Nav = () => {
               </div>
 
               <div>
-                <select data-choose-theme className={"text-sm p-1 border border-border-tertiary"}>
+                <select data-choose-theme className={"text-sm p-1 border border-border-tertiary bg-transparent"}>
                     <option value="root">White</option>
                     <option value="pink">Pink</option>
-                    {/*<option value="dark">Dark</option>*/}
+                    {/*<option value="indigo">Indigo</option>*/}
                 </select>
               </div>
             </div>
