@@ -3,6 +3,7 @@ import {fetchAPI} from "../../lib/api";
 import {ProjectCardMini} from "../../components/projectCardMini";
 import {IntroCard} from "../../components/introCard";
 import Seo from "../../components/seo";
+import CardContainerLayout from "../../components/cardContainerLayout";
 
 export default function ProjectOverview({intros, projects}) {
     const seo = {metaTitle: "Projects"};
@@ -14,11 +15,11 @@ export default function ProjectOverview({intros, projects}) {
             {intros.map((intro, i) => (
                 <IntroCard intro={intro} key={i}/>
             ))}
-            <div className="grid gap-16 grid-cols-4 md:grid-cols-8 lg:grid-cols-12">
+            <CardContainerLayout>
                 {projects.data.map((project, i) => (
                     <ProjectCardMini item={project.attributes} key={i}/>
                 ))}
-            </div>
+            </CardContainerLayout>
         </Layout>
     );
 }

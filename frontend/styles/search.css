@@ -69,13 +69,10 @@
 }
 
 .search-input-option {
-  width: 26rem;
-  min-height: 10rem;
-  max-height: 24rem;
-  @apply overflow-y-auto;
-  @apply text-sm;
-  @apply scroll-py-2;
-  @apply mt-5;
+  /*min-height: 10rem;*/
+  /*max-height: 24rem;*/
+  /*@apply overflow-y-auto;*/
+  /*@apply scroll-py-2;*/
 }
 
 .search-result {

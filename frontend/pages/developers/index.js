@@ -3,6 +3,7 @@ import Layout from "../../components/layout";
 import { fetchAPI } from "../../lib/api";
 import {DeveloperCardMini} from "../../components/developerCardMini";
 import Seo from "../../components/seo";
+import CardContainerLayout from "../../components/cardContainerLayout";
 
 export default function Developers({ developers }) {
   const seo = {metaTitle: "Developers"};
@@ -10,11 +11,11 @@ export default function Developers({ developers }) {
     <Layout>
       <Seo seo={seo}/>
       <h1>Developers</h1>
-        <div className="grid gap-4 grid-cols-3 md:grid-cols-6 lg:grid-cols-12">
+        <CardContainerLayout>
             {developers.map((developer, i) => (
                 <DeveloperCardMini item={developer.attributes} key={i} />
             ))}
-        </div>
+        </CardContainerLayout>
     </Layout>
   );
 }

@@ -53,11 +53,10 @@ const Nav = () => {
                 </Disclosure.Button>
               </div>
 
-              <div>
-                <select data-choose-theme className={"text-sm p-1 border border-border-tertiary bg-transparent"}>
-                    <option value="root">White</option>
-                    <option value="pink">Pink</option>
-                    {/*<option value="indigo">Indigo</option>*/}
+              <div className={"lg:block"}>
+                <select data-choose-theme="light" className={"text-sm p-1 border border-border-tertiary bg-transparent"}>
+                  <option value="light">Light</option>
+                  <option value="pink">Pink</option>
                 </select>
               </div>
             </div>
@@ -65,6 +64,12 @@ const Nav = () => {
           </div>
 
           <Disclosure.Panel className="lg:hidden">
+            <>
+              <select data-choose-theme="light" className={"text-sm p-1 border border-border-tertiary bg-transparent"}>
+                <option value="light">Light</option>
+                <option value="pink">Pink</option>
+              </select>
+
             {defaultNav.map((item) => {
               return (
                 <div className="px-2 space-y-1" key={item.id}>
@@ -74,6 +79,7 @@ const Nav = () => {
                 </div>
               );
             })}
+            </>
           </Disclosure.Panel>
 
         </>
