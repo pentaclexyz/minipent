@@ -176,7 +176,7 @@ export default function Search({initialValues}) {
       <Combobox onChange={() => {}}>
         <Combobox.Input className={`search-input border-b border-border-tertiary`} type={"search"} onFocus={handleFocus} onChange={handleSubmit} ref={ref}/>
         {focussed && (
-          <Combobox.Options static className={`grid grid-cols-12 gap-x-12 lg:gap-x-20 gap-y-8 px-6 pb-6 mt-0 text-sm search-input-option`}>
+          <Combobox.Options static className={`grid grid-cols-12 sm:gap-x-12 lg:gap-x-20 gap-y-8 px-6 pb-6 mt-0 text-sm`}>
             {!!loading && !filteredResults.length && (
               <div key={"loading"} className="flex col-span-12 justify-center items-center">
                 <SearchLoading/>
