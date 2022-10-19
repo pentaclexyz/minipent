@@ -11,7 +11,7 @@ import scrollParentToChild from "../../lib/scroll-parent-to-child";
 import {AllowedLink} from "../allowedLink";
 import {SearchIcon} from "@heroicons/react/outline";
 
-const API_ENDPOINTS = ["contributors", "news", "articles"];
+const API_ENDPOINTS = ["projects", "news", "contributors", "articles", "events"];
 
 export default function Search({initialValues}) {
   const [focussed, setFocussed] = useState(false);
@@ -173,35 +173,32 @@ export default function Search({initialValues}) {
       <div className="absolute left-4 top-5">
         <SearchIcon width={20}/>
       </div>
-      <Combobox onChange={() => {
-      }}>
+      <Combobox onChange={() => {}}>
         <Combobox.Input className={`search-input border-b border-border-tertiary`} type={"search"} onFocus={handleFocus} onChange={handleSubmit} ref={ref}/>
         {focussed && (
-          <Combobox.Options static className={`px-3 py-2 mt-0 search-input-option search-result-grid`}>
+          <Combobox.Options static className={`grid grid-cols-12 gap-x-12 lg:gap-x-20 gap-y-8 px-6 pb-6 mt-0 text-sm search-input-option`}>
             {!!loading && !filteredResults.length && (
               <div key={"loading"} className="flex col-span-12 justify-center items-center">
                 <SearchLoading/>
               </div>
             )}
             {query && !loading && !filteredResults.length && <NoResults/>}
-            {/* Grouping search results by their endpoint names ('tags', 'categories', 'projects'....) */}
             {filteredResults.map((group, i) => (
               <div className="contents" key={i}>
                 <div className="col-span-12">
-                  <h2 id={`header-${group.name}`}>{group.name}</h2>
+                  <h2 className={"pt-4 pb-0 capitalize font-bold"} id={`header-${group.name}`}>{group.name}</h2>
                 </div>
                 {group.data.map((result, i) => (
-                  <div className="sm:col-span-6 md:col-span-4 lg:col-span-3" key={i}>
+                  <ul className="col-span-12 sm:col-span-6 md:col-span-3" key={i}>
                     <Combobox.Option
-                      className={`select-none`}
                       value={{...result.attributes, id: result.id, type: group.name,}}>
                       <SearchResult result={result} group={group.name} slug={result.attributes.slug}/>
                     </Combobox.Option>
-                  </div>
+                  </ul>
                 ))}
                 {group.meta.pagination.total >
                   group.meta.pagination.pageSize && (
-                    <div className="flex col-span-12 w-full">
+                    <div className="col-span-12">
                       <AllowedLink group={group.name} slug={""}>
                         <span className="inline-block mx-3 ml-auto text-xs cursor-pointer">
                           {group.meta.pagination.total - group.meta.pagination.pageSize}{" "} more

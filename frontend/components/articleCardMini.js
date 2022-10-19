@@ -19,14 +19,6 @@ export function ArticleCardMini({item}) {
                         </Link>
                     </div>
                     <div className={"text-sm"}>{item.description}</div>
-                    <div>
-                        <a href={item.url} rel="nofollow noreferrer noopener" target={"_blank"}
-                           className={"line-clamp-2"}>
-                            <p className={"text-sm cursor-pointer hover:txt-secondary line-clamp-1 external-link"}>
-                                {removeTrailingSlash(item.url?.split("//")[1])}
-                            </p>
-                        </a>
-                    </div>
                 </div>
             </div>
         </article>

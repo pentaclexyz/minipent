@@ -4,6 +4,7 @@ import {fetchAPI} from "../../lib/api";
 import {ContributorCardMini} from "../../components/contributorCardMini";
 import {IntroCard} from "../../components/introCard";
 import Seo from "../../components/seo";
+import CardContainerLayout from "../../components/cardContainerLayout";
 
 export default function Contributors({intros, contributors}) {
     const seo = {metaTitle: "Contributors"};
@@ -14,11 +15,11 @@ export default function Contributors({intros, contributors}) {
             {intros.map((intro, i) => (
                 <IntroCard intro={intro} key={i}/>
             ))}
-            <div className="grid gap-4 grid-cols-3 md:grid-cols-6 lg:grid-cols-12">
+            <CardContainerLayout>
                 {contributors.data.map((contributor, i) => (
                     <ContributorCardMini item={contributor.attributes} key={i}/>
                 ))}
-            </div>
+            </CardContainerLayout>
         </Layout>
     );
 }

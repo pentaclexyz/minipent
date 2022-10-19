@@ -9,7 +9,7 @@ function removeTrailingSlash(str = '') {
 export function DeveloperCardMini({item}) {
 
     return (
-        <article className={"col-span-4"}>
+        <article className={"col-span-3"}>
             <div className="flex flex-col p-card-inner">
 
                 <div className="flex flex-col gap-3 mt-auto">

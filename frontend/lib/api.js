@@ -77,27 +77,6 @@ export const getSearchFilterProps = (type, searchString) => {
             })),
         },
     });
-
-    switch (type) {
-        case "projects": {
-            return {
-                populate: "*",
-                ...getFilterForProps(["name", "title", "description"]),
-                ...searchResultOptions,
-            };
-        }
-        // case "chains": {
-        //     return {
-        //         ...getFilterForProps(["name", "ticker"]),
-        //         ...searchResultOptions,
-        //     };
-        // }
-        default:
-            return {
-                ...getFilterForProps(["name", "description"]),
-                ...searchResultOptions,
-            };
-    }
 };
 
 /**

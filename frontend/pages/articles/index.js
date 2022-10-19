@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../../components/layout";
 import {fetchAPI} from "../../lib/api";
+import CardContainerLayout from "../../components/cardContainerLayout";
 import {ArticleCardMini} from "../../components/articleCardMini";
 import Seo from "../../components/seo";
 
@@ -10,11 +11,11 @@ export default function Articles({articles}) {
         <Layout>
             <Seo seo={seo}/>
             <h1>Articles</h1>
-            <div className="grid gap-4 grid-cols-3 md:grid-cols-6 lg:grid-cols-12">
+            <CardContainerLayout>
                 {articles.map((article, i) => (
                     <ArticleCardMini item={article.attributes} key={i} />
                 ))}
-            </div>
+            </CardContainerLayout>
         </Layout>
     );
 }

@@ -4,10 +4,11 @@ import Layout from "../components/layout";
 import Search from "../components/search/search";
 import Seo from "../components/seo";
 import {IntroCard} from "../components/introCard";
+import CardContainerLayout from "../components/cardContainerLayout";
 
 
 // const API_ENDPOINTS = ["projects", "planning", "contributors", "events", "news", "articles"];
-const API_ENDPOINTS = ["contributors", "news", "articles"];
+const API_ENDPOINTS = ["projects", "news", "contributors", "articles", "events"];
 
 const Index = ({homeFeatures, intros, search}) => {
     const seo = {metaTitle: "Home"};
@@ -17,18 +18,16 @@ const Index = ({homeFeatures, intros, search}) => {
             <Seo seo={seo}/>
             <Search initialValues={search}/>
             {intros.map((intro, i) => (<IntroCard intro={intro} key={i}/>))}
-
-            <article className="mt-6 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 md:gap-y-12 md:gap-x-8">
+            <CardContainerLayout>
                 {homeFeatures.map((homeFeature) => (
                     <Link key={homeFeature.id} href={homeFeature.link}>
-                        <article id={`homeFeature-card-${homeFeature.id}`}
-                                 className="rounded-2xl cursor-pointer p-card-inner internal-link">
-                            <h2 className="pt-0">{homeFeature.header}</h2>
+                        <article id={`homeFeature-card-${homeFeature.id}`} className="col-span-3 cursor-pointer p-card-inner internal-link">
+                            <h2>{homeFeature.header}</h2>
                             <p className="text-sm">{homeFeature.text}</p>
                         </article>
                     </Link>
                 ))}
-            </article>
+            </CardContainerLayout>
         </Layout>
     );
 };
