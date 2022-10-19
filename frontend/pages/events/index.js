@@ -3,6 +3,7 @@ import Layout from "../../components/layout";
 import { fetchAPI } from "../../lib/api";
 import {EventCardMini} from "../../components/eventCardMini";
 import Seo from "../../components/seo";
+import CardContainerLayout from "../../components/cardContainerLayout";
 
 export default function Events({ events }) {
   const seo = {metaTitle: "Events"};
@@ -10,11 +11,11 @@ export default function Events({ events }) {
     <Layout>
       <Seo seo={seo}/>
       <h1>Events</h1>
-        <div className="grid gap-4 grid-cols-3 md:grid-cols-6 lg:grid-cols-12">
+        <CardContainerLayout>
             {events.map((item, i) => (
                 <EventCardMini item={item.attributes} key={i} />
             ))}
-        </div>
+        </CardContainerLayout>
     </Layout>
   );
 }
