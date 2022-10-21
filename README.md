@@ -7,7 +7,7 @@ create new > minipent-projectName
 
 link each to minipent github repo and set settings to /frontend or /backend
 
-create new postgres db
+create new > postgres db
 
 
 
