@@ -54,13 +54,6 @@ select repo
 
 select be instance to deploy
 
-Next, navigate to your strapi admin panel [api.domain.xyz/admin]
-
-Go to:
-`settings > USERS & PERMISSIONS PLUGIN > roles > public`
-and check `find`, `findOne` on each endpoint
-
-(ooh yay they were already set from the copied db!)
 
 
 
