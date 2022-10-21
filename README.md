@@ -1,8 +1,8 @@
 ## create new project in railway
 
-create new - minipent-projectName-ui
+create new > minipent-projectName-ui
 
-create new - minipent-projectName
+create new > minipent-projectName
 
 
 link each to minipent github repo and set settings to /frontend or /backend
