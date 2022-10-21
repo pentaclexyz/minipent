@@ -64,6 +64,20 @@
     },
     "styles": {
       "type": "string"
+    },
+    "footerNav": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.nav"
+    },
+    "github_url": {
+      "type": "string"
+    },
+    "twitter_url": {
+      "type": "string"
+    },
+    "blog_url": {
+      "type": "string"
     }
   }
 }
