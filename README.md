@@ -1,7 +1,9 @@
 ## create new project in railway
 
 create new - minipent-projectName-ui
+
 create new - minipent-projectName
+
 
 link each to minipent github repo and set settings to /frontend or /backend
 
@@ -18,7 +20,9 @@ $ PGPASSWORD=00000000000000 pg_dump -h containers-us-west-81.railway.app -U post
 ### connect to railway db and drop the public schema
 
 $ PGPASSWORD=00000000000000 psql -h containers-us-west-92.railway.app -U postgres -p 7777 -d railway
+
 $ DROP SCHEMA public CASCADE;
+
 $ CREATE SCHEMA public;
 
 
