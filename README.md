@@ -42,12 +42,30 @@ $ mp-local-04 < minipent-04.sql
 
 ### deploy backend
 
-to allow public access to the API :
-sign in to strapi admin panel and check `find`, `findOne` on each endpoint in: 
+$ railway link
+
+select repo
+
+$ railway up
+
+select be instance to deploy
+
+Next, navigate to your strapi admin panel [api.domain.xyz/admin]
+
+Go to:
 `settings > USERS & PERMISSIONS PLUGIN > roles > public`
+and check `find`, `findOne` on each endpoint
 
 (ooh yay they were already set from the copied db!)
 
 
 
 ## deploy frontend
+
+$ railway link
+
+select repo
+
+$ railway up
+
+select fe instance to deploy
