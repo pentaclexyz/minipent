@@ -41,7 +41,24 @@ navigate to minipent-db-backups dir
 
 `$ mp-local-04 < minipent-04.sql`
 
+update `backend/config/database.js`
 
+```
+module.exports = ({ env }) => ({
+  settings: {
+    forceMigration: false,
+  },
+  connection: {
+    client: "postgres",
+    connection: {
+      host: env('PGHOST', '127.0.0.1'),
+      port: env.int('PGPORT', 5432),
+      database: env('PGDATABASE', 'mp-local-04'),
+      ssl: env.bool(true),
+    },
+  },
+});
+```
 
 
 ### deploy backend
