@@ -13,17 +13,17 @@ create new postgres db
 
 ### get a database from the master database
 
-$ PGPASSWORD=00000000000000 pg_dump -h containers-us-west-81.railway.app -U postgres -p 9999 -d railway > minipent-04.sql
+`$ PGPASSWORD=00000000000000 pg_dump -h containers-us-west-81.railway.app -U postgres -p 9999 -d railway > minipent-04.sql`
 
 
 
 ### connect to railway db and drop the public schema
 
-$ PGPASSWORD=00000000000000 psql -h containers-us-west-92.railway.app -U postgres -p 7777 -d railway
+`$ PGPASSWORD=00000000000000 psql -h containers-us-west-92.railway.app -U postgres -p 7777 -d railway`
 
-$ DROP SCHEMA public CASCADE;
+`$ DROP SCHEMA public CASCADE;`
 
-$ CREATE SCHEMA public;
+`$ CREATE SCHEMA public;`
 
 
 
@@ -31,26 +31,26 @@ $ CREATE SCHEMA public;
 
 navigate to minipent-db-backups dir
 
-$ PGPASSWORD=00000000000000 psql -h containers-us-west-92.railway.app -U postgres -p 7777 -d railway < minipent-04.sql
+`$ PGPASSWORD=00000000000000 psql -h containers-us-west-92.railway.app -U postgres -p 7777 -d railway < minipent-04.sql`
 
 
 
 ### and locally if you want local
 
-$ createdb mp-local-04
+`$ createdb mp-local-04`
 
-$ mp-local-04 < minipent-04.sql
+`$ mp-local-04 < minipent-04.sql`
 
 
 
 
 ### deploy backend
 
-$ railway link
+`$ railway link`
 
 select repo
 
-$ railway up
+`$ railway up`
 
 select be instance to deploy
 
@@ -66,10 +66,10 @@ and check `find`, `findOne` on each endpoint
 
 ## deploy frontend
 
-$ railway link
+`$ railway link`
 
 select repo
 
-$ railway up
+`$ railway up`
 
 select fe instance to deploy
