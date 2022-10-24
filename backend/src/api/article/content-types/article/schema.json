@@ -25,20 +25,25 @@
       "type": "string"
     },
     "description": {
-      "type": "richtext"
+      "type": "string"
     },
     "content": {
       "type": "richtext"
     },
     "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "date": {
+      "type": "date",
+      "required": false
     }
   }
 }
