@@ -25,6 +25,7 @@ export async function getStaticProps() {
     populate: {
         articles: {populate: "*"},
         people: {populate: "*"},
+        coverImage: {populate: "*"},
     },
     })).data;
 
