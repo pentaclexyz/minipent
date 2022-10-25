@@ -6,16 +6,6 @@ import Image from "next/image";
 
 export function ArticleCardMini({article}) {
 
-        let imageUrl = getStrapiMedia(article.coverImage);
-        if (article.coverImage.prefix) {
-            imageUrl =
-                imageUrl.substr(0, imageUrl.lastIndexOf("/")) +
-                "/" +
-                prefix +
-                "_" +
-                imageUrl.substr(imageUrl.lastIndexOf("/") + 1, imageUrl.length - 1);
-        }
-
     return (
         <article className={"col-span-3"}>
             <div className="p-card-inner">
