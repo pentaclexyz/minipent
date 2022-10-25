@@ -29,7 +29,7 @@ const Nav = () => {
                 <Link href={"/"}><a><img className="hidden w-auto h-10 md:block" src={getStrapiMedia(logo)}/></a></Link>
               </div>
 
-              <div className={"hidden lg:block "}>
+              <div className={"hidden lg:block"}>
                   <ul className="flex items-center space-x-8">
                     {defaultNav.map((item) => {
                       return (
@@ -45,15 +45,14 @@ const Nav = () => {
               </div>
 
               <div className="flex lg:hidden">
-                <Disclosure.Button
-                  className="inline-flex justify-center items-center p-2 text-gray-400 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button>
                   <span className="sr-only">Open main menu</span>{open ? (<XIcon className="block w-6 h-6" aria-hidden="true"/>) : (
                     <MenuIcon className="block w-6 h-6" aria-hidden="true"/>
                   )}
                 </Disclosure.Button>
               </div>
 
-              <div className={"lg:block"}>
+              <div className={"hidden lg:block"}>
                 <select data-choose-theme="light" className={"text-sm p-1 border border-border-tertiary bg-transparent"}>
                   <option value="light">Light</option>
                   <option value="pink">Pink</option>
@@ -65,20 +64,21 @@ const Nav = () => {
 
           <Disclosure.Panel className="lg:hidden">
             <>
-              <select data-choose-theme="light" className={"text-sm p-1 border border-border-tertiary bg-transparent"}>
-                <option value="light">Light</option>
-                <option value="pink">Pink</option>
-              </select>
-
             {defaultNav.map((item) => {
               return (
-                <div className="px-2 space-y-1" key={item.id}>
-                  <Disclosure.Button as="a" href={`/${item.link}`} className="block px-3 py-1">
-                    <span className="text-sm hover:text-p-green-400">{item.navTitle}</span>
+                <div className="block px-6 py-1 border-t border-border-tertiary" key={item.id}>
+                  <Disclosure.Button as="a" href={`/${item.link}`} className="block p-2 hover:underline">
+                    <span className="text-sm">{item.navTitle}</span>
                   </Disclosure.Button>
                 </div>
               );
             })}
+              <div className="block px-6 py-1.5 border-t border-b border-border-tertiary">
+                <select data-choose-theme="light" className={"text-sm p-1 mx-2 border border-border-tertiary bg-transparent"}>
+                  <option value="light">Light</option>
+                  <option value="pink">Pink</option>
+                </select>
+              </div>
             </>
           </Disclosure.Panel>
 

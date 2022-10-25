@@ -13,7 +13,7 @@ export default function Articles({articles}) {
             <h1>Articles</h1>
             <CardContainerLayout>
                 {articles.map((article, i) => (
-                    <ArticleCardMini item={article.attributes} key={i} />
+                    <ArticleCardMini article={article.attributes} key={i} />
                 ))}
             </CardContainerLayout>
         </Layout>
@@ -21,11 +21,16 @@ export default function Articles({articles}) {
 }
 
 export async function getStaticProps() {
-    const articles = (await fetchAPI("/articles")).data;
+    const articles = (await fetchAPI("/articles", {
+    populate: {
+        articles: {populate: "*"},
+        people: {populate: "*"},
+        coverImage: {populate: "*"},
+    },
+    })).data;
+
     return {
-        props: {
-            articles,
-        },
+        props: {articles},
         revalidate: 1,
     };
 }

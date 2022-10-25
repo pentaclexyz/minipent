@@ -1,25 +1,43 @@
+import React from "react";
 import Link from "next/link";
-import {useFavorites} from "../contexts/FavoriteContext";
-import {IsFavorite, IsNotFavorite} from "./favorite";
+import {PersonCardTiny} from "./personCardTiny";
+import {getStrapiMedia} from "../lib/media";
+import Image from "next/image";
 
-function removeTrailingSlash(str = '') {
-    return str.replace(/\/+$/, '');
-}
+export function ArticleCardMini({article}) {
 
-export function ArticleCardMini({item}) {
+        let imageUrl = getStrapiMedia(article.coverImage);
+        if (article.coverImage.prefix) {
+            imageUrl =
+                imageUrl.substr(0, imageUrl.lastIndexOf("/")) +
+                "/" +
+                prefix +
+                "_" +
+                imageUrl.substr(imageUrl.lastIndexOf("/") + 1, imageUrl.length - 1);
+        }
 
     return (
         <article className={"col-span-3"}>
-            <div className="flex flex-col p-card-inner">
+            <div className="p-card-inner">
 
-                <div className="flex flex-col gap-3 mt-auto">
-                    <div className={"flex justify-between"}>
-                        <Link href={{pathname: `/articles/${item.slug}`}}>
-                            <h2 className={"cursor-pointer txt-secondary internal-link py-2"}>{item.name}</h2>
-                        </Link>
-                    </div>
-                    <div className={"text-sm"}>{item.description}</div>
+                <div className="flex flex-col gap-3">
+                    <Link href={{pathname: `/articles/${article.slug}`}}>
+                        <div className={"cursor-pointer"}>
+                            <h2 className={"txt-secondary internal-link"}>{article.name}</h2>
+                            <div><Image src={getStrapiMedia(article.coverImage)} width={300} height={200} className={"object-cover"}/></div>
+                        </div>
+                    </Link>
+
+                    <div className={"text-sm"}>{article.description}</div>
+
+                    <article className="flex gap-x-6">
+                        {article.people.data.map((person, i) => (
+                            <PersonCardTiny person={person.attributes} key={i}/>
+                        ))}
+                    </article>
+                    <div className={"text-sm"}>{article.date}</div>
                 </div>
+
             </div>
         </article>
     );
