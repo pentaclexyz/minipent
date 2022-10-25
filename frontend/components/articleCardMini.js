@@ -2,8 +2,19 @@ import React from "react";
 import Link from "next/link";
 import {PersonCardTiny} from "./personCardTiny";
 import {getStrapiMedia} from "../lib/media";
+import Image from "next/image";
 
 export function ArticleCardMini({article}) {
+
+        let imageUrl = getStrapiMedia(article.coverImage);
+        if (article.coverImage.prefix) {
+            imageUrl =
+                imageUrl.substr(0, imageUrl.lastIndexOf("/")) +
+                "/" +
+                prefix +
+                "_" +
+                imageUrl.substr(imageUrl.lastIndexOf("/") + 1, imageUrl.length - 1);
+        }
 
     return (
         <article className={"col-span-3"}>
@@ -13,7 +24,7 @@ export function ArticleCardMini({article}) {
                     <Link href={{pathname: `/articles/${article.slug}`}}>
                         <div className={"cursor-pointer"}>
                             <h2 className={"txt-secondary internal-link"}>{article.name}</h2>
-                            <img className={"object-cover w-80 h-48"} src={getStrapiMedia(article.coverImage)}/>
+                            <div><Image src={getStrapiMedia(article.coverImage)} width={300} height={200} className={"object-cover"}/></div>
                         </div>
                     </Link>
 
