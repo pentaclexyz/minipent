@@ -96,7 +96,7 @@ html[data-theme="pink"] {
 @layer base {
   h1 {
     @apply text-2xl;
-    @apply py-12;
+    @apply py-4;
   }
 
   h2 {
