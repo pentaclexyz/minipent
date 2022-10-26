@@ -133,6 +133,11 @@ input[type="search"] {
 
 .external-link {
   border-bottom: 1px solid transparent;
+  cursor: pointer;
+}
+
+.internal-link {
+  cursor: pointer;
 }
 
 .internal-link:hover h2, h2.internal-link:hover,
@@ -142,18 +147,16 @@ input[type="search"] {
   border-bottom: 1px solid var(--border-primary);
 }
 
-.internal-link:hover h2:after, h2.internal-link:hover:after,
-.internal-link:hover h3:after, h3.internal-link:hover:after,
-.internal-link:hover h4:after, h4.internal-link:hover:after  {
-  padding-left: 8px;
-  content: "\2192";
-  visibility: visible;
-}
-
-.internal-link:after {
+.internal-link h2:after, .internal-link h3:after {
   padding-left: 8px;
   content: "\2192";
   visibility: hidden;
+}
+
+.internal-link:hover h2:after, h2.internal-link:hover:after,
+.internal-link:hover h3:after, h3.internal-link:hover:after,
+.internal-link:hover h4:after, h4.internal-link:hover:after  {
+  visibility: visible;
 }
 
 .field input {
