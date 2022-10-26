@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "daos",
+  "info": {
+    "singularName": "dao",
+    "pluralName": "daos",
+    "displayName": "dao"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "slug": {
+      "type": "uid"
+    }
+  }
+}
