@@ -147,7 +147,7 @@ input[type="search"] {
   border-bottom: 1px solid var(--border-primary);
 }
 
-.internal-link h2:after, .internal-link h3:after {
+.internal-link h2:after, h2.internal-link:after {
   padding-left: 8px;
   content: "\2192";
   visibility: hidden;
