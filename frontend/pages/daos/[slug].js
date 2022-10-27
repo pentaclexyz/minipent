@@ -2,13 +2,12 @@ import React from "react";
 import {fetchAPI, getSlugsForPath} from "../../lib/api";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
-import ArticleCard from "../../components/articleCard";
 import LayoutPageContent from "../../components/layoutPageContent";
+import DaoCard from "../../components/daoCard";
 
 const Document = ({dao}) => {
     const seo = {
-        metaTitle: document.attributes.name,
-        metaDescription: `${document.attributes.name}`,
+        metaTitle: dao.attributes.name,
     };
 
     return (
@@ -17,7 +16,7 @@ const Document = ({dao}) => {
 
             <LayoutPageContent>
                 <article className={"md:col-span-8"}>
-                <ArticleCard item={dao.attributes} id={dao.id}/>
+                <DaoCard item={dao.attributes} id={dao.id}/>
                 </article>
             </LayoutPageContent>
         </Layout>
@@ -34,7 +33,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({params}) {
-    const daos = await fetchAPI("/articles", {
+    const daos = await fetchAPI("/daos", {
         filters: {slug: params.slug},
         populate: {
             daos: {populate: "*"},

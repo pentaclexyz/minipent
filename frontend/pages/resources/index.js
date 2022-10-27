@@ -5,8 +5,8 @@ import CardContainerLayout from "../../components/cardContainerLayout";
 import Seo from "../../components/seo";
 import {ResourceCardMini} from "../../components/resourceCardMini";
 
-export default function Resources({resources}) {
-    const seo = {metaTitle: "Docs"};
+export default function Dao({resources}) {
+    const seo = {metaTitle: "DAO"};
     return (
         <Layout>
             <Seo seo={seo}/>
@@ -21,12 +21,7 @@ export default function Resources({resources}) {
 }
 
 export async function getStaticProps() {
-    const resources = (await fetchAPI("/resources", {
-    populate: {
-        resources: {populate: "*"},
-        coverImage: {populate: "*"},
-    },
-    })).data;
+    const resources = (await fetchAPI("/resources")).data;
 
     return {
         props: {resources},
