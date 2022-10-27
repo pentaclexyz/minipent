@@ -5,7 +5,7 @@ import Seo from "../../components/seo";
 import ArticleCard from "../../components/articleCard";
 import LayoutPageContent from "../../components/layoutPageContent";
 
-const Document = ({document}) => {
+const Document = ({dao}) => {
     const seo = {
         metaTitle: document.attributes.name,
         metaDescription: `${document.attributes.name}`,
@@ -17,7 +17,7 @@ const Document = ({document}) => {
 
             <LayoutPageContent>
                 <article className={"md:col-span-8"}>
-                <ArticleCard item={document.attributes} id={document.id}/>
+                <ArticleCard item={dao.attributes} id={dao.id}/>
                 </article>
             </LayoutPageContent>
         </Layout>
@@ -28,23 +28,22 @@ export default Document;
 
 export async function getStaticPaths() {
     return {
-        paths: await getSlugsForPath("articles"),
+        paths: await getSlugsForPath("daos"),
         fallback: false,
     };
 }
 
 export async function getStaticProps({params}) {
-    const articles = await fetchAPI("/articles", {
+    const daos = await fetchAPI("/articles", {
         filters: {slug: params.slug},
         populate: {
-            articles: {populate: "*"},
-            people: {populate: "*"},
+            daos: {populate: "*"},
         },
     });
 
     return {
         props: {
-            article: articles.data[0],
+            dao: daos.data[0],
         },
         revalidate: 1,
     };
