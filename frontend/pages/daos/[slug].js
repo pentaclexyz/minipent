@@ -2,13 +2,12 @@ import React from "react";
 import {fetchAPI, getSlugsForPath} from "../../lib/api";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
-import ArticleCard from "../../components/articleCard";
 import LayoutPageContent from "../../components/layoutPageContent";
+import DaoCard from "../../components/daoCard";
 
-const Document = ({document}) => {
+const Document = ({dao}) => {
     const seo = {
-        metaTitle: document.attributes.name,
-        metaDescription: `${document.attributes.name}`,
+        metaTitle: dao.attributes.name,
     };
 
     return (
@@ -17,7 +16,7 @@ const Document = ({document}) => {
 
             <LayoutPageContent>
                 <article className={"md:col-span-8"}>
-                <ArticleCard item={document.attributes} id={document.id}/>
+                <DaoCard item={dao.attributes} id={dao.id}/>
                 </article>
             </LayoutPageContent>
         </Layout>
@@ -28,23 +27,22 @@ export default Document;
 
 export async function getStaticPaths() {
     return {
-        paths: await getSlugsForPath("articles"),
+        paths: await getSlugsForPath("daos"),
         fallback: false,
     };
 }
 
 export async function getStaticProps({params}) {
-    const articles = await fetchAPI("/articles", {
+    const daos = await fetchAPI("/daos", {
         filters: {slug: params.slug},
         populate: {
-            articles: {populate: "*"},
-            people: {populate: "*"},
+            daos: {populate: "*"},
         },
     });
 
     return {
         props: {
-            article: articles.data[0],
+            dao: daos.data[0],
         },
         revalidate: 1,
     };

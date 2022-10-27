@@ -5,12 +5,12 @@ import CardContainerLayout from "../../components/cardContainerLayout";
 import Seo from "../../components/seo";
 import {DocumentCardMini} from "../../components/documentCardMini";
 
-export default function Documents({documents}) {
-    const seo = {metaTitle: "Docs"};
+export default function Dao({documents}) {
+    const seo = {metaTitle: "DAO"};
     return (
         <Layout>
             <Seo seo={seo}/>
-            <h1>Docs</h1>
+            <h1>Resources</h1>
             <CardContainerLayout>
                 {documents.map((document, i) => (
                     <DocumentCardMini document={document.attributes} key={i} />
@@ -21,12 +21,7 @@ export default function Documents({documents}) {
 }
 
 export async function getStaticProps() {
-    const documents = (await fetchAPI("/documents", {
-    populate: {
-        documents: {populate: "*"},
-        coverImage: {populate: "*"},
-    },
-    })).data;
+    const documents = (await fetchAPI("/documents")).data;
 
     return {
         props: {documents},

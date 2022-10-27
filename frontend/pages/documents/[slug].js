@@ -2,13 +2,12 @@ import React from "react";
 import {fetchAPI, getSlugsForPath} from "../../lib/api";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
-import ArticleCard from "../../components/articleCard";
 import LayoutPageContent from "../../components/layoutPageContent";
+import DocumentCard from "../../components/documentCard";
 
 const Document = ({document}) => {
     const seo = {
         metaTitle: document.attributes.name,
-        metaDescription: `${document.attributes.name}`,
     };
 
     return (
@@ -17,7 +16,7 @@ const Document = ({document}) => {
 
             <LayoutPageContent>
                 <article className={"md:col-span-8"}>
-                <ArticleCard item={document.attributes} id={document.id}/>
+                <DocumentCard item={document.attributes} id={document.id}/>
                 </article>
             </LayoutPageContent>
         </Layout>
@@ -43,7 +42,7 @@ export async function getStaticProps({params}) {
 
     return {
         props: {
-            documents: documents.data[0],
+            document: documents.data[0],
         },
         revalidate: 1,
     };

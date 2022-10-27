@@ -2,8 +2,8 @@ import React from "react";
 import {fetchAPI, getSlugsForPath} from "../../lib/api";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
-import ArticleCard from "../../components/articleCard";
 import LayoutPageContent from "../../components/layoutPageContent";
+import ResourceCard from "../../components/resourceCard";
 
 const Document = ({resource}) => {
     const seo = {
@@ -16,7 +16,7 @@ const Document = ({resource}) => {
 
             <LayoutPageContent>
                 <article className={"md:col-span-8"}>
-                <ArticleCard item={resource.attributes} id={resource.id}/>
+                <ResourceCard item={resource.attributes} id={resource.id}/>
                 </article>
             </LayoutPageContent>
         </Layout>
@@ -42,7 +42,7 @@ export async function getStaticProps({params}) {
 
     return {
         props: {
-            resources: resources.data[0],
+            resource: resources.data[0],
         },
         revalidate: 1,
     };
