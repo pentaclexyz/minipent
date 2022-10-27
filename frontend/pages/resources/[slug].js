@@ -28,7 +28,7 @@ export default Document;
 
 export async function getStaticPaths() {
     return {
-        paths: await getSlugsForPath("documents"),
+        paths: await getSlugsForPath("articles"),
         fallback: false,
     };
 }
