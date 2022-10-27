@@ -13,7 +13,7 @@ export default function Resources({resources}) {
             <h1>Resources</h1>
             <CardContainerLayout>
                 {resources.map((resource, i) => (
-                    <ResourceCardMini document={resource.attributes} key={i} />
+                    <ResourceCardMini resource={resource.attributes} key={i} />
                 ))}
             </CardContainerLayout>
         </Layout>
