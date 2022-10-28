@@ -47,6 +47,17 @@
       "inversedBy": "events"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "coverImage": {
       "allowedTypes": [
         "images",
         "files",
