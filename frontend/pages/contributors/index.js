@@ -4,7 +4,7 @@ import {fetchAPI} from "../../lib/api";
 import {IntroCard} from "../../components/cards/introCard";
 import Seo from "../../components/seo";
 import CardContainerLayout from "../../components/layouts/cardContainerLayout";
-import {ArticleCardMini} from "../../components/mini/articleCardMini";
+import {ArticleCardMini} from "../../components/cardsMini/articleCardMini";
 
 export default function Contributors({intros, contributors}) {
     const seo = {metaTitle: "Contributors"};

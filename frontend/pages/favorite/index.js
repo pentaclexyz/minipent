@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Layout from "../../components/layouts/layout";
 import { useFavorites } from "../../contexts/FavoriteContext";
 import { fetchAPI } from "../../lib/api";
-import {ArticleCardMini} from "../../components/mini/articleCardMini";
+import {ArticleCardMini} from "../../components/cardsMini/articleCardMini";
 
 export default function FavoriteOverview() {
   const { faves } = useFavorites();

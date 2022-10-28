@@ -3,7 +3,7 @@ import Layout from "../../components/layouts/layout";
 import { fetchAPI } from "../../lib/api";
 import Seo from "../../components/seo";
 import CardContainerLayout from "../../components/layouts/cardContainerLayout";
-import {ArticleCardMini} from "../../components/mini/articleCardMini";
+import {ArticleCardMini} from "../../components/cardsMini/articleCardMini";
 
 export default function Events({ events }) {
   const seo = {metaTitle: "Events"};

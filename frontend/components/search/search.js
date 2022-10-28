@@ -6,7 +6,7 @@ import useOnClickOutside from "../../hooks/use-click-outside";
 import {fetchAPI, getSearchFilterProps} from "../../lib/api";
 import SearchResult from "./searchResult";
 import NoResults from "./no-results";
-import SearchLoading from "./search-loading";
+import SearchLoading from "../elements/search-loading";
 import scrollParentToChild from "../../lib/scroll-parent-to-child";
 import {AllowedLink} from "../nav/allowedLink";
 import {SearchIcon} from "@heroicons/react/outline";

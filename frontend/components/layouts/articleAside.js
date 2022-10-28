@@ -1,4 +1,4 @@
-import {PersonCardTiny} from "../mini/personCardTiny";
+import {PersonCardTiny} from "../cardsMini/personCardTiny";
 import React from "react";
 
 export function ArticleAside({item}) {

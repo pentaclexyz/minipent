@@ -1,5 +1,5 @@
 import ReactMarkdown from "react-markdown";
-import {PersonCardMini} from "../mini/personCardMini";
+import {PersonCardMini} from "../cardsMini/personCardMini";
 import {TasksCard} from "./tasksCard";
 import BackLink from "../nav/backLink";
 

@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../../components/layouts/layout";
 import {fetchAPI} from "../../lib/api";
 import CardContainerLayout from "../../components/layouts/cardContainerLayout";
-import {ArticleCardMini} from "../../components/mini/articleCardMini";
+import {ArticleCardMini} from "../../components/cardsMini/articleCardMini";
 import Seo from "../../components/seo";
 
 export default function Articles({articles}) {
