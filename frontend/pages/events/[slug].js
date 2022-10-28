@@ -2,6 +2,10 @@ import {fetchAPI, getSlugsForPath} from "../../lib/api";
 import Layout from "../../components/layouts/layout";
 import Seo from "../../components/seo";
 import ReactMarkdown from "react-markdown";
+import LayoutPageContent from "../../components/layouts/layoutPageContent";
+import ArticleContent from "../../components/cards/articleContent";
+import {ArticleAside} from "../../components/layouts/articleAside";
+import React from "react";
 
 
 const Event = ({event}) => {
@@ -13,18 +17,14 @@ const Event = ({event}) => {
     return (
         <Layout>
             <Seo seo={seo}/>
-            <section>
-                <h1>{event?.attributes?.name}</h1>
-                <article className={"pb-6 editorial"}>
-                    <ReactMarkdown>{event?.attributes?.details}</ReactMarkdown>
+            <LayoutPageContent>
+                <article className={"md:col-span-8"}>
+                    <ArticleContent item={event.attributes} section={"events"} id={event.id}/>
                 </article>
-                <article className={"pb-6 editorial"}>
-                    <ReactMarkdown>{event?.attributes?.planning}</ReactMarkdown>
+                <article className="pt-6 md:pt-0 md:col-span-4 sm:mt-4">
+                    <ArticleAside item={event.attributes}/>
                 </article>
-            </section>
-            <aside>
-                <p></p>
-            </aside>
+            </LayoutPageContent>
         </Layout>
     );
 };

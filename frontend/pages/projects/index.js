@@ -1,6 +1,6 @@
 import Layout from "../../components/layouts/layout";
 import {fetchAPI} from "../../lib/api";
-import {IntroCard} from "../../components/card/introCard";
+import {IntroCard} from "../../components/cards/introCard";
 import Seo from "../../components/seo";
 import CardContainerLayout from "../../components/layouts/cardContainerLayout";
 import {ArticleCardMini} from "../../components/mini/articleCardMini";

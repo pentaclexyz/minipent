@@ -1,5 +1,5 @@
 import React, {useMemo, useState} from "react";
-import ArticleCard from "./card/articleCard";
+import ArticleCard from "./cards/articleCard";
 
 const LOWER_LIMIT = 3;
 const UPPER_LIMIT = 15;

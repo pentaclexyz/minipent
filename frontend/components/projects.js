@@ -1,4 +1,4 @@
-import ProjectCardSummary from "./card/projectCardSummary";
+import ProjectCardSummary from "./cards/projectCardSummary";
 
 export default function Projects({projects}) {
     return (

@@ -1,10 +1,10 @@
 import React from "react";
 import {fetchAPI, getSlugsForPath} from "../../lib/api";
-import {PersonCardMini} from "../../components/mini/personCardMini";
 import Layout from "../../components/layouts/layout";
 import Seo from "../../components/seo";
-import ArticleCard from "../../components/card/articleCard";
 import LayoutPageContent from "../../components/layouts/layoutPageContent";
+import ArticleContent from "../../components/cards/articleContent";
+import {ArticleAside} from "../../components/layouts/articleAside";
 
 const Article = ({article}) => {
     const seo = {
@@ -15,17 +15,13 @@ const Article = ({article}) => {
     return (
         <Layout>
             <Seo seo={seo}/>
-
             <LayoutPageContent>
                 <article className={"md:col-span-8"}>
-                <ArticleCard item={article.attributes} id={article.id}/>
+                    <ArticleContent item={article.attributes} section={"articles"} id={article.id}/>
                 </article>
                 <article className="pt-6 md:pt-0 md:col-span-4 sm:mt-4">
-                    {article.attributes.people.data.map((person, i) => (
-                        <PersonCardMini person={person.attributes} key={i}/>
-                    ))}
+                    <ArticleAside item={article.attributes}/>
                 </article>
-
             </LayoutPageContent>
         </Layout>
     );

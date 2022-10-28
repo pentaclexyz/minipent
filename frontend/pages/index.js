@@ -3,7 +3,7 @@ import Link from "next/link";
 import Layout from "../components/layouts/layout";
 import Search from "../components/search/search";
 import Seo from "../components/seo";
-import {IntroCard} from "../components/card/introCard";
+import {IntroCard} from "../components/cards/introCard";
 import CardContainerLayout from "../components/layouts/cardContainerLayout";
 
 
