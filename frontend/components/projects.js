@@ -1,11 +1,11 @@
-import ProjectCardSummary from "./projectCardSummary";
+import ArticleCard from "./cards/articleCard";
 
 export default function Projects({projects}) {
     return (
         <div>
             {projects?.map((project, i) => (
                 <div key={i}>
-                    <ProjectCardSummary project={project.attributes} id={project.id}/>
+                    <ArticleCard project={project.attributes} section={"projects"} id={project.id}/>
                 </div>
             ))}
         </div>

@@ -1,10 +1,10 @@
 import {fetchAPI, getSearchFilterProps} from "../lib/api";
 import Link from "next/link";
-import Layout from "../components/layout";
+import Layout from "../components/layouts/layout";
 import Search from "../components/search/search";
 import Seo from "../components/seo";
-import {IntroCard} from "../components/introCard";
-import CardContainerLayout from "../components/cardContainerLayout";
+import {IntroCard} from "../components/cards/introCard";
+import CardContainerLayout from "../components/layouts/cardContainerLayout";
 
 
 // const API_ENDPOINTS = ["projects", "planning", "contributors", "events", "news", "articles"];

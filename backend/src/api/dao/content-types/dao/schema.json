@@ -4,7 +4,8 @@
   "info": {
     "singularName": "dao",
     "pluralName": "daos",
-    "displayName": "dao"
+    "displayName": "dao",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,6 +23,16 @@
     },
     "slug": {
       "type": "uid"
+    },
+    "coverImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

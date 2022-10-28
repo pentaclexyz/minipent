@@ -1,7 +1,7 @@
 import ReactMarkdown from "react-markdown";
-import {PersonCardMini} from "./personCardMini";
+import {PersonCardMini} from "../cardsMini/personCardMini";
 import {TasksCard} from "./tasksCard";
-import BackLink from "./backLink";
+import BackLink from "../nav/backLink";
 
 export default function PlanningCard({planning}) {
     return (

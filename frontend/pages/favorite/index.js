@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import Layout from "../../components/layout";
-import { ProjectCardMini } from "../../components/projectCardMini";
+import Layout from "../../components/layouts/layout";
 import { useFavorites } from "../../contexts/FavoriteContext";
 import { fetchAPI } from "../../lib/api";
+import {ArticleCardMini} from "../../components/cardsMini/articleCardMini";
 
 export default function FavoriteOverview() {
   const { faves } = useFavorites();
@@ -36,7 +36,7 @@ export default function FavoriteOverview() {
         <h2 className="px-3 my-3 text-xl">Favorites</h2>
         <div className="grid grid-cols-1 gap-5 p-3 md:grid-cols-2 lg:grid-cols-4">
           {resolvedFaves.map((project, i) => (
-            <ProjectCardMini project={project} key={i} />
+            <ArticleCardMini item={project} key={i} />
           ))}
         </div>
       </Layout>

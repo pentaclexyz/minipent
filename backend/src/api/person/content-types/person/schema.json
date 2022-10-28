@@ -63,7 +63,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::new.new",
-      "inversedBy": "people"
+      "mappedBy": "people"
     }
   }
 }

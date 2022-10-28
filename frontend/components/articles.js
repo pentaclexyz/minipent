@@ -1,5 +1,5 @@
 import React, {useMemo, useState} from "react";
-import ArticleCard from "./articleCard";
+import ArticleCard from "./cards/articleCard";
 
 const LOWER_LIMIT = 3;
 const UPPER_LIMIT = 15;
@@ -38,7 +38,7 @@ const Articles = (
         </div>
       </div>
       <ul>
-        {shownArticles.map((article, i) => (
+        {shownArticles.map((article) => (
           <li key={article.id}>
             <ArticleCard article={article.attributes}/>
           </li>

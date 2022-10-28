@@ -24,6 +24,16 @@
     "slug": {
       "type": "uid",
       "targetField": "name"
+    },
+    "coverImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

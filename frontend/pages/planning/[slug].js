@@ -1,8 +1,8 @@
 import React from "react";
 import {fetchAPI, getSlugsForPath} from "../../lib/api";
-import Layout from "../../components/layout";
+import Layout from "../../components/layouts/layout";
 import Seo from "../../components/seo";
-import PlanningCard from "../../components/planningCard";
+import PlanningCard from "../../components/cards/planningCard";
 
 const PlanningItem = ({planning}) => {
     const seo = {

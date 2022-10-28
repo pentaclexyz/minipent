@@ -1,9 +1,10 @@
 import React from "react";
 import {fetchAPI, getSlugsForPath} from "../../lib/api";
-import Layout from "../../components/layout";
+import Layout from "../../components/layouts/layout";
 import Seo from "../../components/seo";
-import LayoutPageContent from "../../components/layoutPageContent";
-import DocumentCard from "../../components/documentCard";
+import LayoutPageContent from "../../components/layouts/layoutPageContent";
+import ArticleContent from "../../components/cards/articleContent";
+import {ArticleAside} from "../../components/layouts/articleAside";
 
 const Document = ({document}) => {
     const seo = {
@@ -13,10 +14,12 @@ const Document = ({document}) => {
     return (
         <Layout>
             <Seo seo={seo}/>
-
             <LayoutPageContent>
                 <article className={"md:col-span-8"}>
-                <DocumentCard item={document.attributes} id={document.id}/>
+                    <ArticleContent item={document.attributes} section={"documents"} id={document.id}/>
+                </article>
+                <article className="pt-6 md:pt-0 md:col-span-4 sm:mt-4">
+                    <ArticleAside item={document.attributes}/>
                 </article>
             </LayoutPageContent>
         </Layout>

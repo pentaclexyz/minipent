@@ -1,15 +1,16 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
-import BackLink from "./backLink";
+import BackLink from "../nav/backLink";
+import {PersonCardTiny} from "../cardsMini/personCardTiny";
 
-const DocumentCard = ({item, ...props}) => {
+const ArticleCard = ({item, ...props}) => {
     return (
         <div {...props}>
-            <BackLink link={"/documents"} title={"Docs"}/>
+            <BackLink link={"/articles"} section={"articles"} title={"Articles"}/>
             <h1>{item.name}</h1>
             <div className={"editorial mb-4 "}><ReactMarkdown>{item.description}</ReactMarkdown></div>
             <div className={"editorial"}><ReactMarkdown>{item.content}</ReactMarkdown></div>
         </div>
     );
 };
-export default DocumentCard;
+export default ArticleCard;

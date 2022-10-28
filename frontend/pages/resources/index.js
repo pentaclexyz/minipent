@@ -1,19 +1,19 @@
 import React from "react";
-import Layout from "../../components/layout";
+import Layout from "../../components/layouts/layout";
 import {fetchAPI} from "../../lib/api";
-import CardContainerLayout from "../../components/cardContainerLayout";
+import CardContainerLayout from "../../components/layouts/cardContainerLayout";
 import Seo from "../../components/seo";
-import {ResourceCardMini} from "../../components/resourceCardMini";
+import {ArticleCardMini} from "../../components/cardsMini/articleCardMini";
 
 export default function Dao({resources}) {
-    const seo = {metaTitle: "DAO"};
+    const seo = {metaTitle: "Resources"};
     return (
         <Layout>
             <Seo seo={seo}/>
             <h1>Resources</h1>
             <CardContainerLayout>
                 {resources.map((resource, i) => (
-                    <ResourceCardMini resource={resource.attributes} key={i} />
+                    <ArticleCardMini item={resource.attributes} section={"resources"} key={i} />
                 ))}
             </CardContainerLayout>
         </Layout>

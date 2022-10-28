@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import {themeChange} from 'theme-change'
-import Nav from "./nav";
-import Footer from "./footer";
+import Nav from "../nav/nav";
+import Footer from "../nav/footer";
 
 const Layout = ({children}) => {
     useEffect(() => {

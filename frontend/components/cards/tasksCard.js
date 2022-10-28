@@ -1,5 +1,5 @@
 import ReactMarkdown from "react-markdown";
-import Label from "./label";
+import Label from "../nav/label";
 
 export function TasksCard({tasks}) {
     return (

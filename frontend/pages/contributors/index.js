@@ -1,10 +1,10 @@
 import React from "react";
-import Layout from "../../components/layout";
+import Layout from "../../components/layouts/layout";
 import {fetchAPI} from "../../lib/api";
-import {ContributorCardMini} from "../../components/contributorCardMini";
-import {IntroCard} from "../../components/introCard";
+import {IntroCard} from "../../components/cards/introCard";
 import Seo from "../../components/seo";
-import CardContainerLayout from "../../components/cardContainerLayout";
+import CardContainerLayout from "../../components/layouts/cardContainerLayout";
+import {ArticleCardMini} from "../../components/cardsMini/articleCardMini";
 
 export default function Contributors({intros, contributors}) {
     const seo = {metaTitle: "Contributors"};
@@ -17,7 +17,7 @@ export default function Contributors({intros, contributors}) {
             ))}
             <CardContainerLayout>
                 {contributors.data.map((contributor, i) => (
-                    <ContributorCardMini item={contributor.attributes} key={i}/>
+                    <ArticleCardMini item={contributor.attributes} section={"contributors"} key={i}/>
                 ))}
             </CardContainerLayout>
         </Layout>

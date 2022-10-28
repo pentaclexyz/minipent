@@ -1,6 +1,6 @@
 import Link from "next/link";
-import React, {createContext, useContext, useMemo} from "react";
-import GlobalContext from "../contexts/GlobalContext";
+import React, {useContext, useMemo} from "react";
+import GlobalContext from "../../contexts/GlobalContext";
 import {useRouter} from "next/router";
 
 const Footer = () => {
