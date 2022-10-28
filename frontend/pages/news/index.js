@@ -13,7 +13,7 @@ export default function News({ news }) {
             <h1>News</h1>
             <CardContainerLayout>
                 {news.map((item, i) => (
-                    <ArticleCardMini item={item.attributes} key={i} />
+                    <ArticleCardMini item={item.attributes} section={"news"} key={i} />
                 ))}
             </CardContainerLayout>
         </Layout>

@@ -13,7 +13,7 @@ export default function Dao({daos}) {
             <h1>DAO</h1>
             <CardContainerLayout>
                 {daos.map((dao, i) => (
-                    <ArticleCardMini item={dao.attributes} key={i} />
+                    <ArticleCardMini item={dao.attributes} section={"daos"} key={i} />
                 ))}
             </CardContainerLayout>
         </Layout>

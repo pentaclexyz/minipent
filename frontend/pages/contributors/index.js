@@ -17,7 +17,7 @@ export default function Contributors({intros, contributors}) {
             ))}
             <CardContainerLayout>
                 {contributors.data.map((contributor, i) => (
-                    <ArticleCardMini item={contributor.attributes} key={i}/>
+                    <ArticleCardMini item={contributor.attributes} section={"contributors"} key={i}/>
                 ))}
             </CardContainerLayout>
         </Layout>

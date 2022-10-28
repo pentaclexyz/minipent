@@ -17,7 +17,7 @@ export default function ProjectOverview({intros, projects}) {
             ))}
             <CardContainerLayout>
                 {projects.data.map((project, i) => (
-                    <ArticleCardMini item={project.attributes} key={i}/>
+                    <ArticleCardMini item={project.attributes} section={"projects"} key={i}/>
                 ))}
             </CardContainerLayout>
         </Layout>

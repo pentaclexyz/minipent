@@ -6,14 +6,14 @@ import Seo from "../../components/seo";
 import {ArticleCardMini} from "../../components/mini/articleCardMini";
 
 export default function Dao({documents}) {
-    const seo = {metaTitle: "DAO"};
+    const seo = {metaTitle: "Docs"};
     return (
         <Layout>
             <Seo seo={seo}/>
-            <h1>Resources</h1>
+            <h1>Docs</h1>
             <CardContainerLayout>
                 {documents.map((document, i) => (
-                    <ArticleCardMini item={document.attributes} key={i} />
+                    <ArticleCardMini item={document.attributes} section={"documents"} key={i} />
                 ))}
             </CardContainerLayout>
         </Layout>

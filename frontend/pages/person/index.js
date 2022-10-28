@@ -7,10 +7,7 @@ export default function PersonOverview({ data }) {
 
       <ul className="grid grid-cols-12 gap-3 px-6 my-8 md:grid-cols-6 lg:grid-cols-12">
         {data?.map((e) => (
-          <li
-            className="col-span-2 px-3 py-2 rounded border md:col-span-3 lg:col-span-4"
-            key={e.id}
-          >
+          <li className="col-span-2 px-3 py-2 rounded border md:col-span-3 lg:col-span-4" key={e.id}>
             <h3 className="text-lg truncate"> {e.attributes.name}</h3>
           </li>
         ))}

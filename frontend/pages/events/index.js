@@ -13,7 +13,7 @@ export default function Events({ events }) {
       <h1>Events</h1>
         <CardContainerLayout>
             {events.map((item, i) => (
-                <ArticleCardMini item={item.attributes} key={i} />
+                <ArticleCardMini item={item.attributes} section={"events"} key={i} />
             ))}
         </CardContainerLayout>
     </Layout>

@@ -13,7 +13,7 @@ export default function Planning({planning}) {
             <Seo seo={seo}/>
             <CardContainerLayout>
                 {planning.map((item, i) => (
-                    <ArticleCardMini item={item.attributes} key={i} />
+                    <ArticleCardMini item={item.attributes} section={"planning"} key={i} />
                 ))}
             </CardContainerLayout>
         </Layout>

@@ -13,7 +13,7 @@ export default function Developers({ developers }) {
       <h1>Developers</h1>
         <CardContainerLayout>
             {developers.map((developer, i) => (
-                <ArticleCardMini item={developer.attributes} key={i} />
+                <ArticleCardMini item={developer.attributes} section={"developers"} key={i} />
             ))}
         </CardContainerLayout>
     </Layout>

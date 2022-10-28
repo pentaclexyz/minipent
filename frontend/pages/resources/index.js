@@ -13,7 +13,7 @@ export default function Dao({resources}) {
             <h1>Resources</h1>
             <CardContainerLayout>
                 {resources.map((resource, i) => (
-                    <ArticleCardMini item={resource.attributes} key={i} />
+                    <ArticleCardMini item={resource.attributes} section={"resources"} key={i} />
                 ))}
             </CardContainerLayout>
         </Layout>

@@ -13,7 +13,7 @@ export default function Articles({articles}) {
             <h1>Articles</h1>
             <CardContainerLayout>
                 {articles.map((article, i) => (
-                    <ArticleCardMini item={article.attributes} key={i} />
+                    <ArticleCardMini item={article.attributes} section={"articles"} key={i} />
                 ))}
             </CardContainerLayout>
         </Layout>
