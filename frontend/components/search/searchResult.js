@@ -1,7 +1,7 @@
 import {useMemo} from "react";
-import {AllowedLink} from "./allowedLink";
+import {AllowedLink} from "../nav/allowedLink";
 
-function SearchResult({result, group, slug, price}) {
+function SearchResult({result, group, slug}) {
     const description = useMemo(
         () =>
             result?.attributes?.description && (

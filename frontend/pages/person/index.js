@@ -1,4 +1,4 @@
-import Layout from "../../components/layout";
+import Layout from "../../components/layouts/layout";
 import { fetchAPI } from "../../lib/api";
 export default function PersonOverview({ data }) {
   return (

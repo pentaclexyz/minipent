@@ -1,7 +1,7 @@
 import {fetchAPI, getSlugsForPath} from "../../lib/api";
-import Layout from "../../components/layout";
+import Layout from "../../components/layouts/layout";
 import Seo from "../../components/seo";
-import ProjectCard from "../../components/projectCard";
+import ProjectCard from "../../components/card/projectCard";
 
 const Project = ({project}) => {
     const seo = {

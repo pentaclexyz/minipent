@@ -1,9 +1,9 @@
 import React from "react";
-import Layout from "../../components/layout";
+import Layout from "../../components/layouts/layout";
 import {fetchAPI} from "../../lib/api";
-import {PlanningCardMini} from "../../components/planningCardMini";
 import Seo from "../../components/seo";
-import CardContainerLayout from "../../components/cardContainerLayout";
+import CardContainerLayout from "../../components/layouts/cardContainerLayout";
+import {ArticleCardMini} from "../../components/mini/articleCardMini";
 
 export default function Planning({planning}) {
     const seo = {metaTitle: "Planning"};
@@ -13,7 +13,7 @@ export default function Planning({planning}) {
             <Seo seo={seo}/>
             <CardContainerLayout>
                 {planning.map((item, i) => (
-                    <PlanningCardMini item={item.attributes} key={i} />
+                    <ArticleCardMini item={item.attributes} key={i} />
                 ))}
             </CardContainerLayout>
         </Layout>

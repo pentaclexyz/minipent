@@ -2,7 +2,7 @@ import Select from "react-select";
 import { useQuery } from "react-query";
 import { useState } from "react";
 import qs from "qs";
-import Layout from "../components/layout";
+import Layout from "../components/layouts/layout";
 
 const getProjects = async (key) => {
   const sectionId = key.queryKey[1].section;

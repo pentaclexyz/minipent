@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { useCallback, useEffect, useMemo, useState } from "react";
-import { useCoingecko } from "../contexts/CoingeckoContext";
-import { useFavorites } from "../contexts/FavoriteContext";
-import { IsFavorite, IsNotFavorite } from "./favorite";
-import { fetchAPI, getStrapiURL } from "../lib/api";
+import { useEffect, useMemo, useState } from "react";
+import { useCoingecko } from "../../contexts/CoingeckoContext";
+import { useFavorites } from "../../contexts/FavoriteContext";
+import { IsFavorite, IsNotFavorite } from "../favorite";
+import { getStrapiURL } from "../../lib/api";
 import { useAccount, useSignMessage } from "wagmi";
 function removeTrailingSlash(str = "") {
   return str.replace(/\/+$/, "");

@@ -1,4 +1,4 @@
-import { AllowedLink } from "../allowedLink";
+import { AllowedLink } from "../nav/allowedLink";
 import React, { useState, useRef, useCallback } from "react";
 import debounce from "debounce";
 import { fetchAPI, getSearchFilterProps } from "../../lib/api";

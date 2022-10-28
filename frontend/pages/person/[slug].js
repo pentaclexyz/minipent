@@ -1,6 +1,6 @@
 import Articles from "../../components/articles";
 import { fetchAPI } from "../../lib/api";
-import Layout from "../../components/layout";
+import Layout from "../../components/layouts/layout";
 import Seo from "../../components/seo";
 import Projects from "../../components/projects";
 import ArrowLeftIcon from "@heroicons/react/outline/ArrowLeftIcon";

@@ -1,4 +1,4 @@
-const LinkLaunch = (props) => {
+const LaunchLink = (props) => {
     return (
         <>
             {props.url && (
@@ -10,4 +10,4 @@ const LinkLaunch = (props) => {
         </>
     );
 };
-export default LinkLaunch;
+export default LaunchLink;

@@ -1,5 +1,5 @@
 import ReactMarkdown from "react-markdown";
-import BackLink from "./backLink";
+import BackLink from "../nav/backLink";
 
 export default function NewsCard({news}) {
     return (

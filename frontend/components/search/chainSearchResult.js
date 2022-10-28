@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { AllowedLink } from "../allowedLink";
+import { AllowedLink } from "../nav/allowedLink";
 
 const ChainSearchResult = ({ result, group, slug, price }) => {
   const description = useMemo(
@@ -29,9 +29,8 @@ const ChainSearchResult = ({ result, group, slug, price }) => {
       <div className="w-full search-result">
         <div className="flex flex-row gap-3 items-center w-full">
           {result.attributes.ticker && group === "chains" && (
-            <img
-              src={`https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/32/color/${result.attributes.ticker}.png`}
-              style={{ width: 20, height: 20 }}
+            <img src={`https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/32/color/${result.attributes.ticker}.png`}
+              style={{ width: 20, height: 20 }} alt={result.attributes.ticker}
               // Fallback image
               onError={({ currentTarget }) => {
                 currentTarget.onerror = null;

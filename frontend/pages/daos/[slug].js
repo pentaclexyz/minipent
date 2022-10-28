@@ -1,9 +1,9 @@
 import React from "react";
 import {fetchAPI, getSlugsForPath} from "../../lib/api";
-import Layout from "../../components/layout";
+import Layout from "../../components/layouts/layout";
 import Seo from "../../components/seo";
-import LayoutPageContent from "../../components/layoutPageContent";
-import DaoCard from "../../components/daoCard";
+import LayoutPageContent from "../../components/layouts/layoutPageContent";
+import DaoCard from "../../components/card/daoCard";
 
 const Document = ({dao}) => {
     const seo = {

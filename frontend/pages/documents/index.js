@@ -1,9 +1,9 @@
 import React from "react";
-import Layout from "../../components/layout";
+import Layout from "../../components/layouts/layout";
 import {fetchAPI} from "../../lib/api";
-import CardContainerLayout from "../../components/cardContainerLayout";
+import CardContainerLayout from "../../components/layouts/cardContainerLayout";
 import Seo from "../../components/seo";
-import {DocumentCardMini} from "../../components/documentCardMini";
+import {ArticleCardMini} from "../../components/mini/articleCardMini";
 
 export default function Dao({documents}) {
     const seo = {metaTitle: "DAO"};
@@ -13,7 +13,7 @@ export default function Dao({documents}) {
             <h1>Resources</h1>
             <CardContainerLayout>
                 {documents.map((document, i) => (
-                    <DocumentCardMini document={document.attributes} key={i} />
+                    <ArticleCardMini item={document.attributes} key={i} />
                 ))}
             </CardContainerLayout>
         </Layout>

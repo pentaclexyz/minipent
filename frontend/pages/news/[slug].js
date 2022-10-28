@@ -1,9 +1,8 @@
 import {fetchAPI, getSlugsForPath} from "../../lib/api";
-import Layout from "../../components/layout";
+import Layout from "../../components/layouts/layout";
 import Seo from "../../components/seo";
 import React from "react";
-import BackLink from "../../components/backLink";
-import NewsCard from "../../components/newsCard";
+import NewsCard from "../../components/card/newsCard";
 
 const NewsItem = ({news}) => {
     const seo = {

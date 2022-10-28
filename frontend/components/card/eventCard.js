@@ -1,6 +1,6 @@
 import ReactMarkdown from "react-markdown";
-import BackLink from "./backLink";
-import {PersonCardMini} from "./personCardMini";
+import BackLink from "../nav/backLink";
+import {PersonCardMini} from "../mini/personCardMini";
 
 export default function EventCard({event}) {
     return (

@@ -1,5 +1,5 @@
 import ReactMarkdown from "react-markdown";
-import {getStrapiMedia} from "../lib/media";
+import {getStrapiMedia} from "../../lib/media";
 
 export function IntroCard({intro}) {
 
@@ -10,7 +10,7 @@ export function IntroCard({intro}) {
                 <ReactMarkdown>{intro.content}</ReactMarkdown>
             </div>
             <div className={"col-span-1"}>
-                <img className={"rounded-full"} src={getStrapiMedia(intro.image)}/>
+                <img className={"rounded-full"} alt={intro.name} src={getStrapiMedia(intro.image)}/>
             </div>
         </article>
     );

@@ -1,5 +1,5 @@
 import {fetchAPI, getSlugsForPath} from "../../lib/api";
-import Layout from "../../components/layout";
+import Layout from "../../components/layouts/layout";
 import Seo from "../../components/seo";
 import ReactMarkdown from "react-markdown";
 import React from "react";

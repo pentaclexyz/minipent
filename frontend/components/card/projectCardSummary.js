@@ -1,7 +1,7 @@
 import Link from "next/link";
-import {useFavorites} from "../contexts/FavoriteContext";
+import {useFavorites} from "../../contexts/FavoriteContext";
 import {useAccount} from "wagmi";
-import {IsFavorite, IsNotFavorite} from "./favorite";
+import {IsFavorite, IsNotFavorite} from "../favorite";
 
 
 export default function ProjectSummary({project, key, id}) {

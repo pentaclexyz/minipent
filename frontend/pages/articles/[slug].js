@@ -1,10 +1,10 @@
 import React from "react";
 import {fetchAPI, getSlugsForPath} from "../../lib/api";
-import {PersonCardMini} from "../../components/personCardMini";
-import Layout from "../../components/layout";
+import {PersonCardMini} from "../../components/mini/personCardMini";
+import Layout from "../../components/layouts/layout";
 import Seo from "../../components/seo";
-import ArticleCard from "../../components/articleCard";
-import LayoutPageContent from "../../components/layoutPageContent";
+import ArticleCard from "../../components/card/articleCard";
+import LayoutPageContent from "../../components/layouts/layoutPageContent";
 
 const Article = ({article}) => {
     const seo = {

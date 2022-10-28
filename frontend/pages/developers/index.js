@@ -1,9 +1,9 @@
 import React from "react";
-import Layout from "../../components/layout";
+import Layout from "../../components/layouts/layout";
 import { fetchAPI } from "../../lib/api";
-import {DeveloperCardMini} from "../../components/developerCardMini";
 import Seo from "../../components/seo";
-import CardContainerLayout from "../../components/cardContainerLayout";
+import CardContainerLayout from "../../components/layouts/cardContainerLayout";
+import {ArticleCardMini} from "../../components/mini/articleCardMini";
 
 export default function Developers({ developers }) {
   const seo = {metaTitle: "Developers"};
@@ -13,7 +13,7 @@ export default function Developers({ developers }) {
       <h1>Developers</h1>
         <CardContainerLayout>
             {developers.map((developer, i) => (
-                <DeveloperCardMini item={developer.attributes} key={i} />
+                <ArticleCardMini item={developer.attributes} key={i} />
             ))}
         </CardContainerLayout>
     </Layout>

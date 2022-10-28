@@ -1,9 +1,9 @@
-import Layout from "../../components/layout";
+import Layout from "../../components/layouts/layout";
 import {fetchAPI} from "../../lib/api";
-import {ProjectCardMini} from "../../components/projectCardMini";
-import {IntroCard} from "../../components/introCard";
+import {IntroCard} from "../../components/card/introCard";
 import Seo from "../../components/seo";
-import CardContainerLayout from "../../components/cardContainerLayout";
+import CardContainerLayout from "../../components/layouts/cardContainerLayout";
+import {ArticleCardMini} from "../../components/mini/articleCardMini";
 
 export default function ProjectOverview({intros, projects}) {
     const seo = {metaTitle: "Projects"};
@@ -17,7 +17,7 @@ export default function ProjectOverview({intros, projects}) {
             ))}
             <CardContainerLayout>
                 {projects.data.map((project, i) => (
-                    <ProjectCardMini item={project.attributes} key={i}/>
+                    <ArticleCardMini item={project.attributes} key={i}/>
                 ))}
             </CardContainerLayout>
         </Layout>

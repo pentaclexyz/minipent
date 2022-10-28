@@ -1,8 +1,8 @@
 import React from "react";
-import Layout from "../../components/layout";
+import Layout from "../../components/layouts/layout";
 import {fetchAPI} from "../../lib/api";
-import CardContainerLayout from "../../components/cardContainerLayout";
-import {ArticleCardMini} from "../../components/articleCardMini";
+import CardContainerLayout from "../../components/layouts/cardContainerLayout";
+import {ArticleCardMini} from "../../components/mini/articleCardMini";
 import Seo from "../../components/seo";
 
 export default function Articles({articles}) {
@@ -13,7 +13,7 @@ export default function Articles({articles}) {
             <h1>Articles</h1>
             <CardContainerLayout>
                 {articles.map((article, i) => (
-                    <ArticleCardMini article={article.attributes} key={i} />
+                    <ArticleCardMini item={article.attributes} key={i} />
                 ))}
             </CardContainerLayout>
         </Layout>
