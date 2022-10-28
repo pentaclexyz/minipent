@@ -18,9 +18,15 @@ const Event = ({event}) => {
         <Layout>
             <Seo seo={seo}/>
             <LayoutPageContent>
-                <article className={"md:col-span-8"}>
-                    <ArticleContent item={event.attributes} section={"events"} id={event.id}/>
-                </article>
+                <section className={"md:col-span-8"}>
+                    <h1>{event?.attributes?.name}</h1>
+                    <article className={"pb-6 editorial"}>
+                        <ReactMarkdown>{event?.attributes?.details}</ReactMarkdown>
+                    </article>
+                    <article className={"pb-6 editorial"}>
+                        <ReactMarkdown>{event?.attributes?.planning}</ReactMarkdown>
+                    </article>
+                </section>
                 <article className="pt-6 md:pt-0 md:col-span-4 sm:mt-4">
                     <ArticleAside item={event.attributes}/>
                 </article>
