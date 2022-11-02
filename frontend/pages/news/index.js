@@ -21,11 +21,15 @@ export default function News({ news }) {
 }
 
 export async function getStaticProps() {
-    const news = (await fetchAPI("/news")).data;
-    return {
-        props: {
-            news,
+    const news = (await fetchAPI("/news", {
+        populate: {
+            news: {populate: "*"},
+            coverImage: {populate: "*"},
         },
+    })).data;
+
+    return {
+        props: {news},
         revalidate: 1,
     };
 }

@@ -19,13 +19,17 @@ export default function Events({ events }) {
     </Layout>
   );
 }
-export async function getStaticProps() {
-  const events = (await fetchAPI("/events")).data;
 
-  return {
-    props: {
-        events,
-    },
-    revalidate: 1,
-  };
+export async function getStaticProps() {
+    const events = (await fetchAPI("/events", {
+        populate: {
+            events: {populate: "*"},
+            coverImage: {populate: "*"},
+        },
+    })).data;
+
+    return {
+        props: {events},
+        revalidate: 1,
+    };
 }

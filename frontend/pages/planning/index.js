@@ -21,7 +21,13 @@ export default function Planning({planning}) {
 }
 
 export async function getStaticProps() {
-    const planning = (await fetchAPI("/plannings")).data;
+    const planning = (await fetchAPI("/plannings", {
+        populate: {
+            plannings: {populate: "*"},
+            coverImage: {populate: "*"},
+        },
+    })).data;
+
     return {
         props: {planning},
         revalidate: 1,

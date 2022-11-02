@@ -21,7 +21,12 @@ export default function Dao({resources}) {
 }
 
 export async function getStaticProps() {
-    const resources = (await fetchAPI("/resources")).data;
+    const resources = (await fetchAPI("/resources", {
+        populate: {
+            resources: {populate: "*"},
+            coverImage: {populate: "*"},
+        },
+    })).data;
 
     return {
         props: {resources},
