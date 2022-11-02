@@ -67,7 +67,7 @@ html[data-theme="indigo"] {
 html[data-theme="pink"] {
   --primary: #fcdbe4;
   --primary-dark: #f91c9a;
-  --border-primary: #fcdbe4;
+  --border-primary: #fff;
   --border-secondary: #f91c9a;
   --border-tertiary: #ffffff;
   --p-bg: #fcdbe4;
