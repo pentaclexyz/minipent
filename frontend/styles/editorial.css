@@ -6,7 +6,7 @@
 
 .editorial hr {
     margin: 1.75rem 0 0 0;
-    color: var(--border-primary);
+    border-color: var(--border-primary);
 }
 
 .editorial h2 {
