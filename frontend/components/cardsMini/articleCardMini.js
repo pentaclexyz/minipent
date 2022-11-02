@@ -15,7 +15,7 @@ export function ArticleCardMini({item, section}) {
                         <div className={"cursor-pointer"}>
                             <h2 className={"txt-secondary internal-link"}>{item.name}</h2>
                             {item.coverImage &&
-                                <div><Image src={getStrapiMedia(item.coverImage)} width={300} height={200} className={"object-cover"}/></div>
+                                <div><Image src={getStrapiMedia(item.coverImage)} className={"object-cover"} width={300} height={200}/></div>
                             }
                         </div>
                     </Link>
