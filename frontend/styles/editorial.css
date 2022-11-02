@@ -1,14 +1,30 @@
 
 .editorial {
     white-space: normal;
+    max-width: 40rem;
+}
+
+.editorial hr {
+    margin: 1.75rem 0 0 0;
+    border-color: var(--border-primary);
+}
+
+.editorial h2 {
+    font-size: 1.5rem;
+    padding: 1.5rem 0 .5rem 0;
 }
 
 .editorial h3 {
-    padding-top: 2rem;
+    font-size: 1.2rem;
+    padding-top: 1.5rem;
+}
+
+.editorial h2 + h3 {
+    padding-top:0;
 }
 
 .editorial ul {
-    margin: 0 0 .5rem 0;
+    margin: 0;
     padding: 0;
 }
 
@@ -23,7 +39,7 @@
 }
 
 .editorial a:hover {
-    color: #02E0B9;
+    color: var(--txt-hover);
 }
 
 .editorial img {
