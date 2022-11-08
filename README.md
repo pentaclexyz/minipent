@@ -39,7 +39,7 @@ navigate to minipent-db-backups dir
 
 `$ createdb mp-local-04`
 
-`$ mp-local-04 < minipent-04.sql`
+`$ psql mp-local-04 < minipent-04.sql`
 
 update `backend/config/database.js`
 
