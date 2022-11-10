@@ -16,7 +16,7 @@
       "type": "string"
     },
     "description": {
-      "type": "richtext"
+      "type": "string"
     },
     "githubRepo": {
       "type": "string"
@@ -24,6 +24,9 @@
     "slug": {
       "type": "uid",
       "targetField": "name"
+    },
+    "content": {
+      "type": "string"
     }
   }
 }

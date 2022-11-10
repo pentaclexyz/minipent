@@ -12,6 +12,12 @@
 }
 
 @font-face {
+  font-family: "matter-medium";
+  src: url("../public/fonts/matter/Matter-Medium.woff") format("woff2");
+  src: url("../public/fonts/matter/Matter-Medium.woff2") format("woff");
+}
+
+@font-face {
   font-family: "matter-semibold";
   src: url("../public/fonts/matter/Matter-SemiBold.woff") format("woff2");
   src: url("../public/fonts/matter/Matter-SemiBold.woff2") format("woff");
