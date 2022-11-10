@@ -97,16 +97,24 @@ html[data-theme="pink"] {
   h1 {
     @apply text-2xl;
     @apply py-4;
+    font-family: matter-semibold, Arial, sans-serif;
   }
 
   h2 {
     @apply text-xl;
     @apply py-2;
+    font-family: matter-semibold, Arial, sans-serif;
   }
 
   h3 {
     @apply text-lg;
     @apply py-2;
+    font-family: matter-semibold, Arial, sans-serif;
+  }
+
+  h4 {
+    @apply py-1;
+    font-family: matter-semibold, Arial, sans-serif;
   }
 }
 
@@ -163,6 +171,6 @@ input[type="search"] {
   background-color: transparent;
 }
 
-p + p {
-  padding-top: .5rem;
+p + p, ul + p {
+  padding-top: 1.25rem;
 }
