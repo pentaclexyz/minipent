@@ -37,14 +37,21 @@
       "type": "string"
     },
     "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "calendars": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::calendar.calendar",
+      "inversedBy": "plannings"
     }
   }
 }
