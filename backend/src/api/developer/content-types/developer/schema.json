@@ -26,7 +26,7 @@
       "targetField": "name"
     },
     "content": {
-      "type": "string"
+      "type": "richtext"
     }
   }
 }
