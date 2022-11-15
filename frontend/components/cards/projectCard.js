@@ -11,7 +11,7 @@ export default function ProjectCard({project}) {
 
             <article className={"grid grid-cols-12 gap-x-8"}>
                 <div className="col-span-9">
-                    <img className={"rounded-2xl"} alt={project.name} src={getStrapiMedia(project.coverImage)}/>
+                    <img className={"rounded-2xl"} alt={project.name} src={getStrapiMedia(project.projectImage)}/>
                 </div>
 
                 <div className="col-span-3 text-sm">

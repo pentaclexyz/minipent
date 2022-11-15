@@ -46,6 +46,20 @@
     },
     "githubRepo": {
       "type": "string"
+    },
+    "projectImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "content": {
+      "type": "richtext"
     }
   }
 }

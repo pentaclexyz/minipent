@@ -13,6 +13,12 @@
   "attributes": {
     "name": {
       "type": "string"
+    },
+    "plannings": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::planning.planning",
+      "inversedBy": "calendars"
     }
   }
 }
