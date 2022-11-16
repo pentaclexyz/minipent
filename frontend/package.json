@@ -1,11 +1,7 @@
 {
-  "name": "pentacle",
+  "name": "minipent",
   "version": "0.1.0",
   "description": "mini pentacle for teams",
-  "engines": {
-    "node": "14.x",
-    "yarn": "^1.22.5"
-  },
   "private": true,
   "scripts": {
     "dev": "next dev",
