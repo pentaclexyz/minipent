@@ -70,3 +70,4 @@ select repo
 `$ railway up`
 
 select fe instance to deploy
+
