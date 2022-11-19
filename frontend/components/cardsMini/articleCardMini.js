@@ -12,9 +12,12 @@ export function ArticleCardMini({item, section}) {
     }
 
     const coverImage = item.coverImage
+    const web = "https://pentacle.xyz/images/icons/web.svg"
+    const twitter = "https://pentacle.xyz/images/icons/twitter.svg"
+    const github = "https://pentacle.xyz/images/icons/github.svg"
 
     return (
-        <article className={"col-span-3"}>
+        <article className={"col-span-4"}>
             <div className="p-card-inner">
 
                 <div className="flex flex-col gap-3">
@@ -24,14 +27,17 @@ export function ArticleCardMini({item, section}) {
                             <h2 className={"txt-secondary internal-link"}>{item.name}</h2>
                         </div>
                     </Link>
-                    <StyledLink url={item.url} text={item.url}/>
 
-                        {coverImage &&
-                            <Link href={{pathname: `/${section}/${item.slug}`}}>
-                            <div><Image src={getStrapiMedia(item.coverImage)} className={"object-cover cursor-pointer"} width={300}
-                                        height={200}/></div></Link>
-                        }
-
+                    <StyledLink url={item.url} text={item.url} icon={web}/>
+                    {item.twitterId && <StyledLink url={item.twitterId} text={item.twitterId} icon={twitter}/>}
+                    {item.githubRepo && <StyledLink url={item.githubRepo} text={item.githubRepo} icon={github}/>}
+                    {coverImage &&
+                        <Link href={{pathname: `/${section}/${item.slug}`}}>
+                            <div><Image src={getStrapiMedia(item.coverImage)} className={"object-cover cursor-pointer"}
+                                        width={300}
+                                        height={200}/></div>
+                        </Link>
+                    }
                     {item.description && <div className={"text-sm"}>{item.description}</div>}
                     {item.date && <div className={"text-sm"}>{item.date}</div>}
                     {item.people && <article className="flex gap-x-6">
