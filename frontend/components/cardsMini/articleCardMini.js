@@ -17,7 +17,7 @@ export function ArticleCardMini({item, section}) {
     const github = "https://pentacle.xyz/images/icons/github.svg"
 
     return (
-        <article className={"col-span-4"}>
+        <article className={"col-span-3"}>
             <div className="p-card-inner">
 
                 <div className="flex flex-col gap-3">

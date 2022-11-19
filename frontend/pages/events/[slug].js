@@ -22,7 +22,7 @@ const Event = ({event}) => {
         <Layout>
             <Seo seo={seo}/>
             <LayoutPageContent>
-                <section className={"md:col-span-8"}>
+                <section className={"md:col-span-10"}>
                     <h1>{event.attributes.name}</h1>
 
                     <div className={"py-4"}><StyledLink url={event.attributes.url} text={event.attributes.url} icon={web}/></div>
@@ -43,7 +43,8 @@ const Event = ({event}) => {
                     </article>
                 </section>
 
-                <article className="pt-6 md:pt-0 md:col-span-4 sm:mt-4">
+
+                <article className="pt-6 md:pt-0 md:col-span-2 sm:mt-4">
                     <ArticleAside item={event.attributes}/>
                 </article>
 
