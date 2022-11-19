@@ -31,7 +31,7 @@ export function ArticleCardMini({item, section}) {
                     {item.url && <StyledLink url={item.url} text={item.url} icon={web}/>}
                     {item.twitterId && <StyledLink url={item.twitterId} text={item.twitterId} icon={twitter}/>}
                     {item.githubRepo && <StyledLink url={item.githubRepo} text={item.githubRepo} icon={github}/>}
-                    {coverImage &&
+                    {item.coverImage &&
                         <Link href={{pathname: `/${section}/${item.slug}`}}>
                             <div><Image src={getStrapiMedia(item.coverImage)} className={"object-cover cursor-pointer"}
                                         width={300}
