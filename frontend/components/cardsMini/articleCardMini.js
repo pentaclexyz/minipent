@@ -28,7 +28,7 @@ export function ArticleCardMini({item, section}) {
                         </div>
                     </Link>
 
-                    <StyledLink url={item.url} text={item.url} icon={web}/>
+                    {item.url && <StyledLink url={item.url} text={item.url} icon={web}/>}
                     {item.twitterId && <StyledLink url={item.twitterId} text={item.twitterId} icon={twitter}/>}
                     {item.githubRepo && <StyledLink url={item.githubRepo} text={item.githubRepo} icon={github}/>}
                     {coverImage &&
