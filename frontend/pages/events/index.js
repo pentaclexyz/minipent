@@ -24,6 +24,8 @@ export async function getStaticProps() {
     const events = (await fetchAPI("/events", {
         populate: {
             events: {populate: "*"},
+            projects: {populate: "*"},
+            people: {populate: "*"},
             coverImage: {populate: "*"},
         },
     })).data;
