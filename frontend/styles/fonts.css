@@ -1,4 +1,16 @@
 @font-face {
+  font-family: "berkeley-regular";
+  src: url("../public/fonts/berkeley-mono/BerkeleyMono-Regular.woff") format("woff2");
+  src: url("../public/fonts/berkeley-mono/BerkeleyMono-Regular.woff2") format("woff");
+}
+
+@font-face {
+  font-family: "berkeley-bold";
+  src: url("../public/fonts/berkeley-mono/BerkeleyMono-Bold.woff") format("woff2");
+  src: url("../public/fonts/berkeley-mono/BerkeleyMono-Bold.woff2") format("woff");
+}
+
+@font-face {
   font-family: "cako";
   src: url("../public/fonts/cako/Cako-Regular.eot") format("eot");
   src: url("../public/fonts/cako/Cako-Regular.woff") format("woff2");

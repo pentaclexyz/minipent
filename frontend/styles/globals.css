@@ -39,26 +39,26 @@
 }
 
 html[data-theme="canto"] {
-  --p-bg: #070a1b;
+  --p-bg: #060707;
   --primary: #57f597;
   --primary-dark: #00e0b9;
   --border-primary: #57f597;
-  --border-secondary: #f3f3f3;
-  --border-tertiary: #cdc7c3;
+  --border-secondary: #57f597;
+  --border-tertiary: #57f597;
   --bg-01: rgba(255,255,255,.8);
   --bg-02: rgba(53, 115, 110, 1);
   --bg-03: rgba(29, 60, 67, 1);
-  --bg-card: rgba(255, 255, 255, 0);
+  --bg-card: transparent;
   --bg-card-hover: rgba(255, 255, 255, .05);
   --bg-card-secondary: rgba(255, 255, 255, .1);
   --bg-card-secondary-hover: #05121B;
   --bg-form: #cccccc;
   --bg-input: rgba(255, 255, 255, .1);
   --bg-search: rgba(53, 115, 110, .95);
-  --secondary: #ffcde5;
+  --secondary: #57f597;
   --tertiary: #4e3689;
   --txt-hover: #ffffff;
-  --txt-primary: rgba(255,255,255,.8);
+  --txt-primary: #51e38c;
   --txt-secondary: #ffcc77;
   --txt-inverted: #05121B;
   --black: #05121B;
@@ -97,31 +97,31 @@ html[data-theme="pink"] {
   h1 {
     @apply text-2xl;
     @apply py-4;
-    font-family: matter-semibold, Arial, sans-serif;
+    font-family: berkeley-bold, matter-semibold, Arial, sans-serif;
   }
 
   h2 {
     @apply text-xl;
     @apply py-2;
-    font-family: matter-semibold, Arial, sans-serif;
+    font-family: berkeley-bold, Arial, sans-serif;
   }
 
   h3 {
     @apply text-lg;
     @apply py-2;
-    font-family: matter-semibold, Arial, sans-serif;
+    font-family: berkeley-bold, Arial, sans-serif;
   }
 
   h4 {
     @apply py-1;
-    font-family: matter-semibold, Arial, sans-serif;
+    font-family: berkeley-bold, Arial, sans-serif;
   }
 }
 
 html,
 body {
   font-size: 16px;
-  font-family: matter, arial, sans-serif;
+  font-family: berkeley-regular, matter, arial, sans-serif;
 }
 
 input:focus-visible {

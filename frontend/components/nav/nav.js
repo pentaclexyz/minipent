@@ -54,7 +54,7 @@ const Nav = () => {
               </div>
 
               <div className={"hidden lg:block"}>
-                <select data-choose-theme="light" className={"text-sm p-1 border border-border-tertiary bg-transparent"}>
+                <select data-choose-theme="canto" className={"text-sm p-1 border border-border-tertiary bg-transparent"}>
                   <option value="light">Light</option>
                   <option value="pink">Pink</option>
                   <option value="canto">Canto</option>
