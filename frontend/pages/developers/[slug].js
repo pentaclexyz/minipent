@@ -1,8 +1,7 @@
+import React from "react";
 import {fetchAPI, getSlugsForPath} from "../../lib/api";
 import Layout from "../../components/layouts/layout";
 import Seo from "../../components/seo";
-import ReactMarkdown from "react-markdown";
-import React from "react";
 import LayoutPageContent from "../../components/layouts/layoutPageContent";
 import ArticleContent from "../../components/cards/articleContent";
 import {ArticleAside} from "../../components/layouts/articleAside";
