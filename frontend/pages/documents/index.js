@@ -24,7 +24,6 @@ export async function getStaticProps() {
     const documents = (await fetchAPI("/documents", {
         populate: {
             documents: {populate: "*"},
-            coverImage: {populate: "*"},
         },
     })).data;
 
