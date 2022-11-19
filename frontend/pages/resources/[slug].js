@@ -41,6 +41,7 @@ export async function getStaticProps({params}) {
         filters: {slug: params.slug},
         populate: {
             resources: {populate: "*"},
+            coverImage: {populate: "*"},
         },
     });
 

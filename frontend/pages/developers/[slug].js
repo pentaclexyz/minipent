@@ -41,7 +41,8 @@ export async function getStaticProps({params}) {
     const developers = await fetchAPI("/developers", {
         filters: {slug: params.slug},
         populate: {
-            contributors: {populate: "*"},
+            developers: {populate: "*"},
+            coverImage: {populate: "*"},
         },
     });
 

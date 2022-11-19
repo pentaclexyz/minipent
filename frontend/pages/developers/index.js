@@ -20,12 +20,15 @@ export default function Developers({ developers }) {
   );
 }
 export async function getStaticProps() {
-  const developers = (await fetchAPI("/developers")).data;
+    const developers = (await fetchAPI("/developers", {
+        populate: {
+            developers: {populate: "*"},
+            coverImage: {populate: "*"},
+        },
+    })).data;
 
-  return {
-    props: {
-        developers,
-    },
-    revalidate: 1,
-  };
+    return {
+        props: {developers},
+        revalidate: 1,
+    };
 }

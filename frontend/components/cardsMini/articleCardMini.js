@@ -25,10 +25,13 @@ export function ArticleCardMini({item, section}) {
                         </div>
                     </Link>
                     <StyledLink url={item.url} text={item.url}/>
-                    {coverImage &&
-                        <div><Image src={getStrapiMedia(item.coverImage)} className={"object-cover"} width={300}
-                                    height={200}/></div>
-                    }
+
+                        {coverImage &&
+                            <Link href={{pathname: `/${section}/${item.slug}`}}>
+                            <div><Image src={getStrapiMedia(item.coverImage)} className={"object-cover cursor-pointer"} width={300}
+                                        height={200}/></div></Link>
+                        }
+
                     {item.description && <div className={"text-sm"}>{item.description}</div>}
                     {item.date && <div className={"text-sm"}>{item.date}</div>}
                     {item.people && <article className="flex gap-x-6">
