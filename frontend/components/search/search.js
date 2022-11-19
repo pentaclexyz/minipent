@@ -169,12 +169,12 @@ export default function Search({initialValues}) {
 
 
   return (
-    <div className={`search-container bg-bg-01 relative mb-4 ${focussed ? "border border-border-tertiary" : ""}`}>
-      <div className="absolute left-4 top-5">
+    <div className={`search-container relative ${focussed ? "border border-border-tertiary" : ""}`}>
+      <div className="absolute left-4 top-5 text-black">
         <SearchIcon width={20}/>
       </div>
       <Combobox onChange={() => {}}>
-        <Combobox.Input className={`search-input border-b border-border-tertiary`} type={"search"} onFocus={handleFocus} onChange={handleSubmit} ref={ref}/>
+        <Combobox.Input className={`search-input border-b text-black border-border-tertiary`} type={"search"} onFocus={handleFocus} onChange={handleSubmit} ref={ref}/>
         {focussed && (
           <Combobox.Options static className={`grid grid-cols-12 sm:gap-x-12 lg:gap-x-20 gap-y-8 px-6 pb-6 mt-0 text-sm`}>
             {!!loading && !filteredResults.length && (

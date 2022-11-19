@@ -57,6 +57,7 @@ const Nav = () => {
                 <select data-choose-theme="light" className={"text-sm p-1 border border-border-tertiary bg-transparent"}>
                   <option value="light">Light</option>
                   <option value="pink">Pink</option>
+                  <option value="canto">Canto</option>
                 </select>
               </div>
             </div>
