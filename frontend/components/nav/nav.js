@@ -60,9 +60,9 @@ const Nav = () => {
                             <div className={"hidden lg:block"}>
                                 <select data-choose-theme="canto"
                                         className={"text-sm p-1 border border-border-tertiary bg-transparent"}>
+                                    <option value="canto">Canto</option>
                                     <option value="light">Light</option>
                                     <option value="pink">Pink</option>
-                                    <option value="canto">Canto</option>
                                 </select>
                             </div>
                         </div>
