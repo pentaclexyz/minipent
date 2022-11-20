@@ -12,8 +12,8 @@ export default function Events({ events }) {
       <Seo seo={seo}/>
       <h1>Events</h1>
         <CardContainerLayout>
-            {events.map((item, i) => (
-                <ArticleCardMini item={item.attributes} section={"events"} key={i} />
+            {events.map((event, i) => (
+                <ArticleCardMini item={event.attributes} section={"events"} key={i} />
             ))}
         </CardContainerLayout>
     </Layout>

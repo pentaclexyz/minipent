@@ -9,9 +9,10 @@ import {getStrapiMedia} from "../../lib/media";
 import {ArticleCardMini} from "../../components/cardsMini/articleCardMini";
 import CardContainerLayout from "../../components/layouts/cardContainerLayout";
 import StyledLink from "../../components/nav/styledLink";
+import BackLink from "../../components/nav/backLink";
 
 
-const Event = ({event}) => {
+const Event = ({section, event}) => {
     const seo = {
         metaTitle: event?.attributes?.name,
     };
@@ -23,6 +24,7 @@ const Event = ({event}) => {
             <Seo seo={seo}/>
             <LayoutPageContent>
                 <section className={"md:col-span-10"}>
+                    <BackLink link={`/${section}`} section={section} title={section}/>
                     <h1>{event.attributes.name}</h1>
 
                     <div className={"py-4"}><StyledLink url={event.attributes.url} text={event.attributes.url} icon={web}/></div>
