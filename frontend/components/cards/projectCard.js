@@ -17,6 +17,7 @@ export default function ProjectCard({project}) {
                 <div className="col-span-3 text-sm">
                     <LaunchLink url={project.url} text={project.url}/>
                     <article className={"pt-2 editorial"}><ReactMarkdown>{project.description}</ReactMarkdown></article>
+                    <article className={"pt-4 editorial"}><ReactMarkdown>{project.content}</ReactMarkdown></article>
                 </div>
             </article>
         </section>

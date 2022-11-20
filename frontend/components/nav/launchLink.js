@@ -3,7 +3,7 @@ const LaunchLink = (props) => {
         <>
             {props.url && (
                 <a href={`${props.url}`} target={"_blank"} rel="noopener noreferrer"
-                   className="cursor-pointer rounded-full text-sm px-4 py-2 mb-4 inline-block bg-primary hover:bg-secondary text-txt-primary hover:text-txt-primary">
+                   className="cursor-pointer rounded-full text-sm px-4 py-2 mb-4 inline-block bg-primary hover:bg-secondary text-txt-inverted hover:underline">
                     <span>Launch app</span>
                 </a>
             )}
