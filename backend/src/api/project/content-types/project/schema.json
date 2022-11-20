@@ -66,6 +66,12 @@
       "relation": "manyToMany",
       "target": "api::event.event",
       "inversedBy": "projects"
+    },
+    "resources": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::resource.resource",
+      "inversedBy": "projects"
     }
   }
 }

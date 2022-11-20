@@ -42,6 +42,7 @@ export async function getStaticProps({params}) {
         populate: {
             resources: {populate: "*"},
             coverImage: {populate: "*"},
+            projects: {populate: "*"},
         },
     });
 
