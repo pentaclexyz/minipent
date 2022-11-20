@@ -55,11 +55,11 @@ html[data-theme="canto"] {
   --bg-form: #cccccc;
   --bg-input: rgba(255, 255, 255, .1);
   --bg-search: rgba(53, 115, 110, .95);
-  --secondary: #57f597;
+  --secondary: #ffffff;
   --tertiary: #4e3689;
   --txt-hover: #ffffff;
   --txt-primary: #51e38c;
-  --txt-secondary: #ffcc77;
+  --txt-secondary: rgba(255,255,255,.8);
   --txt-inverted: #05121B;
   --black: #05121B;
 }
