@@ -124,12 +124,17 @@ body {
   font-family: berkeley-regular, matter, arial, sans-serif;
 }
 
+input[type="text"] {
+  font-size: inherit;
+}
+
 input:focus-visible {
   @apply outline-none;
 }
 
 input[type="search"] {
   -webkit-appearance: none;
+  font-size: inherit;
 }
 
 .internal-link h2, h2.internal-link,
