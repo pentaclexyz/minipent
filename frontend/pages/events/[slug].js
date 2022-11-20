@@ -48,7 +48,7 @@ const Event = ({event}) => {
 
 
                 <article className="pt-6 md:pt-0 md:col-span-2 sm:mt-4">
-                    <ArticleAside item={event.attributes}/>
+                    {/*People*/}
                 </article>
 
             </LayoutPageContent>
