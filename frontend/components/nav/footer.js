@@ -9,6 +9,7 @@ const Footer = () => {
     const {github_url} = useContext(GlobalContext) || {};
     const {twitter_url} = useContext(GlobalContext) || {};
     const {blog_url} = useContext(GlobalContext) || {};
+    const {discord_url} = useContext(GlobalContext) || {};
     const router = useRouter();
 
     const slugFromPath = useMemo(() => {
@@ -32,6 +33,7 @@ const Footer = () => {
                     })}
                 </ul>
                 <div className={"flex gap-4"}>
+                    <a className={"cursor-pointer hover:underline"} href={discord_url} target={"_blank"} rel="noopener noreferrer">Discord</a>
                     <a className={"cursor-pointer hover:underline"} href={github_url} target={"_blank"} rel="noopener noreferrer">Github</a>
                     <a className={"cursor-pointer hover:underline"} href={twitter_url} target={"_blank"} rel="noopener noreferrer">Twitter</a>
                     <a className={"cursor-pointer hover:underline"} href={blog_url} target={"_blank"} rel="noopener noreferrer">Blog</a>
