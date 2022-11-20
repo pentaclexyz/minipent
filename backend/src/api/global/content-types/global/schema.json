@@ -78,6 +78,9 @@
     },
     "blog_url": {
       "type": "string"
+    },
+    "discord_url": {
+      "type": "string"
     }
   }
 }
