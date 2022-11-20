@@ -17,7 +17,7 @@ export function ArticleAside({item}) {
                 {/*)}*/}
                 {item.projects && (<div className={"flex gap-x-4 py-6"}>
                     {item.projects.data.map((project, i) => (
-                        <ArticleCardMini item={project.attributes} key={i}/>
+                        <ArticleCardMini item={project.attributes} key={i} section={"projects"}/>
                     ))}
                 </div>)}
                 {item.people && (<div className={"flex gap-x-4"}>
