@@ -12,7 +12,7 @@ import StyledLink from "../../components/nav/styledLink";
 import BackLink from "../../components/nav/backLink";
 
 
-const Event = ({section, event}) => {
+const Event = ({event}) => {
     const seo = {
         metaTitle: event?.attributes?.name,
     };
@@ -24,7 +24,8 @@ const Event = ({section, event}) => {
             <Seo seo={seo}/>
             <LayoutPageContent>
                 <section className={"md:col-span-10"}>
-                    <BackLink link={`/${section}`} section={section} title={section}/>
+                    <BackLink link={"/events"} section={"events"} title={"Events"}/>
+
                     <h1>{event.attributes.name}</h1>
 
                     <div className={"py-4"}><StyledLink url={event.attributes.url} text={event.attributes.url} icon={web}/></div>
