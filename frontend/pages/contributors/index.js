@@ -6,7 +6,7 @@ import Seo from "../../components/seo";
 import CardContainerLayout from "../../components/layouts/cardContainerLayout";
 import {ArticleCardMini} from "../../components/cardsMini/articleCardMini";
 
-export default function Contributors({intros, contributors}) {
+export default function Contributors({intros, contributors, developers}) {
     const seo = {metaTitle: "Contributors"};
     return (
         <Layout>
@@ -15,9 +15,16 @@ export default function Contributors({intros, contributors}) {
             {intros.map((intro, i) => (
                 <IntroCard intro={intro} key={i}/>
             ))}
+            <h2>Developers</h2>
+            <CardContainerLayout>
+                {developers.data.map((developer, i) => (
+                    <ArticleCardMini item={developer.attributes} section={"developers"} key={i}/>
+                ))}
+            </CardContainerLayout>
+            <h2 className={"mt-16"}>Contributors</h2>
             <CardContainerLayout>
                 {contributors.data.map((contributor, i) => (
-                    <ArticleCardMini item={contributor.attributes} section={"contributors"} key={i}/>
+                    <ArticleCardMini item={contributor.attributes} section={"developers"} key={i}/>
                 ))}
             </CardContainerLayout>
         </Layout>
@@ -30,6 +37,7 @@ export async function getStaticProps() {
         populate: {
             intros: {populate: "*"},
             contributors: {populate: "*"},
+            developers: {populate: "*"},
         },
     });
 
@@ -37,6 +45,7 @@ export async function getStaticProps() {
         props: {
             intros: contributorpage.data.attributes.intros,
             contributors: contributorpage.data.attributes.contributors,
+            developers: contributorpage.data.attributes.developers,
         },
         revalidate: 1,
     };

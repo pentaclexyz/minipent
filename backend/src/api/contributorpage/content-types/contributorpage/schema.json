@@ -4,7 +4,8 @@
   "info": {
     "singularName": "contributorpage",
     "pluralName": "contributorpages",
-    "displayName": "contributorpage"
+    "displayName": "contributorpage",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,6 +21,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::contributor.contributor"
+    },
+    "developers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::developer.developer"
     }
   }
 }
