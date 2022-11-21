@@ -15,18 +15,20 @@ export default function Contributors({intros, contributors, developers}) {
             {intros.map((intro, i) => (
                 <IntroCard intro={intro} key={i}/>
             ))}
-            <h2>Developers</h2>
-            <CardContainerLayout>
-                {developers.data.map((developer, i) => (
-                    <ArticleCardMini item={developer.attributes} section={"developers"} key={i}/>
-                ))}
-            </CardContainerLayout>
-            <h2 className={"mt-16"}>Contributors</h2>
-            <CardContainerLayout>
-                {contributors.data.map((contributor, i) => (
-                    <ArticleCardMini item={contributor.attributes} section={"developers"} key={i}/>
-                ))}
-            </CardContainerLayout>
+            {developers.data && <div>
+                <h2>Developers</h2>
+                <CardContainerLayout>
+                    {developers.data.map((developer, i) => (
+                        <ArticleCardMini item={developer.attributes} section={"developers"} key={i}/>
+                    ))}
+                </CardContainerLayout>
+            </div>}
+            {contributors.data && <div><h2 className={"mt-16"}>Contributors</h2>
+                <CardContainerLayout>
+                    {contributors.data.map((contributor, i) => (
+                        <ArticleCardMini item={contributor.attributes} section={"developers"} key={i}/>
+                    ))}
+                </CardContainerLayout></div>}
         </Layout>
     );
 }
