@@ -15,9 +15,16 @@ export default function Contributors({intros, contributors, developers}) {
             {intros.map((intro, i) => (
                 <IntroCard intro={intro} key={i}/>
             ))}
+            <h2>Developers</h2>
             <CardContainerLayout>
                 {developers.data.map((developer, i) => (
                     <ArticleCardMini item={developer.attributes} section={"developers"} key={i}/>
+                ))}
+            </CardContainerLayout>
+            <h2 className={"mt-16"}>Contributors</h2>
+            <CardContainerLayout>
+                {contributors.data.map((contributor, i) => (
+                    <ArticleCardMini item={contributor.attributes} section={"developers"} key={i}/>
                 ))}
             </CardContainerLayout>
         </Layout>
@@ -29,6 +36,7 @@ export async function getStaticProps() {
     const contributorpage = await fetchAPI("/contributorpage", {
         populate: {
             intros: {populate: "*"},
+            contributors: {populate: "*"},
             developers: {populate: "*"},
         },
     });
@@ -36,6 +44,7 @@ export async function getStaticProps() {
     return {
         props: {
             intros: contributorpage.data.attributes.intros,
+            contributors: contributorpage.data.attributes.contributors,
             developers: contributorpage.data.attributes.developers,
         },
         revalidate: 1,
