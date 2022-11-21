@@ -8,6 +8,9 @@ import {ArticleCardMini} from "../../components/cardsMini/articleCardMini";
 
 export default function Contributors({intros, contributors, developers}) {
     const seo = {metaTitle: "Contributors"};
+    const developersData = developers.data.length > 0;
+    const contributorsData = contributors.data.length > 0;
+
     return (
         <Layout>
             <Seo seo={seo}/>
@@ -15,7 +18,7 @@ export default function Contributors({intros, contributors, developers}) {
             {intros.map((intro, i) => (
                 <IntroCard intro={intro} key={i}/>
             ))}
-            {developers.data && <div>
+            {developersData && <div>
                 <h2>Developers</h2>
                 <CardContainerLayout>
                     {developers.data.map((developer, i) => (
@@ -23,7 +26,7 @@ export default function Contributors({intros, contributors, developers}) {
                     ))}
                 </CardContainerLayout>
             </div>}
-            {contributors.data && <div><h2 className={"mt-16"}>Contributors</h2>
+            {contributorsData && <div><h2 className={"mt-16"}>Contributors</h2>
                 <CardContainerLayout>
                     {contributors.data.map((contributor, i) => (
                         <ArticleCardMini item={contributor.attributes} section={"developers"} key={i}/>
