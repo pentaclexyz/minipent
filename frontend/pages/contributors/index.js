@@ -6,7 +6,7 @@ import Seo from "../../components/seo";
 import CardContainerLayout from "../../components/layouts/cardContainerLayout";
 import {ArticleCardMini} from "../../components/cardsMini/articleCardMini";
 
-export default function Contributors({intros, contributors}) {
+export default function Contributors({intros, contributors, developers}) {
     const seo = {metaTitle: "Contributors"};
     return (
         <Layout>
@@ -16,8 +16,8 @@ export default function Contributors({intros, contributors}) {
                 <IntroCard intro={intro} key={i}/>
             ))}
             <CardContainerLayout>
-                {contributors.data.map((contributor, i) => (
-                    <ArticleCardMini item={contributor.attributes} section={"contributors"} key={i}/>
+                {developers.data.map((developer, i) => (
+                    <ArticleCardMini item={developer.attributes} section={"developers"} key={i}/>
                 ))}
             </CardContainerLayout>
         </Layout>
@@ -29,14 +29,14 @@ export async function getStaticProps() {
     const contributorpage = await fetchAPI("/contributorpage", {
         populate: {
             intros: {populate: "*"},
-            contributors: {populate: "*"},
+            developers: {populate: "*"},
         },
     });
 
     return {
         props: {
             intros: contributorpage.data.attributes.intros,
-            contributors: contributorpage.data.attributes.contributors,
+            developers: contributorpage.data.attributes.developers,
         },
         revalidate: 1,
     };
