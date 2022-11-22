@@ -58,8 +58,9 @@ const Nav = () => {
                             </div>
 
                             <div className={"hidden lg:block"}>
-                                <select data-choose-theme="canto"
+                                <select data-choose-theme="root"
                                         className={"text-sm p-1 border border-border-tertiary bg-transparent"}>
+                                    <option value="root">Dark</option>
                                     <option value="canto">Canto</option>
                                     <option value="light">Light</option>
                                     <option value="pink">Pink</option>
@@ -82,8 +83,10 @@ const Nav = () => {
                                 );
                             })}
                             <div className="block px-6 py-1.5 border-t border-b border-border-tertiary">
-                                <select data-choose-theme="light"
-                                        className={"text-sm p-1 mx-2 border border-border-tertiary bg-transparent"}>
+                                <select data-choose-theme="root"
+                                        className={"text-sm p-1 border border-border-tertiary bg-transparent"}>
+                                    <option value="root">Dark</option>
+                                    <option value="canto">Canto</option>
                                     <option value="light">Light</option>
                                     <option value="pink">Pink</option>
                                 </select>

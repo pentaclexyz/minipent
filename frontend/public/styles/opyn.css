@@ -1,3 +1,7 @@
+html, body {
+    background-color: red;
+}
+
 :root {
     --p-bg: #ffcde5;
     --primary: #57f597;
