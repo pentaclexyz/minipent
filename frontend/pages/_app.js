@@ -14,12 +14,10 @@ const Providers = ({children}) => {
 };
 const MyApp = ({Component, pageProps}) => {
     const {global} = pageProps;
-
     return (
         <Providers>
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-                <link rel={"stylesheet"} href={"https://minipent.xyz/styles/opyn.css"}/>
                 <link rel="shortcut icon" type="image/x-icon" href={getStrapiMedia(global.attributes.favicon)}/>
             </Head>
             <GlobalContext.Provider value={global.attributes}>

@@ -12,6 +12,10 @@ module.exports = {
         '50%': '50%',
         '16': '4rem',
       },
+      fontFamily:{
+          'heading': "var(--font-heading)",
+          'body': "var(--font-body)",
+      },
       padding: {
         "card-inner": "var(--card-inner)",
       },

@@ -1,11 +1,7 @@
-html, body {
-    background-color: red;
-}
-
-:root, html[data-theme="root"] {
-    --font-heading: "matter-medium", "arial", "helvetica", "sans-serif";
-    --font-body: "matter", "arial", "helvetica", "sans-serif";
-    --p-bg: #ffcde5;
+:root, html[data-theme="dark"] {
+    --font-heading: "berkeley-bold", "berkeley-regular", "arial", "helvetica", "sans-serif";
+    --font-body: "berkeley-regular", "arial", "helvetica", "sans-serif";
+    --p-bg: #060707;
     --primary: #57f597;
     --primary-dark: #00e0b9;
     --border-primary: #57f597;

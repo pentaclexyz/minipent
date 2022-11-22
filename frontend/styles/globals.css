@@ -2,118 +2,8 @@
 @import url(./fonts.css);
 @import url(./editorial.css);
 @import url(./table.css);
+/*@import url(themes/minipent.css);*/
 
-
-:root, html[data-theme="dark"] {
-  --p-bg: #ffcde5;
-  --primary: #57f597;
-  --primary-dark: #00e0b9;
-  --border-primary: #57f597;
-  --border-secondary: #57f597;
-  --border-tertiary: #57f597;
-  --bg-01: rgba(255,255,255,.8);
-  --bg-02: rgba(53, 115, 110, 1);
-  --bg-03: rgba(29, 60, 67, 1);
-  --bg-card: transparent;
-  --bg-card-hover: rgba(255, 255, 255, .05);
-  --bg-card-secondary: #347d52;
-  --bg-card-secondary-hover: #05121B;
-  --bg-form: #cccccc;
-  --bg-input: rgba(255, 255, 255, .1);
-  --bg-search: rgba(53, 115, 110, .95);
-  --secondary: #ffffff;
-  --tertiary: #4e3689;
-  --txt-hover: #ffffff;
-  --txt-primary: #51e38c;
-  --txt-secondary: rgba(255,255,255,.8);
-  --txt-inverted: #05121B;
-  --black: #05121B;
-}
-
-html[data-theme="canto"] {
-  --p-bg: #060707;
-  --primary: #57f597;
-  --primary-dark: #00e0b9;
-  --border-primary: #57f597;
-  --border-secondary: #57f597;
-  --border-tertiary: #57f597;
-  --bg-01: rgba(255,255,255,.8);
-  --bg-02: rgba(53, 115, 110, 1);
-  --bg-03: rgba(29, 60, 67, 1);
-  --bg-card: transparent;
-  --bg-card-hover: rgba(255, 255, 255, .05);
-  --bg-card-secondary: #347d52;
-  --bg-card-secondary-hover: #05121B;
-  --bg-form: #cccccc;
-  --bg-input: rgba(255, 255, 255, .1);
-  --bg-search: rgba(53, 115, 110, .95);
-  --secondary: #ffffff;
-  --tertiary: #4e3689;
-  --txt-hover: #ffffff;
-  --txt-primary: #51e38c;
-  --txt-secondary: rgba(255,255,255,.8);
-  --txt-inverted: #05121B;
-  --black: #05121B;
-}
-
-html[data-theme="light"] {
-  --primary: #00e0b9;
-  --primary-dark: #00e0b9;
-  --border-primary: #ffcde5;
-  --border-secondary: #f3f3f3;
-  --border-tertiary: #cdc7c3;
-  --p-bg: #fff;
-  --bg-01: rgba(255,255,255,.8);
-  --bg-02: rgba(53, 115, 110, 1);
-  --bg-03: rgba(29, 60, 67, 1);
-  --bg-card: rgba(255, 255, 255, .1);
-  --bg-card-hover: rgba(255, 255, 255, .05);
-  --bg-card-secondary: rgba(255, 255, 255, .1);
-  --bg-card-secondary-hover: #05121B;
-  --bg-form: #cccccc;
-  --bg-input: rgba(255, 255, 255, .1);
-  --bg-search: rgba(53, 115, 110, .95);
-  --secondary: #ffcde5;
-  --tertiary: #4e3689;
-  --txt-hover: #000;
-  --txt-primary: #000;
-  --txt-secondary: #ffcc77;
-  --txt-inverted: #05121B;
-  --black: #05121B;
-  --card-inner: 0;
-  --gap-sm: 8;
-  --todo: #ffcde5;
-  --doing: #4e3689;
-  --done: #00e0b9;
-  --request: #ffcde5;
-  --approved: #00e0b9;
-  --rejected: #4e3689;
-}
-
-html[data-theme="pink"] {
-  --primary: #fcdbe4;
-  --primary-dark: #f91c9a;
-  --border-primary: #fff;
-  --border-secondary: #f91c9a;
-  --border-tertiary: #ffffff;
-  --p-bg: #fcdbe4;
-  --bg-01: #fcdbe4;
-  --bg-02: #ffc3c3;
-  --bg-03: #fcdbe4;
-  --bg-card: #ffffff;
-  --bg-card-hover: rgba(255, 255, 255, .7);
-  --bg-card-secondary: #fcdbe4;
-  --bg-card-secondary-hover: #f1f1f1;
-  --bg-form: #cccccc;
-  --bg-input: #ffffff;
-  --bg-search: #ffffff;
-  --secondary: #00e0b9;
-  --tertiary: #4e3689;
-  --txt-primary: #05121B;
-  --txt-secondary: #05121B;
-  --txt-hover: #05121B;
-  --txt-inverted: #ffffff;
-}
 
 @tailwind base;
 @tailwind components;
@@ -123,31 +13,32 @@ html[data-theme="pink"] {
   h1 {
     @apply text-2xl;
     @apply py-4;
-    font-family: berkeley-bold, matter-semibold, Arial, sans-serif;
+    font-family: var(--font-heading);
   }
 
   h2 {
     @apply text-xl;
     @apply py-2;
-    font-family: berkeley-bold, Arial, sans-serif;
+    font-family: var(--font-heading);
   }
 
   h3 {
     @apply text-lg;
     @apply py-2;
-    font-family: berkeley-bold, Arial, sans-serif;
+    font-family: var(--font-heading);
   }
 
   h4 {
     @apply py-1;
-    font-family: berkeley-bold, Arial, sans-serif;
+    font-family: var(--font-heading);
   }
 }
 
 html,
 body {
   font-size: 16px;
-  font-family: berkeley-regular, matter, arial, sans-serif;
+  background-color: var(--p-bg);
+  font-family: var(--font-body);
 }
 
 input[type="text"] {

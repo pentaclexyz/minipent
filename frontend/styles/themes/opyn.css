@@ -1,8 +1,4 @@
-html, body {
-    background-color: red;
-}
-
-:root, html[data-theme="root"] {
+:root, html[data-theme="dark"] {
     --font-heading: "matter-medium", "arial", "helvetica", "sans-serif";
     --font-body: "matter", "arial", "helvetica", "sans-serif";
     --p-bg: #ffcde5;
