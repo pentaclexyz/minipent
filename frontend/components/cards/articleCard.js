@@ -1,7 +1,6 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import BackLink from "../nav/backLink";
-import {PersonCardTiny} from "../cardsMini/personCardTiny";
 
 const ArticleCard = ({item, ...props}) => {
     return (
