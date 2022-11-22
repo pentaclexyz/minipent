@@ -1,3 +1,31 @@
 html, body {
-    background-color: white;
+    background-color: red;
+}
+
+:root, html[data-theme="root"] {
+    --font-heading: "matter-medium", "arial", "helvetica", "sans-serif";
+    --font-body: "matter", "arial", "helvetica", "sans-serif";
+    --p-bg: #ffcde5;
+    --primary: #57f597;
+    --primary-dark: #00e0b9;
+    --border-primary: #57f597;
+    --border-secondary: #57f597;
+    --border-tertiary: #57f597;
+    --bg-01: rgba(255,255,255,.8);
+    --bg-02: rgba(53, 115, 110, 1);
+    --bg-03: rgba(29, 60, 67, 1);
+    --bg-card: transparent;
+    --bg-card-hover: rgba(255, 255, 255, .05);
+    --bg-card-secondary: #347d52;
+    --bg-card-secondary-hover: #05121B;
+    --bg-form: #cccccc;
+    --bg-input: rgba(255, 255, 255, .1);
+    --bg-search: rgba(53, 115, 110, .95);
+    --secondary: #ffffff;
+    --tertiary: #4e3689;
+    --txt-hover: #ffffff;
+    --txt-primary: #51e38c;
+    --txt-secondary: rgba(255,255,255,.8);
+    --txt-inverted: #05121B;
+    --black: #05121B;
 }
