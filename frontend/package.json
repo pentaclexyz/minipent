@@ -7,7 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p $PORT",
-    "lint": "next lint"
+    "lint": "next lint",
+    "css": "tailwindcss -o ./public/styles/canto.css"
   },
   "dependencies": {
     "@headlessui/react": "^1.6.4",
@@ -21,6 +22,7 @@
     "isomorphic-unfetch": "^3.1.0",
     "next": "12.1.6",
     "next-seo": "^5.4.0",
+    "postcss-import": "^15.0.0",
     "qs": "^6.10.4",
     "react": "^18.2.0",
     "react-dom": "18.1.0",

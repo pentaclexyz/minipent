@@ -1,0 +1,88 @@
+
+h1 {
+    @apply text-2xl;
+    @apply py-4;
+    font-family: var(--font-heading);
+}
+
+h2 {
+    @apply text-xl;
+    @apply py-2;
+    font-family: var(--font-heading);
+}
+
+h3 {
+    @apply text-lg;
+    @apply py-2;
+    font-family: var(--font-heading);
+}
+
+h4 {
+    @apply py-1;
+    font-family: var(--font-heading);
+}
+
+
+
+html,
+body {
+    font-size: 16px;
+    background-color: var(--p-bg);
+    font-family: var(--font-body);
+}
+
+input[type="text"] {
+    font-size: inherit;
+}
+
+input:focus-visible {
+    @apply outline-none;
+}
+
+input[type="search"] {
+    -webkit-appearance: none;
+    font-size: inherit;
+}
+
+.internal-link h2, h2.internal-link,
+.internal-link h3, h3.internal-link,
+.internal-link h4, h4.internal-link {
+    border-bottom: 1px solid var(--border-primary);
+    margin-bottom: .5rem;
+}
+
+.external-link {
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+}
+
+.internal-link {
+    cursor: pointer;
+}
+
+.internal-link:hover h2, h2.internal-link:hover,
+.internal-link:hover h3, h3.internal-link:hover,
+.internal-link:hover h4, h4.internal-link:hover,
+.external-link:hover {
+    border-bottom: 1px solid var(--border-primary);
+}
+
+.internal-link h2:after, h2.internal-link:after {
+    padding-left: 8px;
+    content: "\2192";
+    visibility: hidden;
+}
+
+.internal-link:hover h2:after, h2.internal-link:hover:after,
+.internal-link:hover h3:after, h3.internal-link:hover:after,
+.internal-link:hover h4:after, h4.internal-link:hover:after  {
+    visibility: visible;
+}
+
+.field input {
+    background-color: transparent;
+}
+
+p + p, ul + p {
+    padding-top: 1.25rem;
+}

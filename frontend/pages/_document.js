@@ -2,12 +2,10 @@ import {Html, Head, Main, NextScript} from "next/document";
 import React from "react";
 import {fetchAPI} from "../lib/api";
 
-export default function Document() {
+export default function Document({global}) {
     return (
         <Html data-theme={"root"}>
             <Head>
-                {/*<link rel={"stylesheet"} href={"https://minipent.xyz/styles/opyn.css"}/>*/}
-                <link rel={"stylesheet"} href={global.styles}/>
             </Head>
             <body className={"bg-p-bg text-txt-primary"}>
                 <Main/>
@@ -18,9 +16,14 @@ export default function Document() {
 }
 
 export async function getStaticProps() {
-    const global = (await fetchAPI("/global"));
+    const global = (await fetchAPI("/global", {
+        populate: {
+            global: {populate: "styles"},
+        },
+    })).data;
+
     return {
-        props: {global: global.data},
+        props: {global},
         revalidate: 1,
     };
 }

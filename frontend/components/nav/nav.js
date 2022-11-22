@@ -39,8 +39,7 @@ const Nav = () => {
                                         return (
                                             <li key={item.id}>
                                                 <ActiveLink href={`/${item.link}`}>
-                                                    <a id={router.pathname}
-                                                       className={"p-card-inner text-sm hover:underline"}>{item.navTitle}</a>
+                                                    <div id={router.pathname} className={"p-card-inner text-sm hover:underline"}>{item.navTitle}</div>
                                                 </ActiveLink>
                                             </li>
                                         );
@@ -85,10 +84,8 @@ const Nav = () => {
                             <div className="block px-6 py-1.5 border-t border-b border-border-tertiary">
                                 <select data-choose-theme="root"
                                         className={"text-sm p-1 border border-border-tertiary bg-transparent"}>
-                                    <option value="root">Dark</option>
-                                    <option value="canto">Canto</option>
-                                    <option value="light">Light</option>
-                                    <option value="pink">Pink</option>
+                                    <option value="dark">Dark</option>
+                                    <option value="light">Canto</option>
                                 </select>
                             </div>
                         </>
