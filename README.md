@@ -1,8 +1,11 @@
 completed in Q4 2022
 
 https://euler.minipent.xyz
+
 https://canto.minipent.xyz
+
 https://opyn.minipent.xyz
+
 https://redacted.minipent.xyz
 
 ---
