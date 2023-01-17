@@ -39,8 +39,8 @@ const Nav = () => {
                                         return (
                                             <li key={item.id}>
                                                 <ActiveLink href={`/${item.link}`}>
-                                                    <a id={router.pathname}
-                                                       className={"p-card-inner text-sm hover:underline"}>{item.navTitle}</a>
+                                                    <span id={router.pathname}
+                                                       className={"p-card-inner text-sm hover:underline"}>{item.navTitle}</span>
                                                 </ActiveLink>
                                             </li>
                                         );

@@ -33,7 +33,7 @@ export function ArticleCardMini({item, section}) {
                     {item.githubRepo && <StyledLink url={item.githubRepo} text={item.githubRepo} icon={github}/>}
                     {item.coverImage &&
                         <Link href={{pathname: `/${section}/${item.slug}`}}>
-                            <div><Image src={getStrapiMedia(item.coverImage)} className={"object-cover cursor-pointer"}
+                            <div><img src={getStrapiMedia(item.coverImage)} className={"object-cover cursor-pointer"}
                                         width={300}
                                         height={200}/></div>
                         </Link>
