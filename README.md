@@ -10,6 +10,12 @@ https://redacted.minipent.xyz
 
 ---
 
+we have been conducting product research and testing with the above minipent instances and building out new components at https://pentacle.xyz
+
+these will soon be bundled into minipent for our next phase of work to create minipents for content-curators
+
+---
+
 ## create new project in railway
 
 create new > minipent-projectName-ui
